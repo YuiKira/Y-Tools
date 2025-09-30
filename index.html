@@ -9,11 +9,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
     <style>
-        :root{--primary-green:#28a745;--light-green-bg:#e9f5ee;--border-color:#d8e6de;--text-color:#333;--secondary-text-color:#555;--page-bg:#f8f9fa;--animation-speed:0.2s}body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif;background-color:var(--page-bg);margin:0;padding:2rem;display:flex;justify-content:center;color:var(--text-color)}.container{display:flex;gap:2rem;width:100%;max-width:1100px}.sidebar{flex:0 0 120px;display:flex;flex-direction:column;align-items:center;gap:1.5rem}.sidebar-item{background-color:#fff;border-radius:1rem;padding:1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;cursor:pointer;box-shadow:0 4px 6px rgba(0,0,0,.05);text-align:center;font-size:.8rem;width:100%;transition:box-shadow var(--animation-speed)}.sidebar-item.active{background:linear-gradient(135deg,#4ad295,#2ab67b);color:#fff;cursor:default}.sidebar-item:not(.active):hover{box-shadow:0 6px 12px rgba(0,0,0,.08)}.sidebar-item.active svg{color:#fff}.content{flex:1;background-color:#fff;border-radius:1rem;padding:2rem;box-shadow:0 4px 12px rgba(0,0,0,.08);position:relative;overflow:hidden}.page{position:absolute;top:2rem;left:2rem;right:2rem;bottom:2rem;opacity:0;transition:opacity var(--animation-speed) ease-in-out;pointer-events:none;display:flex;flex-direction:column}.page.active{opacity:1;position:relative;top:auto;left:auto;right:auto;bottom:auto;pointer-events:auto}h1,h2{margin:0 0 .5rem;font-weight:700;flex-shrink:0}h1{font-size:2rem}h2{font-size:1.5rem}.subtitle{margin:0 0 1.5rem;color:var(--secondary-text-color);flex-shrink:0}.update-info{background-color:var(--light-green-bg);border:1px solid var(--border-color);padding:.75rem 1rem;border-radius:.5rem;margin-bottom:1.5rem;font-size:.9rem;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}.update-info .refresh-btn{background-color:var(--primary-green);color:#fff;border:none;padding:.25rem .75rem;border-radius:.25rem;cursor:pointer;font-size:.85rem;font-family:'Nunito',sans-serif;transition:background-color var(--animation-speed)}.update-info .refresh-btn:hover{opacity:.9}.update-info .refresh-btn:disabled{background-color:#999;cursor:not-allowed}.rates-grid-wrapper{overflow-y:auto;flex-grow:1;padding-right:10px;margin-right:-10px}.rates-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}.rate-row{display:flex;align-items:center;background-color:var(--light-green-bg);border-radius:.5rem;padding:.75rem;border:1px solid transparent;transition:transform 0.2s ease-in-out,box-shadow var(--animation-speed) ease,border-color .2s}.rate-row:focus-within{border-color:var(--primary-green)}.rate-row.sortable-ghost{background:#d4f0e2;opacity:.7}.rate-row.sortable-chosen{box-shadow:0 8px 20px rgba(0,0,0,.15);border:1px solid var(--border-color);transform:scale(1.02)}.drag-handle{cursor:grab;color:#b0c9bd;margin-right:.75rem;flex-shrink:0}.drag-handle:active{cursor:grabbing}.currency-code{font-weight:700;width:50px;flex-shrink:0;color:var(--secondary-text-color)}.separator{color:#c9d9d1;margin:0 .5rem}.currency-value{flex-grow:1;border:none;background:transparent;font-size:1rem;font-family:'Menlo','Monaco','Consolas',monospace;padding:.25rem;outline:0;width:100%;cursor:pointer}.currency-name{background-color:#c1e5d4;color:#1a593b;font-weight:500;padding:.25rem .75rem;border-radius:.25rem;font-size:.8rem;white-space:nowrap}.instructions{margin-top:2rem;padding-top:1.5rem;border-top:1px solid #eee;flex-shrink:0}.instructions p{font-size:.9rem;color:var(--secondary-text-color);line-height:1.6}.copy-notification{position:fixed;left:2rem;bottom:2rem;background-color:var(--primary-green);color:#fff;padding:.75rem 1.5rem;border-radius:.5rem;box-shadow:0 4px 10px rgba(0,0,0,.1);font-size:.9rem;z-index:1000;opacity:0;transform:translateX(-120%);transition:opacity var(--animation-speed) ease,transform var(--animation-speed) ease}.copy-notification.show{opacity:1;transform:translateX(0)}.json-container{display:flex;flex-grow:1;gap:.75rem;min-height:0}.json-pane{flex:1;display:flex;flex-direction:column;background-color:var(--light-green-bg);border-radius:.5rem;overflow:hidden}.json-pane textarea,.json-pane pre{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto}.json-pane pre{white-space:pre-wrap;word-break:break-all}.json-pane pre.error{color:#d9534f;font-weight:700}@media (max-width:900px){.rates-grid{grid-template-columns:1fr}}@media (max-width:768px){body{padding:1rem}.container{flex-direction:column}.content{padding:1rem}.page{top:1rem;left:1rem;right:1rem;bottom:1rem}.sidebar{flex-direction:row;flex:1 1 0%;justify-content:center;gap:1rem;width:100%;max-width:none;margin:0 auto}.sidebar-item{flex:1}.copy-notification{left:1rem;bottom:1rem;width:calc(100% - 2rem);text-align:center}.json-container{flex-direction:column}}
+        :root{--primary-green:#28a745;--light-green-bg:#e9f5ee;--border-color:#d8e6de;--text-color:#333;--secondary-text-color:#555;--page-bg:#f8f9fa;--content-bg:#fff;--card-bg:#fff;--input-bg:transparent;--separator-color:#c9d9d1;--currency-name-bg:#c1e5d4;--currency-name-color:#1a593b;--flag-bg:#f0f0f0;--flag-border:#ddd;--animation-speed:0.2s;--theme-transition:0.3s}
+
+        /* 深色主题 */
+        [data-theme="dark"]{--primary-green:#10b981;--light-green-bg:#374151;--border-color:#4b5563;--text-color:#f3f4f6;--secondary-text-color:#d1d5db;--page-bg:#111827;--content-bg:#1f2937;--card-bg:#374151;--input-bg:#374151;--separator-color:#6b7280;--currency-name-bg:#047857;--currency-name-color:#ecfdf5;--flag-bg:#4b5563;--flag-border:#6b7280}
+
+        /* 主题过渡动画 */
+        *,*::before,*::after{transition:background-color var(--theme-transition),color var(--theme-transition),border-color var(--theme-transition),box-shadow var(--theme-transition)!important}body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif;background-color:var(--page-bg);margin:0;padding:2rem;display:flex;justify-content:center;color:var(--text-color)}.container{display:flex;gap:2rem;width:100%;max-width:1100px}.sidebar{flex:0 0 120px;display:flex;flex-direction:column;align-items:center;gap:1.5rem}.sidebar-item{background-color:var(--card-bg);border-radius:1rem;padding:1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;cursor:pointer;box-shadow:0 4px 6px rgba(0,0,0,.05);text-align:center;font-size:.8rem;width:100%;transition:box-shadow var(--animation-speed)}.sidebar-item.active{background:linear-gradient(135deg,#4ad295,#2ab67b);color:#fff;cursor:default}.sidebar-item:not(.active):hover{box-shadow:0 6px 12px rgba(0,0,0,.08)}.sidebar-item.active svg{color:#fff}.content{flex:1;background-color:var(--content-bg);border-radius:1rem;padding:2rem;box-shadow:0 4px 12px rgba(0,0,0,.08);position:relative;overflow:hidden}.page{position:absolute;top:2rem;left:2rem;right:2rem;bottom:2rem;opacity:0;transition:opacity var(--animation-speed) ease-in-out;pointer-events:none;display:flex;flex-direction:column}.page.active{opacity:1;position:relative;top:auto;left:auto;right:auto;bottom:auto;pointer-events:auto}h1,h2{margin:0 0 .5rem;font-weight:700;flex-shrink:0}h1{font-size:2rem}h2{font-size:1.5rem}.subtitle{margin:0 0 1.5rem;color:var(--secondary-text-color);flex-shrink:0}.update-info{background-color:var(--light-green-bg);border:1px solid var(--border-color);padding:.75rem 1rem;border-radius:.5rem;margin-bottom:1.5rem;font-size:.9rem;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}.update-info .refresh-btn{background-color:var(--primary-green);color:#fff;border:none;padding:.25rem .75rem;border-radius:.25rem;cursor:pointer;font-size:.85rem;font-family:'Nunito',sans-serif;transition:background-color var(--animation-speed)}.update-info .refresh-btn:hover{opacity:.9}.update-info .refresh-btn:disabled{background-color:#999;cursor:not-allowed}.rates-grid-wrapper{overflow-y:auto;flex-grow:1;padding-right:10px;margin-right:-10px}.rates-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}.rate-row{display:flex;align-items:center;background-color:var(--light-green-bg);border-radius:.5rem;padding:.75rem;border:1px solid transparent;transition:transform 0.2s ease-in-out,box-shadow var(--animation-speed) ease,border-color .2s}.rate-row:focus-within{border-color:var(--primary-green)}.rate-row.sortable-ghost{background:#d4f0e2;opacity:.7}.rate-row.sortable-chosen{box-shadow:0 8px 20px rgba(0,0,0,.15);border:1px solid var(--border-color);transform:scale(1.02)}.drag-handle{cursor:grab;color:#b0c9bd;margin-right:.75rem;flex-shrink:0}.drag-handle:active{cursor:grabbing}.currency-code{font-weight:700;width:50px;flex-shrink:0;color:var(--secondary-text-color);margin-left:2px}.white-separator{color:#fff;margin:0 .1rem;font-size:.8rem}.currency-flag{width:18px;height:13px;background-size:cover;background-position:center;border-radius:2px;margin:0;display:inline-block;vertical-align:middle;flex-shrink:0;background-color:var(--flag-bg);border:1px solid var(--flag-border);overflow:hidden}.currency-flag.error{background-image:none!important;background-color:var(--flag-bg);position:relative;opacity:.6}.currency-flag.error::after{content:'🏳';font-size:10px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:var(--secondary-text-color)}
+
+        /* 深色主题下旗帜优化 */
+        [data-theme="dark"] .currency-flag{filter:brightness(1.1) contrast(0.95)}.separator{color:var(--separator-color);margin:0 .2rem}
+
+        /* 主题切换按钮 */
+        .theme-switcher{position:fixed;top:2rem;right:2rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:.75rem;padding:.5rem;box-shadow:0 4px 12px rgba(0,0,0,.1);display:flex;align-items:center;gap:.5rem;z-index:1000}.theme-btn{background:none;border:none;padding:.5rem;border-radius:.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--secondary-text-color);transition:all .2s ease;width:32px;height:32px}.theme-btn:hover{background:var(--light-green-bg);color:var(--text-color)}.theme-btn.active{background:var(--primary-green);color:#fff}.theme-btn svg{width:16px;height:16px}.currency-value{flex-grow:1;border:none;background:transparent;font-size:1rem;font-family:'Menlo','Monaco','Consolas',monospace;padding:.25rem;outline:0;width:100%;cursor:pointer;color:var(--text-color)}.currency-name{background-color:var(--currency-name-bg);color:var(--currency-name-color);font-weight:500;padding:.25rem .75rem;border-radius:.25rem;font-size:.8rem;white-space:nowrap}.instructions{margin-top:2rem;padding-top:1.5rem;border-top:1px solid #eee;flex-shrink:0}.instructions p{font-size:.9rem;color:var(--secondary-text-color);line-height:1.6}.copy-notification{position:fixed;left:2rem;bottom:2rem;background-color:var(--primary-green);color:#fff;padding:.75rem 1.5rem;border-radius:.5rem;box-shadow:0 4px 10px rgba(0,0,0,.1);font-size:.9rem;z-index:1000;opacity:0;transform:translateX(-120%);transition:opacity var(--animation-speed) ease,transform var(--animation-speed) ease}.copy-notification.show{opacity:1;transform:translateX(0)}.json-container{display:flex;flex-grow:1;gap:.75rem;min-height:0}.json-pane{flex:1;display:flex;flex-direction:column;background-color:var(--light-green-bg);border-radius:.5rem;overflow:hidden}.json-pane textarea,.json-pane pre{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto}.json-pane pre{white-space:pre-wrap;word-break:break-all}.json-pane pre.error{color:#d9534f;font-weight:700}
+
+/* JSON 树形显示样式 */
+.json-tree{overflow-y:auto;height:100%;padding:.75rem;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;line-height:1.6;color:var(--text-color)}.json-tree.error{color:#d9534f;font-weight:700}.json-node{margin:0}.json-toggle{cursor:pointer;display:inline-block;width:12px;height:12px;margin-right:4px;text-align:center;background:var(--light-green-bg);border:1px solid var(--border-color);border-radius:3px;font-size:10px;line-height:10px;user-select:none;transition:transform .2s ease}.json-toggle:hover{background:var(--primary-green);color:#fff}.json-toggle.collapsed{transform:rotate(-90deg)}.json-toggle.empty{opacity:.3;cursor:default}.json-toggle.empty:hover{background:var(--light-green-bg);color:var(--text-color)}.json-key{color:#0451a5;font-weight:500}.json-string{color:#0a8043}.json-number{color:#098658}.json-boolean{color:#e36209}.json-null{color:#a626a4}.json-bracket{font-weight:bold;cursor:pointer}.json-bracket.level-0{color:#e60000}.json-bracket.level-1{color:#f57c00}.json-bracket.level-2{color:#388e3c}.json-bracket.level-3{color:#1976d2}.json-bracket.level-4{color:#7b1fa2}.json-bracket.level-5{color:#c2185b}.json-bracket:hover{opacity:.7}.json-count{color:var(--secondary-text-color);font-size:.85em;margin-left:4px}.json-collapsed{display:none}.json-ellipsis{color:var(--secondary-text-color);font-style:italic;cursor:pointer}.json-ellipsis:hover{color:var(--primary-green)}
+
+/* 深色主题下的 JSON 样式优化 */
+[data-theme="dark"] .json-key{color:#9cdcfe}[data-theme="dark"] .json-string{color:#ce9178}[data-theme="dark"] .json-number{color:#b5cea8}[data-theme="dark"] .json-boolean{color:#569cd6}[data-theme="dark"] .json-null{color:#c586c0}[data-theme="dark"] .json-bracket.level-0{color:#ff6b6b}[data-theme="dark"] .json-bracket.level-1{color:#ffa726}[data-theme="dark"] .json-bracket.level-2{color:#66bb6a}[data-theme="dark"] .json-bracket.level-3{color:#42a5f5}[data-theme="dark"] .json-bracket.level-4{color:#ab47bc}[data-theme="dark"] .json-bracket.level-5{color:#ec407a}
+
+@media (max-width:900px){.rates-grid{grid-template-columns:1fr}}@media (max-width:768px){body{padding:1rem}.container{flex-direction:column}.content{padding:1rem}.page{top:1rem;left:1rem;right:1rem;bottom:1rem}.sidebar{flex-direction:row;flex:1 1 0%;justify-content:center;gap:1rem;width:100%;max-width:none;margin:0 auto}.sidebar-item{flex:1}.copy-notification{left:1rem;bottom:1rem;width:calc(100% - 2rem);text-align:center}.json-container{flex-direction:column}.theme-switcher{top:1rem;right:1rem;padding:.25rem;gap:.25rem}.theme-btn{width:28px;height:28px;padding:.25rem}.theme-btn svg{width:14px;height:14px}}
     </style>
 </head>
 <body>
     <div id="copy-notification" class="copy-notification">已复制</div>
+
+    <!-- 主题切换器 -->
+    <div class="theme-switcher" id="theme-switcher">
+        <button class="theme-btn" id="theme-light" title="浅色模式">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+            </svg>
+        </button>
+        <button class="theme-btn" id="theme-dark" title="深色模式">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+            </svg>
+        </button>
+        <button class="theme-btn" id="theme-system" title="跟随系统">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+            </svg>
+        </button>
+    </div>
+
     <div class="container">
         <aside class="sidebar">
             <div id="nav-currency" class="sidebar-item active">
@@ -50,7 +90,7 @@
                         <textarea id="json-input" placeholder="在此处粘贴 JSON..."></textarea>
                     </div>
                     <div class="json-pane">
-                        <pre id="json-output"></pre>
+                        <div id="json-output" class="json-tree"></div>
                     </div>
                 </div>
             </div>
@@ -69,6 +109,32 @@
         const currencyNames = {
             'CNY': '人民币 [中国 ¥]', 'HKD': '港元 [中国香港 HK$]', 'TWD': '台币 [中国台湾 NT$]', 'USD': '美元 [美国 $]', 'RUB': '卢布 [俄罗斯 ₽]', 'VND': '越南盾 [越南 ₫]', 'INR': '卢比 [印度 ₹]', 'EUR': '欧元 [欧盟 €]', 'JPY': '日元 [日本 ¥]', 'GBP': '英镑 [英国 £]', 'SGD': '新元 [新加坡 S$]', 'PHP': '比索 [菲律宾 ₱]', 'ARS': '比索 [阿根廷 $]', 'TRY': '里拉 [土耳其 ₺]', 'KRW': '韩元 [韩国 ₩]', 'CHF': '法郎 [瑞士 Fr]', 'AUD': '澳元 [澳大利亚 A$]', 'IDR': '印尼盾 [印尼 Rp]', 'THB': '泰铢 [泰国 ฿]', 'PKR': '卢比 [巴基斯坦 Rs]', 'CAD': '加元 [加拿大 C$]', 'SAR': '里亚尔 [沙特阿拉伯 SR]', 'MXN': '比索 [墨西哥 $]', 'BDT': '塔卡 [孟加拉国 ৳]', 'MYR': '林吉特 [马来西亚 RM]',
         };
+
+        const currencyFlags = {
+            'CNY': 'cn', 'HKD': 'hk', 'TWD': 'tw', 'USD': 'us', 'RUB': 'ru',
+            'VND': 'vn', 'INR': 'in', 'EUR': 'eu', 'JPY': 'jp', 'GBP': 'gb',
+            'SGD': 'sg', 'PHP': 'ph', 'ARS': 'ar', 'TRY': 'tr', 'KRW': 'kr',
+            'CHF': 'ch', 'AUD': 'au', 'IDR': 'id', 'THB': 'th', 'PKR': 'pk',
+            'CAD': 'ca', 'SAR': 'sa', 'MXN': 'mx', 'BDT': 'bd', 'MYR': 'my'
+        };
+
+        // 特殊处理一些可能404的代码，使用备用方案
+        function getFlagUrl(code) {
+            const flagCode = currencyFlags[code] || 'xx';
+
+            // 特殊映射：欧盟使用德国旗帜作为代表
+            if (flagCode === 'eu') {
+                return 'https://flagcdn.com/w20/de.png';
+            }
+
+            // 备用CDN列表
+            const cdnOptions = [
+                `https://flagcdn.com/w20/${flagCode}.png`,
+                `https://countryflagsapi.com/png/${flagCode}`
+            ];
+
+            return cdnOptions[0]; // 使用第一个作为主要CDN
+        }
 
         const ratesContainer = document.getElementById('rates-container');
         const updateTimeEl = document.getElementById('update-time');
@@ -95,7 +161,19 @@
                 const rateRow = document.createElement('div'); 
                 rateRow.className = 'rate-row'; 
                 rateRow.dataset.currencyCode = code; 
-                rateRow.innerHTML = `<span class="drag-handle" title="拖动排序"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M4 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM4 4a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm5 10a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 4a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm5 10a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM14 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm0-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path></svg></span><span class="currency-code">${code}</span><span class="separator">|</span><input type="text" class="currency-value" data-currency="${code}" placeholder="0.00"><span class="currency-name">${name}</span>`; 
+                const flagUrl = getFlagUrl(code);
+                rateRow.innerHTML = `<span class="drag-handle" title="拖动排序"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M4 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM4 4a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm5 10a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 4a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm5 10a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM14 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm0-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path></svg></span><span class="currency-flag" data-flag-url="${flagUrl}" title="${code}旗帜"></span><span class="currency-code">${code}</span><span class="separator">|</span><input type="text" class="currency-value" data-currency="${code}" placeholder="0.00"><span class="currency-name">${name}</span>`;
+
+                // 设置旗帜背景并处理加载失败
+                const flagElement = rateRow.querySelector('.currency-flag');
+                const img = new Image();
+                img.onload = () => {
+                    flagElement.style.backgroundImage = `url('${flagUrl}')`;
+                };
+                img.onerror = () => {
+                    flagElement.classList.add('error');
+                };
+                img.src = flagUrl; 
                 ratesContainer.appendChild(rateRow); 
             }); 
             addInputEventListeners();
@@ -210,19 +288,283 @@
             const rawJson = jsonInput.value.trim();
             jsonOutput.classList.remove('error');
             if (!rawJson) {
-                jsonOutput.textContent = '';
+                jsonOutput.innerHTML = '';
                 return;
             }
             try {
                 const parsed = JSON.parse(rawJson);
-                jsonOutput.textContent = JSON.stringify(parsed, null, 2);
+                jsonOutput.innerHTML = '';
+                const treeNode = createJsonTree(parsed, 0);
+                jsonOutput.appendChild(treeNode);
             } catch (e) {
                 jsonOutput.textContent = `JSON 格式错误:\n${e.message}`;
                 jsonOutput.classList.add('error');
             }
         }
 
+        function createJsonTree(value, depth = 0, key = null) {
+            const container = document.createElement('div');
+            container.className = 'json-node';
+
+            if (value === null) {
+                container.innerHTML = `${key ? `<span class="json-key">"${key}"</span>: ` : ''}<span class="json-null">null</span>`;
+            } else if (typeof value === 'boolean') {
+                container.innerHTML = `${key ? `<span class="json-key">"${key}"</span>: ` : ''}<span class="json-boolean">${value}</span>`;
+            } else if (typeof value === 'number') {
+                container.innerHTML = `${key ? `<span class="json-key">"${key}"</span>: ` : ''}<span class="json-number">${value}</span>`;
+            } else if (typeof value === 'string') {
+                container.innerHTML = `${key ? `<span class="json-key">"${key}"</span>: ` : ''}<span class="json-string">"${escapeHtml(value)}"</span>`;
+            } else if (Array.isArray(value)) {
+                const isArray = true;
+                const length = value.length;
+                const levelClass = `level-${depth % 6}`;
+
+                const toggleBtn = document.createElement('span');
+                toggleBtn.className = length === 0 ? 'json-toggle empty' : 'json-toggle';
+                toggleBtn.textContent = '▼';
+
+                const openBracket = document.createElement('span');
+                openBracket.className = `json-bracket ${levelClass}`;
+                openBracket.textContent = '[';
+
+                const closeBracket = document.createElement('span');
+                closeBracket.className = `json-bracket ${levelClass}`;
+                closeBracket.textContent = ']';
+
+                const count = document.createElement('span');
+                count.className = 'json-count';
+                count.textContent = `${length} ${length === 1 ? 'item' : 'items'}`;
+
+                const content = document.createElement('div');
+                content.className = 'json-content';
+
+                const header = document.createElement('div');
+                header.appendChild(toggleBtn);
+                if (key) {
+                    const keySpan = document.createElement('span');
+                    keySpan.className = 'json-key';
+                    keySpan.textContent = `"${key}": `;
+                    header.appendChild(keySpan);
+                }
+                header.appendChild(openBracket);
+                header.appendChild(count);
+
+                container.appendChild(header);
+
+                if (length > 0) {
+                    value.forEach((item, index) => {
+                        const itemNode = createJsonTree(item, depth + 1);
+                        itemNode.style.marginLeft = '20px';
+                        if (index < length - 1) {
+                            itemNode.innerHTML += ',';
+                        }
+                        content.appendChild(itemNode);
+                    });
+
+                    const closeBracketDiv = document.createElement('div');
+                    closeBracketDiv.appendChild(closeBracket);
+                    content.appendChild(closeBracketDiv);
+
+                    container.appendChild(content);
+
+                    toggleBtn.addEventListener('click', () => {
+                        const isCollapsed = content.style.display === 'none';
+                        content.style.display = isCollapsed ? 'block' : 'none';
+                        toggleBtn.textContent = isCollapsed ? '▼' : '▶';
+                        toggleBtn.classList.toggle('collapsed', !isCollapsed);
+
+                        if (!isCollapsed) {
+                            const ellipsis = document.createElement('span');
+                            ellipsis.className = 'json-ellipsis';
+                            ellipsis.textContent = ` ... `;
+                            ellipsis.addEventListener('click', () => {
+                                content.style.display = 'block';
+                                toggleBtn.textContent = '▼';
+                                toggleBtn.classList.remove('collapsed');
+                                ellipsis.remove();
+                            });
+                            header.appendChild(ellipsis);
+                        } else {
+                            const ellipsis = header.querySelector('.json-ellipsis');
+                            if (ellipsis) ellipsis.remove();
+                        }
+
+                        if (!isCollapsed) {
+                            header.appendChild(closeBracket);
+                        } else {
+                            const inlineCloseBracket = header.querySelector('.json-bracket:last-child');
+                            if (inlineCloseBracket && inlineCloseBracket !== openBracket) {
+                                inlineCloseBracket.remove();
+                            }
+                        }
+                    });
+                } else {
+                    const inlineClose = document.createElement('span');
+                    inlineClose.className = `json-bracket ${levelClass}`;
+                    inlineClose.textContent = ']';
+                    header.appendChild(inlineClose);
+                }
+
+            } else if (typeof value === 'object') {
+                const keys = Object.keys(value);
+                const length = keys.length;
+                const levelClass = `level-${depth % 6}`;
+
+                const toggleBtn = document.createElement('span');
+                toggleBtn.className = length === 0 ? 'json-toggle empty' : 'json-toggle';
+                toggleBtn.textContent = '▼';
+
+                const openBracket = document.createElement('span');
+                openBracket.className = `json-bracket ${levelClass}`;
+                openBracket.textContent = '{';
+
+                const closeBracket = document.createElement('span');
+                closeBracket.className = `json-bracket ${levelClass}`;
+                closeBracket.textContent = '}';
+
+                const count = document.createElement('span');
+                count.className = 'json-count';
+                count.textContent = `${length} ${length === 1 ? 'property' : 'properties'}`;
+
+                const content = document.createElement('div');
+                content.className = 'json-content';
+
+                const header = document.createElement('div');
+                header.appendChild(toggleBtn);
+                if (key) {
+                    const keySpan = document.createElement('span');
+                    keySpan.className = 'json-key';
+                    keySpan.textContent = `"${key}": `;
+                    header.appendChild(keySpan);
+                }
+                header.appendChild(openBracket);
+                header.appendChild(count);
+
+                container.appendChild(header);
+
+                if (length > 0) {
+                    keys.forEach((objKey, index) => {
+                        const itemNode = createJsonTree(value[objKey], depth + 1, objKey);
+                        itemNode.style.marginLeft = '20px';
+                        if (index < length - 1) {
+                            itemNode.innerHTML += ',';
+                        }
+                        content.appendChild(itemNode);
+                    });
+
+                    const closeBracketDiv = document.createElement('div');
+                    closeBracketDiv.appendChild(closeBracket);
+                    content.appendChild(closeBracketDiv);
+
+                    container.appendChild(content);
+
+                    toggleBtn.addEventListener('click', () => {
+                        const isCollapsed = content.style.display === 'none';
+                        content.style.display = isCollapsed ? 'block' : 'none';
+                        toggleBtn.textContent = isCollapsed ? '▼' : '▶';
+                        toggleBtn.classList.toggle('collapsed', !isCollapsed);
+
+                        if (!isCollapsed) {
+                            const ellipsis = document.createElement('span');
+                            ellipsis.className = 'json-ellipsis';
+                            ellipsis.textContent = ` ... `;
+                            ellipsis.addEventListener('click', () => {
+                                content.style.display = 'block';
+                                toggleBtn.textContent = '▼';
+                                toggleBtn.classList.remove('collapsed');
+                                ellipsis.remove();
+                            });
+                            header.appendChild(ellipsis);
+                        } else {
+                            const ellipsis = header.querySelector('.json-ellipsis');
+                            if (ellipsis) ellipsis.remove();
+                        }
+
+                        if (!isCollapsed) {
+                            header.appendChild(closeBracket);
+                        } else {
+                            const inlineCloseBracket = header.querySelector('.json-bracket:last-child');
+                            if (inlineCloseBracket && inlineCloseBracket !== openBracket) {
+                                inlineCloseBracket.remove();
+                            }
+                        }
+                    });
+                } else {
+                    const inlineClose = document.createElement('span');
+                    inlineClose.className = `json-bracket ${levelClass}`;
+                    inlineClose.textContent = '}';
+                    header.appendChild(inlineClose);
+                }
+            }
+
+            return container;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // 主题管理
+        const themeManager = {
+            current: 'system',
+
+            init() {
+                // 获取保存的主题设置
+                this.current = localStorage.getItem('theme') || 'system';
+                this.apply();
+                this.bindEvents();
+                this.updateButtons();
+
+                // 监听系统主题变化
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                    if (this.current === 'system') {
+                        this.apply();
+                    }
+                });
+            },
+
+            apply() {
+                const root = document.documentElement;
+
+                if (this.current === 'dark') {
+                    root.setAttribute('data-theme', 'dark');
+                } else if (this.current === 'light') {
+                    root.removeAttribute('data-theme');
+                } else { // system
+                    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    if (isDark) {
+                        root.setAttribute('data-theme', 'dark');
+                    } else {
+                        root.removeAttribute('data-theme');
+                    }
+                }
+            },
+
+            set(theme) {
+                this.current = theme;
+                localStorage.setItem('theme', theme);
+                this.apply();
+                this.updateButtons();
+            },
+
+            updateButtons() {
+                document.querySelectorAll('.theme-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                document.getElementById(`theme-${this.current}`).classList.add('active');
+            },
+
+            bindEvents() {
+                document.getElementById('theme-light').addEventListener('click', () => this.set('light'));
+                document.getElementById('theme-dark').addEventListener('click', () => this.set('dark'));
+                document.getElementById('theme-system').addEventListener('click', () => this.set('system'));
+            }
+        };
+
         async function init() {
+            themeManager.init();
             renderCurrencyRows();
             initSortable();
             await fetchRates();
@@ -234,7 +576,7 @@
             navCurrency.addEventListener('click', () => switchPage('currency'));
             navJson.addEventListener('click', () => switchPage('json'));
             jsonInput.addEventListener('input', formatJson);
-            setInterval(fetchRates, 15 * 60 * 1000); 
+            setInterval(fetchRates, 15 * 60 * 1000);
         }
 
         init();
