@@ -15,22 +15,56 @@
         [data-theme="dark"]{--primary-green:#10b981;--light-green-bg:#374151;--border-color:#4b5563;--text-color:#f3f4f6;--secondary-text-color:#d1d5db;--page-bg:#111827;--content-bg:#1f2937;--card-bg:#374151;--input-bg:#374151;--separator-color:#6b7280;--currency-name-bg:#047857;--currency-name-color:#ecfdf5;--flag-bg:#4b5563;--flag-border:#6b7280}
 
         /* 主题过渡动画 */
-        *,*::before,*::after{transition:background-color var(--theme-transition),color var(--theme-transition),border-color var(--theme-transition),box-shadow var(--theme-transition)!important}body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif;background-color:var(--page-bg);margin:0;padding:2rem;display:flex;justify-content:center;color:var(--text-color)}.container{display:flex;gap:2rem;width:100%;max-width:1100px}.sidebar{flex:0 0 120px;display:flex;flex-direction:column;align-items:center;gap:1.5rem}.sidebar-item{background-color:var(--card-bg);border-radius:1rem;padding:1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;cursor:pointer;box-shadow:0 4px 6px rgba(0,0,0,.05);text-align:center;font-size:.8rem;width:100%;transition:box-shadow var(--animation-speed)}.sidebar-item.active{background:linear-gradient(135deg,#4ad295,#2ab67b);color:#fff;cursor:default}.sidebar-item:not(.active):hover{box-shadow:0 6px 12px rgba(0,0,0,.08)}.sidebar-item.active svg{color:#fff}.content{flex:1;background-color:var(--content-bg);border-radius:1rem;padding:2rem;box-shadow:0 4px 12px rgba(0,0,0,.08);position:relative;overflow:hidden}.page{position:absolute;top:2rem;left:2rem;right:2rem;bottom:2rem;opacity:0;transition:opacity var(--animation-speed) ease-in-out;pointer-events:none;display:flex;flex-direction:column}.page.active{opacity:1;position:relative;top:auto;left:auto;right:auto;bottom:auto;pointer-events:auto}h1,h2{margin:0 0 .5rem;font-weight:700;flex-shrink:0}h1{font-size:2rem}h2{font-size:1.5rem}.subtitle{margin:0 0 1.5rem;color:var(--secondary-text-color);flex-shrink:0}.update-info{background-color:var(--light-green-bg);border:1px solid var(--border-color);padding:.75rem 1rem;border-radius:.5rem;margin-bottom:1.5rem;font-size:.9rem;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}.update-info .refresh-btn{background-color:var(--primary-green);color:#fff;border:none;padding:.25rem .75rem;border-radius:.25rem;cursor:pointer;font-size:.85rem;font-family:'Nunito',sans-serif;transition:background-color var(--animation-speed)}.update-info .refresh-btn:hover{opacity:.9}.update-info .refresh-btn:disabled{background-color:#999;cursor:not-allowed}.rates-grid-wrapper{overflow-y:auto;flex-grow:1;padding-right:10px;margin-right:-10px}.rates-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}.rate-row{display:flex;align-items:center;background-color:var(--light-green-bg);border-radius:.5rem;padding:.75rem;border:1px solid transparent;transition:transform 0.2s ease-in-out,box-shadow var(--animation-speed) ease,border-color .2s}.rate-row:focus-within{border-color:var(--primary-green)}.rate-row.sortable-ghost{background:#d4f0e2;opacity:.7}.rate-row.sortable-chosen{box-shadow:0 8px 20px rgba(0,0,0,.15);border:1px solid var(--border-color);transform:scale(1.02)}.drag-handle{cursor:grab;color:#b0c9bd;margin-right:.75rem;flex-shrink:0}.drag-handle:active{cursor:grabbing}.currency-code{font-weight:700;width:50px;flex-shrink:0;color:var(--secondary-text-color);margin-left:2px}.white-separator{color:#fff;margin:0 .1rem;font-size:.8rem}.currency-flag{width:18px;height:13px;background-size:cover;background-position:center;border-radius:2px;margin:0;display:inline-block;vertical-align:middle;flex-shrink:0;background-color:var(--flag-bg);border:1px solid var(--flag-border);overflow:hidden}.currency-flag.error{background-image:none!important;background-color:var(--flag-bg);position:relative;opacity:.6}.currency-flag.error::after{content:'🏳';font-size:10px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:var(--secondary-text-color)}
+        *,*::before,*::after{transition:background-color var(--theme-transition),color var(--theme-transition),border-color var(--theme-transition),box-shadow var(--theme-transition)!important}body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif;background-color:var(--page-bg);margin:0;padding:2rem;display:flex;justify-content:center;color:var(--text-color)}.container{display:flex;gap:2rem;width:100%;max-width:1100px}.sidebar{flex:0 0 120px;display:flex;flex-direction:column;align-items:center;gap:1.5rem}.sidebar-item{background-color:var(--card-bg);border-radius:1rem;padding:1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;cursor:pointer;box-shadow:0 4px 6px rgba(0,0,0,.05);text-align:center;font-size:.8rem;width:100%;transition:box-shadow var(--animation-speed)}.sidebar-item.active{background:linear-gradient(135deg,#4ad295,#2ab67b);color:#fff;cursor:default}.sidebar-item:not(.active):hover{box-shadow:0 6px 12px rgba(0,0,0,.08)}.sidebar-item.active svg{color:#fff}.content{flex:1;background-color:var(--content-bg);border-radius:1rem;padding:2rem;box-shadow:0 4px 12px rgba(0,0,0,.08);position:relative;overflow:hidden;min-height:calc(100vh - 8rem)}.page{position:absolute;top:2rem;left:2rem;right:2rem;bottom:2rem;opacity:0;transition:opacity var(--animation-speed) ease-in-out;pointer-events:none;display:flex;flex-direction:column;min-height:calc(100vh - 12rem)}.page.active{opacity:1;position:relative;top:auto;left:auto;right:auto;bottom:auto;pointer-events:auto}h1,h2{margin:0 0 .5rem;font-weight:700;flex-shrink:0}h1{font-size:2rem}h2{font-size:1.5rem}.subtitle{margin:0 0 1.5rem;color:var(--secondary-text-color);flex-shrink:0}.update-info{background-color:var(--light-green-bg);border:1px solid var(--border-color);padding:.75rem 1rem;border-radius:.5rem;margin-bottom:1.5rem;font-size:.9rem;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}.update-info .refresh-btn{background-color:var(--primary-green);color:#fff;border:none;padding:.25rem .75rem;border-radius:.25rem;cursor:pointer;font-size:.85rem;font-family:'Nunito',sans-serif;transition:background-color var(--animation-speed)}.update-info .refresh-btn:hover{opacity:.9}.update-info .refresh-btn:disabled{background-color:#999;cursor:not-allowed}.rates-grid-wrapper{overflow-y:auto;flex-grow:1;padding-right:10px;margin-right:-10px;min-height:calc(100vh - 25rem)}.rates-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}.rate-row{display:flex;align-items:center;background-color:var(--light-green-bg);border-radius:.5rem;padding:.75rem;border:1px solid transparent;transition:transform 0.2s ease-in-out,box-shadow var(--animation-speed) ease,border-color .2s}.rate-row:focus-within{border-color:var(--primary-green)}.rate-row.sortable-ghost{background:#d4f0e2;opacity:.7}.rate-row.sortable-chosen{box-shadow:0 8px 20px rgba(0,0,0,.15);border:1px solid var(--border-color);transform:scale(1.02)}.drag-handle{cursor:grab;color:#b0c9bd;margin-right:.75rem;flex-shrink:0}.drag-handle:active{cursor:grabbing}.currency-code{font-weight:700;width:50px;flex-shrink:0;color:var(--secondary-text-color);margin-left:2px}.white-separator{color:#fff;margin:0 .1rem;font-size:.8rem}.currency-flag{width:18px;height:13px;background-size:cover;background-position:center;border-radius:2px;margin:0;display:inline-block;vertical-align:middle;flex-shrink:0;background-color:var(--flag-bg);border:1px solid var(--flag-border);overflow:hidden}.currency-flag.error{background-image:none!important;background-color:var(--flag-bg);position:relative;opacity:.6}.currency-flag.error::after{content:'🏳';font-size:10px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:var(--secondary-text-color)}
 
         /* 深色主题下旗帜优化 */
         [data-theme="dark"] .currency-flag{filter:brightness(1.1) contrast(0.95)}.separator{color:var(--separator-color);margin:0 .2rem}
 
         /* 主题切换按钮 */
-        .theme-switcher{position:fixed;top:2rem;right:2rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:.75rem;padding:.5rem;box-shadow:0 4px 12px rgba(0,0,0,.1);display:flex;align-items:center;gap:.5rem;z-index:1000}.theme-btn{background:none;border:none;padding:.5rem;border-radius:.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--secondary-text-color);transition:all .2s ease;width:32px;height:32px}.theme-btn:hover{background:var(--light-green-bg);color:var(--text-color)}.theme-btn.active{background:var(--primary-green);color:#fff}.theme-btn svg{width:16px;height:16px}.currency-value{flex-grow:1;border:none;background:transparent;font-size:1rem;font-family:'Menlo','Monaco','Consolas',monospace;padding:.25rem;outline:0;width:100%;cursor:pointer;color:var(--text-color)}.currency-name{background-color:var(--currency-name-bg);color:var(--currency-name-color);font-weight:500;padding:.25rem .75rem;border-radius:.25rem;font-size:.8rem;white-space:nowrap}.instructions{margin-top:2rem;padding-top:1.5rem;border-top:1px solid #eee;flex-shrink:0}.instructions p{font-size:.9rem;color:var(--secondary-text-color);line-height:1.6}.copy-notification{position:fixed;left:2rem;bottom:2rem;background-color:var(--primary-green);color:#fff;padding:.75rem 1.5rem;border-radius:.5rem;box-shadow:0 4px 10px rgba(0,0,0,.1);font-size:.9rem;z-index:1000;opacity:0;transform:translateX(-120%);transition:opacity var(--animation-speed) ease,transform var(--animation-speed) ease}.copy-notification.show{opacity:1;transform:translateX(0)}.json-container{display:flex;flex-grow:1;gap:.75rem;min-height:calc(67vh - 8rem)}.json-pane{flex:1;display:flex;flex-direction:column;background-color:var(--light-green-bg);border-radius:.5rem;overflow:hidden;min-height:calc(67vh - 8rem)}.json-pane textarea{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto;min-height:calc(67vh - 10rem)}.json-pane pre{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto}.json-pane pre{white-space:pre-wrap;word-break:break-all}.json-pane pre.error{color:#d9534f;font-weight:700}
+        .theme-switcher{position:fixed;top:2rem;right:2rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:.75rem;padding:.5rem;box-shadow:0 4px 12px rgba(0,0,0,.1);display:flex;align-items:center;gap:.5rem;z-index:1000}.theme-btn{background:none;border:none;padding:.5rem;border-radius:.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--secondary-text-color);transition:all .2s ease;width:32px;height:32px}.theme-btn:hover{background:var(--light-green-bg);color:var(--text-color)}.theme-btn.active{background:var(--primary-green);color:#fff}.theme-btn svg{width:16px;height:16px}.currency-value{flex-grow:1;border:none;background:transparent;font-size:1rem;font-family:'Menlo','Monaco','Consolas',monospace;padding:.25rem;outline:0;width:100%;cursor:pointer;color:var(--text-color)}.currency-name{background-color:var(--currency-name-bg);color:var(--currency-name-color);font-weight:500;padding:.25rem .75rem;border-radius:.25rem;font-size:.8rem;white-space:nowrap}.instructions{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border-color);flex-shrink:0}.instructions p{font-size:.9rem;color:var(--secondary-text-color);line-height:1.6}.copy-notification{position:fixed;left:2rem;bottom:2rem;background-color:var(--primary-green);color:#fff;padding:.75rem 1.5rem;border-radius:.5rem;box-shadow:0 4px 10px rgba(0,0,0,.1);font-size:.9rem;z-index:1000;opacity:0;transform:translateX(-120%);transition:opacity var(--animation-speed) ease,transform var(--animation-speed) ease}.copy-notification.show{opacity:1;transform:translateX(0)}.json-container{display:flex;flex-grow:1;gap:.75rem;min-height:calc(100vh - 28rem)}.json-pane{flex:1;display:flex;flex-direction:column;background-color:var(--light-green-bg);border-radius:.5rem;overflow:hidden;min-height:calc(100vh - 30rem)}.json-pane textarea{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto;min-height:calc(100vh - 32rem)}.json-pane pre{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto}.json-pane pre{white-space:pre-wrap;word-break:break-all}.json-pane pre.error{color:#d9534f;font-weight:700}
 
 /* JSON 树形显示样式 */
-.json-tree{overflow-y:auto;height:100%;min-height:calc(67vh - 10rem);padding:.75rem;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;line-height:1.6;color:var(--text-color)}.json-tree.error{color:#d9534f;font-weight:700}.json-node{margin:0}.json-toggle{cursor:pointer;display:inline-block;width:12px;height:12px;margin-right:4px;text-align:center;background:var(--light-green-bg);border:1px solid var(--border-color);border-radius:3px;font-size:10px;line-height:10px;user-select:none;transition:transform .2s ease}.json-toggle:hover{background:var(--primary-green);color:#fff}.json-toggle.collapsed{transform:rotate(-90deg)}.json-toggle.empty{opacity:.3;cursor:default}.json-toggle.empty:hover{background:var(--light-green-bg);color:var(--text-color)}.json-key{color:#0451a5;font-weight:500}.json-string{color:#0a8043}.json-number{color:#098658}.json-boolean{color:#e36209}.json-null{color:#a626a4}.json-bracket{font-weight:bold;cursor:pointer}.json-bracket.level-0{color:#e60000}.json-bracket.level-1{color:#f57c00}.json-bracket.level-2{color:#388e3c}.json-bracket.level-3{color:#1976d2}.json-bracket.level-4{color:#7b1fa2}.json-bracket.level-5{color:#c2185b}.json-bracket:hover{opacity:.7}.json-count{color:var(--secondary-text-color);font-size:.85em;margin-left:4px}.json-collapsed{display:none}.json-ellipsis{color:var(--secondary-text-color);font-style:italic;cursor:pointer}.json-ellipsis:hover{color:var(--primary-green)}
+.json-tree{overflow-y:auto;height:100%;min-height:calc(100vh - 32rem);padding:.75rem;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;line-height:1.6;color:var(--text-color)}.json-tree.error{color:#d9534f;font-weight:700}.json-node{margin:0}.json-toggle{cursor:pointer;display:inline-block;width:12px;height:12px;margin-right:4px;text-align:center;background:var(--light-green-bg);border:1px solid var(--border-color);border-radius:3px;font-size:10px;line-height:10px;user-select:none;transition:transform .2s ease}.json-toggle:hover{background:var(--primary-green);color:#fff}.json-toggle.collapsed{transform:rotate(-90deg)}.json-toggle.empty{opacity:.3;cursor:default}.json-toggle.empty:hover{background:var(--light-green-bg);color:var(--text-color)}.json-key{color:#0451a5;font-weight:500}.json-string{color:#0a8043}.json-number{color:#098658}.json-boolean{color:#e36209}.json-null{color:#a626a4}.json-bracket{font-weight:bold;cursor:pointer}.json-bracket.level-0{color:#e60000}.json-bracket.level-1{color:#f57c00}.json-bracket.level-2{color:#388e3c}.json-bracket.level-3{color:#1976d2}.json-bracket.level-4{color:#7b1fa2}.json-bracket.level-5{color:#c2185b}.json-bracket:hover{opacity:.7}.json-count{color:var(--secondary-text-color);font-size:.85em;margin-left:4px}.json-collapsed{display:none}.json-ellipsis{color:var(--secondary-text-color);font-style:italic;cursor:pointer}.json-ellipsis:hover{color:var(--primary-green)}
 
 /* 深色主题下的 JSON 样式优化 */
 [data-theme="dark"] .json-key{color:#9cdcfe}[data-theme="dark"] .json-string{color:#ce9178}[data-theme="dark"] .json-number{color:#b5cea8}[data-theme="dark"] .json-boolean{color:#569cd6}[data-theme="dark"] .json-null{color:#c586c0}[data-theme="dark"] .json-bracket.level-0{color:#ff6b6b}[data-theme="dark"] .json-bracket.level-1{color:#ffa726}[data-theme="dark"] .json-bracket.level-2{color:#66bb6a}[data-theme="dark"] .json-bracket.level-3{color:#42a5f5}[data-theme="dark"] .json-bracket.level-4{color:#ab47bc}[data-theme="dark"] .json-bracket.level-5{color:#ec407a}
 
 /* 今天吃什么转盘样式 */
-.food-container{display:flex;justify-content:center;align-items:center;flex-grow:1;padding:2rem}.wheel-container{position:relative;display:flex;flex-direction:column;align-items:center;gap:2rem}.wheel-pointer{position:absolute;top:-15px;left:50%;transform:translateX(-50%);font-size:2rem;color:var(--primary-green);z-index:10;text-shadow:0 2px 4px rgba(0,0,0,.3)}#wheel-canvas{border-radius:50%;box-shadow:0 8px 32px rgba(0,0,0,.15);transition:transform 4s cubic-bezier(.23,1,.32,1);border:4px solid var(--primary-green)}.spin-button{background:linear-gradient(135deg,var(--primary-green),#20c063);color:#fff;border:none;padding:1rem 2rem;border-radius:2rem;font-size:1.1rem;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(40,167,69,.3);transition:all .3s ease;font-family:'Nunito',sans-serif}.spin-button:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(40,167,69,.4)}.spin-button:active{transform:translateY(0)}.spin-button:disabled{background:#999;cursor:not-allowed;transform:none}
+.food-container{display:flex;justify-content:center;align-items:center;flex-grow:1;padding:2rem;min-height:calc(100vh - 20rem)}.wheel-container{position:relative;display:flex;flex-direction:column;align-items:center;gap:2rem}.wheel-pointer{position:absolute;top:-15px;left:50%;transform:translateX(-50%);font-size:2rem;color:var(--primary-green);z-index:10;text-shadow:0 2px 4px rgba(0,0,0,.3)}#wheel-canvas {
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(0,0,0,.15);
+    border: 4px solid var(--primary-green);
+    will-change: transform;
+    transform-origin: center center;
+    /* 移除CSS transition，使用JavaScript动画 */
+}
+
+/* 模式切换按钮 */
+.mode-toggle{position:absolute;top:1rem;right:1rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:.5rem;padding:.5rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.1);transition:all .2s ease;z-index:100}.mode-toggle:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.15)}.mode-toggle svg{width:20px;height:20px;color:var(--secondary-text-color);transition:color .2s}.mode-toggle:hover svg{color:var(--text-color)}
+
+/* 开箱模式样式 */
+.box-container{display:none;flex-direction:column;align-items:center;gap:2rem;width:100%}
+
+/* 盲盒状态 */
+.mystery-box{width:200px;height:200px;background:linear-gradient(135deg,#2c3e50,#34495e);border-radius:1rem;border:3px solid var(--primary-green);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;cursor:pointer;transition:all .3s ease;box-shadow:0 8px 32px rgba(0,0,0,.15)}.mystery-box:hover{animation:hoverShake .6s ease-in-out infinite;box-shadow:0 12px 40px rgba(0,0,0,.2)}.mystery-box::before{content:'🎁';font-size:4rem;margin-bottom:.5rem}.mystery-box .box-text{color:#fff;font-size:1.2rem;font-weight:600;text-align:center}.mystery-box.opening{animation:boxShake .5s ease-in-out}
+
+@keyframes boxShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+
+@keyframes hoverShake{0%,100%{transform:translateX(0) rotate(0deg)}25%{transform:translateX(-3px) rotate(-2deg)}75%{transform:translateX(3px) rotate(2deg)}}
+
+/* 开箱器状态 */
+.box-viewer{position:relative;width:100%;max-width:800px;height:200px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:1rem;overflow:hidden;border:2px solid #4CAF50;opacity:0;transform:scale(.9);transition:all .5s ease}.box-viewer.active{opacity:1;transform:scale(1)}.box-track {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    will-change: transform;
+    transform: translateX(0);
+    /* 移除CSS transition，使用JavaScript动画 */
+}.box-item{flex-shrink:0;width:120px;height:120px;margin:0 10px;border-radius:.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden}.box-item img{width:60px;height:60px;object-fit:cover;border-radius:.25rem}.box-item .item-name{font-size:.7rem;color:#fff;margin-top:.25rem;text-align:center;font-weight:500}.box-selector{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:140px;height:140px;border:3px solid #fff;border-radius:.5rem;box-shadow:0 0 20px rgba(255,255,255,.5);pointer-events:none;z-index:10}.rarity-common{background:linear-gradient(135deg,#5dade2,#85c1e9)}.rarity-uncommon{background:linear-gradient(135deg,#bb8fce,#d2b4de)}.rarity-rare{background:linear-gradient(135deg,#f1948a,#fadbd8)}.rarity-epic{background:linear-gradient(135deg,#f8c471,#fdeaa7)}.rarity-legendary{background:linear-gradient(135deg,#f39c12,#f7dc6f);position:relative}.rarity-legendary::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(45deg,rgba(255,215,0,.3) 25%,transparent 25%,transparent 75%,rgba(255,215,0,.3) 75%),linear-gradient(45deg,rgba(255,215,0,.3) 25%,transparent 25%,transparent 75%,rgba(255,215,0,.3) 75%);background-size:10px 10px;background-position:0 0,5px 5px;animation:shine 2s infinite linear}
+
+@keyframes shine{0%{background-position:0 0,5px 5px}100%{background-position:20px 20px,25px 25px}}
+
+.spin-button{background:linear-gradient(135deg,var(--primary-green),#20c063);color:#fff;border:none;padding:1rem 2rem;border-radius:2rem;font-size:1.1rem;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(40,167,69,.3);transition:all .3s ease;font-family:'Nunito',sans-serif}.spin-button:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(40,167,69,.4)}.spin-button:active{transform:translateY(0)}.spin-button:disabled{background:#999;cursor:not-allowed;transform:none}
 
 /* 结果弹窗样式 */
 .modal{display:none;position:fixed;z-index:2000;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,.6);backdrop-filter:blur(5px)}.modal.show{display:flex;align-items:center;justify-content:center}.modal-content{background:var(--content-bg);padding:2rem;border-radius:1rem;text-align:center;position:relative;max-width:400px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.3);animation:modalShow .3s ease-out}.close-btn{position:absolute;top:1rem;right:1.5rem;color:var(--secondary-text-color);font-size:2rem;font-weight:bold;cursor:pointer;line-height:1;transition:color .2s}.close-btn:hover{color:var(--text-color)}.result-content img{width:150px;height:150px;object-fit:cover;border-radius:1rem;margin-bottom:1rem;box-shadow:0 4px 12px rgba(0,0,0,.2)}.result-content h2{margin:0 0 .5rem;color:var(--text-color);font-size:1.5rem}.result-content p{margin:0;color:var(--secondary-text-color);font-size:1rem}
@@ -108,15 +142,45 @@
                         <div id="json-output" class="json-tree"></div>
                     </div>
                 </div>
+                <div class="instructions">
+                    <h2>JSON 工具说明</h2>
+                    <p><strong>格式化功能:</strong> 实时解析和格式化 JSON 数据，支持语法高亮显示。</p>
+                    <p><strong>操作提示:</strong> 点击 ▼ 按钮可折叠/展开对象和数组。支持多层嵌套结构，便于查看复杂数据。</p>
+                </div>
             </div>
             <div id="page-food" class="page">
                 <h1>今天吃什么</h1>
                 <p class="subtitle">转盘决定你的下一餐，解决选择困难症！</p>
+
+                <!-- 模式切换按钮 -->
+                <div class="mode-toggle" id="mode-toggle" title="切换模式">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+                    </svg>
+                </div>
+
                 <div class="food-container">
-                    <div class="wheel-container">
+                    <!-- 转盘模式 -->
+                    <div class="wheel-container" id="wheel-mode">
                         <div class="wheel-pointer">▼</div>
                         <canvas id="wheel-canvas" width="400" height="400"></canvas>
                         <button id="spin-button" class="spin-button">开始转盘</button>
+                    </div>
+
+                    <!-- 开箱模式 -->
+                    <div class="box-container" id="box-mode">
+                        <!-- 盲盒状态 -->
+                        <div class="mystery-box" id="mystery-box">
+                            <div class="box-text">神秘宝箱<br>点击开启</div>
+                        </div>
+
+                        <!-- 开箱器状态 -->
+                        <div class="box-viewer" id="box-viewer">
+                            <div class="box-selector"></div>
+                            <div class="box-track" id="box-track"></div>
+                        </div>
+
+                        <button id="box-button" class="spin-button" style="display: none;">开启宝箱</button>
                     </div>
                 </div>
             </div>
@@ -198,51 +262,232 @@
 
         let exchangeRates = {}, baseCurrencyForCalc = BASE_CURRENCY, baseAmountForCalc = DEFAULT_AMOUNT, notificationTimeout;
 
-        // 食物数据 - 使用易获取的食物图片占位符
+        // 食物数据 - 带稀有度分级，使用高质量图片
         const foodData = [
-            { name: '麻辣烫', image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=200&h=200&fit=crop' },
-            { name: '兰州拉面', image: 'https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=200&h=200&fit=crop' },
-            { name: '黄焖鸡米饭', image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=200&h=200&fit=crop' },
-            { name: '沙县小吃', image: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=200&h=200&fit=crop' },
-            { name: '重庆小面', image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=200&h=200&fit=crop' },
-            { name: '煲仔饭', image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=200&h=200&fit=crop' },
-            { name: '川菜', image: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=200&h=200&fit=crop' },
-            { name: '粤菜', image: 'https://images.unsplash.com/photo-1563379091339-03246963d96c?w=200&h=200&fit=crop' },
-            { name: '湘菜', image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=200&h=200&fit=crop' },
-            { name: '东北菜', image: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=200&h=200&fit=crop' },
-            { name: '日式料理', image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=200&h=200&fit=crop' },
-            { name: '韩式料理', image: 'https://images.unsplash.com/photo-1590301157890-4810ed352733?w=200&h=200&fit=crop' },
-            { name: '意大利面', image: 'https://images.unsplash.com/photo-1621996346565-e3dbc92d2e99?w=200&h=200&fit=crop' },
-            { name: '汉堡', image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=200&h=200&fit=crop' },
-            { name: '披萨', image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop' },
-            { name: '炸鸡', image: 'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=200&h=200&fit=crop' },
-            { name: '寿司', image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=200&h=200&fit=crop' },
-            { name: '烤肉', image: 'https://images.unsplash.com/photo-1558030006-450675393462?w=200&h=200&fit=crop' },
-            { name: '火锅', image: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=200&h=200&fit=crop' },
-            { name: '小龙虾', image: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=200&h=200&fit=crop' },
-            { name: '烧烤', image: 'https://images.unsplash.com/photo-1558030006-450675393462?w=200&h=200&fit=crop' },
-            { name: '粥类', image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=200&h=200&fit=crop' },
-            { name: '包子', image: 'https://images.unsplash.com/photo-1563379091339-03246963d96c?w=200&h=200&fit=crop' },
-            { name: '饺子', image: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=200&h=200&fit=crop' },
-            { name: '面条', image: 'https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=200&h=200&fit=crop' },
-            { name: '馄饨', image: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=200&h=200&fit=crop' },
-            { name: '米线', image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=200&h=200&fit=crop' },
-            { name: '盖浇饭', image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=200&h=200&fit=crop' },
-            { name: '炒饭', image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=200&h=200&fit=crop' },
-            { name: '蛋炒饭', image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=200&h=200&fit=crop' },
-            { name: '咖喱饭', image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=200&h=200&fit=crop' },
-            { name: '便当', image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=200&h=200&fit=crop' },
-            { name: '轻食沙拉', image: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=200&h=200&fit=crop' },
-            { name: '三明治', image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=200&h=200&fit=crop' },
-            { name: '奶茶', image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=200&h=200&fit=crop' },
-            { name: '甜品', image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=200&h=200&fit=crop' }
+            // 蓝色 - 普通 (50%)
+            { name: '包子', image: 'https://images.unsplash.com/photo-1548373779-e0ea9b9e65b8?w=200&h=200&fit=crop&crop=center', rarity: 'common' },
+            { name: '饺子', image: 'https://images.unsplash.com/photo-1563379091339-03246963d96c?w=200&h=200&fit=crop&crop=center', rarity: 'common' },
+            { name: '面条', image: 'https://images.unsplash.com/photo-1555126634-323283e090fa?w=200&h=200&fit=crop&crop=center', rarity: 'common' },
+            { name: '馄饨', image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=200&h=200&fit=crop&crop=center', rarity: 'common' },
+            { name: '粥类', image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=200&h=200&fit=crop&crop=center', rarity: 'common' },
+            { name: '炒饭', image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=200&h=200&fit=crop&crop=center', rarity: 'common' },
+            { name: '蛋炒饭', image: 'https://images.unsplash.com/photo-1574484284002-952d92456975?w=200&h=200&fit=crop&crop=center', rarity: 'common' },
+            { name: '三明治', image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=200&h=200&fit=crop&crop=center', rarity: 'common' },
+            { name: '轻食沙拉', image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=200&h=200&fit=crop&crop=center', rarity: 'common' },
+            { name: '奶茶', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=200&h=200&fit=crop&crop=center', rarity: 'common' },
+            { name: '麻辣烫', image: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=200&h=200&fit=crop&crop=center', rarity: 'common' },
+            { name: '沙县小吃', image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=200&h=200&fit=crop&crop=center', rarity: 'common' },
+            { name: '盖浇饭', image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=200&h=200&fit=crop&crop=center', rarity: 'common' },
+            { name: '咖喱饭', image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=200&h=200&fit=crop&crop=center', rarity: 'common' },
+            { name: '便当', image: 'https://images.unsplash.com/photo-1575444758702-4a6b9222336e?w=200&h=200&fit=crop&crop=center', rarity: 'common' },
+
+            // 紫色 - 少见 (30%)
+            { name: '兰州拉面', image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=200&h=200&fit=crop&crop=center', rarity: 'uncommon' },
+            { name: '黄焖鸡米饭', image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=200&h=200&fit=crop&crop=center', rarity: 'uncommon' },
+            { name: '重庆小面', image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=200&h=200&fit=crop&crop=center', rarity: 'uncommon' },
+            { name: '煲仔饭', image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=200&h=200&fit=crop&crop=center', rarity: 'uncommon' },
+            { name: '米线', image: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=200&h=200&fit=crop&crop=center', rarity: 'uncommon' },
+            { name: '炸鸡', image: 'https://images.unsplash.com/photo-1562967916-eb82221dfb92?w=200&h=200&fit=crop&crop=center', rarity: 'uncommon' },
+            { name: '汉堡', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200&h=200&fit=crop&crop=center', rarity: 'uncommon' },
+            { name: '披萨', image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop&crop=center', rarity: 'uncommon' },
+            { name: '甜品', image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=200&h=200&fit=crop&crop=center', rarity: 'uncommon' },
+
+            // 粉色 - 稀有 (15%)
+            { name: '川菜', image: 'https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=200&h=200&fit=crop&crop=center', rarity: 'rare' },
+            { name: '粤菜', image: 'https://images.unsplash.com/photo-1563379091339-03246963d96c?w=200&h=200&fit=crop&crop=center', rarity: 'rare' },
+            { name: '湘菜', image: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=200&h=200&fit=crop&crop=center', rarity: 'rare' },
+            { name: '东北菜', image: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=200&h=200&fit=crop&crop=center', rarity: 'rare' },
+            { name: '意大利面', image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop&crop=center', rarity: 'rare' },
+
+            // 橙色 - 史诗 (4%)
+            { name: '日式料理', image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=200&h=200&fit=crop&crop=center', rarity: 'epic' },
+            { name: '韩式料理', image: 'https://images.unsplash.com/photo-1590301157890-4810ed352733?w=200&h=200&fit=crop&crop=center', rarity: 'epic' },
+            { name: '寿司', image: 'https://images.unsplash.com/photo-1553621042-f6e147245754?w=200&h=200&fit=crop&crop=center', rarity: 'epic' },
+            { name: '烤肉', image: 'https://images.unsplash.com/photo-1558030006-450675393462?w=200&h=200&fit=crop&crop=center', rarity: 'epic' },
+            { name: '火锅', image: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=200&h=200&fit=crop&crop=center', rarity: 'epic' },
+            { name: '小龙虾', image: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=200&h=200&fit=crop&crop=center', rarity: 'epic' },
+            { name: '烧烤', image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=200&h=200&fit=crop&crop=center', rarity: 'epic' },
+
+            // 金色 - 传奇 (1%)
+            { name: '吃大份去吧! 💩', image: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRkZEODAwIiByeD0iMjAiLz4KPHN2ZyB4PSI1MCIgeT0iNTAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IiM4QjQ1MTMiPgo8cGF0aCBkPSJNMTIgMkwyLjUgMTBsMy43IDQuM0w4IDIwaDh2LTVsMS44LTUuN0wyMS41IDEwTDEyIDJ6bTAgMy4yTDE4IDEwSDZ6bTAgMTEuOGgtM2wtMS0yaDEwbC0xIDJ6Ii8+Cjwvc3ZnPgo8L3N2Zz4K', rarity: 'legendary' }
         ];
 
+        let currentMode = 'wheel'; // wheel 或 box
         let currentRotation = 0;
         let isSpinning = false;
 
         function formatNumber(num) { if (num > 1000) return num.toFixed(2); if (num > 1) return num.toFixed(4); return num.toFixed(6); }
         function showNotification() { if (notificationTimeout) clearTimeout(notificationTimeout); notificationEl.classList.add('show'); notificationTimeout = setTimeout(() => notificationEl.classList.remove('show'), 2000); }
+
+        // 权重抽取函数
+        function getRandomFood() {
+            const rand = Math.random() * 100;
+
+            // 1% 概率金色传奇
+            if (rand <= 1) {
+                return foodData.find(food => food.rarity === 'legendary');
+            }
+            // 4% 概率橙色史诗
+            else if (rand <= 5) {
+                const epicFoods = foodData.filter(food => food.rarity === 'epic');
+                return epicFoods[Math.floor(Math.random() * epicFoods.length)];
+            }
+            // 15% 概率粉色稀有
+            else if (rand <= 20) {
+                const rareFoods = foodData.filter(food => food.rarity === 'rare');
+                return rareFoods[Math.floor(Math.random() * rareFoods.length)];
+            }
+            // 30% 概率紫色少见
+            else if (rand <= 50) {
+                const uncommonFoods = foodData.filter(food => food.rarity === 'uncommon');
+                return uncommonFoods[Math.floor(Math.random() * uncommonFoods.length)];
+            }
+            // 50% 概率蓝色普通
+            else {
+                const commonFoods = foodData.filter(food => food.rarity === 'common');
+                return commonFoods[Math.floor(Math.random() * commonFoods.length)];
+            }
+        }
+
+        // 模式切换函数
+        function toggleMode() {
+            const wheelMode = document.getElementById('wheel-mode');
+            const boxMode = document.getElementById('box-mode');
+
+            if (currentMode === 'wheel') {
+                currentMode = 'box';
+                wheelMode.style.display = 'none';
+                boxMode.style.display = 'flex';
+                setupBoxMode();
+            } else {
+                currentMode = 'wheel';
+                wheelMode.style.display = 'flex';
+                boxMode.style.display = 'none';
+                drawWheel();
+            }
+        }
+
+        // 设置开箱模式 - 重置到盲盒状态
+        function setupBoxMode() {
+            const mysteryBox = document.getElementById('mystery-box');
+            const boxViewer = document.getElementById('box-viewer');
+            const boxButton = document.getElementById('box-button');
+
+            // 显示盲盒，隐藏开箱器
+            mysteryBox.style.display = 'flex';
+            boxViewer.classList.remove('active');
+            boxButton.style.display = 'none';
+
+            // 重置开箱器状态
+            const boxTrack = document.getElementById('box-track');
+            boxTrack.innerHTML = '';
+            boxTrack.style.transform = 'translateX(0)';
+            boxTrack.style.transition = 'none';
+        }
+
+        // 生成开箱轨道
+        function generateBoxTrack(finalFood) {
+            const boxTrack = document.getElementById('box-track');
+            boxTrack.innerHTML = '';
+
+            // 生成足够的随机食物项 (用于滑动效果)
+            const items = [];
+            for (let i = 0; i < 50; i++) {
+                if (i === 25) {
+                    items.push(finalFood); // 中间位置放置获胜食物
+                } else {
+                    items.push(getRandomFood());
+                }
+            }
+
+            items.forEach(food => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = `box-item rarity-${food.rarity}`;
+                itemDiv.innerHTML = `
+                    <img src="${food.image}" alt="${food.name}">
+                    <div class="item-name">${food.name}</div>
+                `;
+                boxTrack.appendChild(itemDiv);
+            });
+        }
+
+        // 开箱动画 - 从盲盒开始
+        function startBoxSpin() {
+            if (isSpinning) return;
+
+            const mysteryBox = document.getElementById('mystery-box');
+            const boxViewer = document.getElementById('box-viewer');
+            const boxTrack = document.getElementById('box-track');
+
+            isSpinning = true;
+
+
+            // 第一阶段：盲盒震动动画
+            mysteryBox.classList.add('opening');
+
+            setTimeout(() => {
+                // 第二阶段：过渡到开箱器
+                mysteryBox.style.display = 'none';
+                boxViewer.style.display = 'block';
+
+                // 预抽取最终结果
+                const finalFood = getRandomFood();
+
+                generateBoxTrack(finalFood);
+
+                // 激活开箱器
+                setTimeout(() => {
+                    boxViewer.classList.add('active');
+
+                    // 第三阶段：开始滑动动画
+                    setTimeout(() => {
+
+                        // 计算滑动距离
+                        const itemWidth = 140; // 120px width + 20px margin
+                        const containerWidth = boxViewer.clientWidth;
+                        const centerOffset = containerWidth / 2;
+                        const targetPosition = -(25 * itemWidth) + centerOffset - (itemWidth / 2);
+
+                        // 强制移除任何现有动画
+                        boxTrack.style.transition = '';
+                        boxTrack.style.animation = '';
+                        boxTrack.style.transform = 'translateX(0px)';
+
+                        // 使用JavaScript动画代替CSS transition
+                        let startTime = null;
+                        const duration = 3000; // 3秒
+                        const startPosition = 0;
+
+                        function animateSlide(timestamp) {
+                            if (!startTime) startTime = timestamp;
+                            const progress = Math.min((timestamp - startTime) / duration, 1);
+
+                            // 使用easing函数
+                            const easeProgress = 1 - Math.pow(1 - progress, 3);
+                            const currentPosition = startPosition + (targetPosition * easeProgress);
+
+                            boxTrack.style.transform = `translateX(${currentPosition}px)`;
+
+                            if (progress < 1) {
+                                requestAnimationFrame(animateSlide);
+                            } else {
+                                // 动画完成
+                                showResult(finalFood);
+                                isSpinning = false;
+                                mysteryBox.classList.remove('opening');
+
+                                // 2秒后重置到盲盒状态
+                                setTimeout(() => {
+                                    setupBoxMode();
+                                }, 2000);
+                            }
+                        }
+
+                        requestAnimationFrame(animateSlide);
+                    }, 300);
+                }, 100);
+            }, 500);
+        }
         
         function renderCurrencyRows() {
             ratesContainer.innerHTML = ''; 
@@ -402,7 +647,10 @@
                 '#F8C471', '#82E0AA', '#F1948A', '#85C1E9', '#F8C471', '#82E0AA'
             ];
 
-            // 绘制扇形
+            let imagesLoaded = 0;
+            const totalImages = totalFoods;
+
+            // 绘制扇形和加载图片
             for (let i = 0; i < totalFoods; i++) {
                 const startAngle = i * anglePerSection - Math.PI / 2;
                 const endAngle = (i + 1) * anglePerSection - Math.PI / 2;
@@ -418,31 +666,85 @@
                 ctx.lineWidth = 2;
                 ctx.stroke();
 
-                // 绘制文字
-                const textAngle = startAngle + anglePerSection / 2;
-                const textRadius = radius * 0.75;
-                const textX = centerX + Math.cos(textAngle) * textRadius;
-                const textY = centerY + Math.sin(textAngle) * textRadius;
+                // 绘制食物图片 - 带备用方案
+                const img = new Image();
+                img.crossOrigin = 'anonymous';
 
-                ctx.save();
-                ctx.translate(textX, textY);
-                ctx.rotate(textAngle + Math.PI / 2);
-                ctx.fillStyle = '#333';
-                ctx.font = 'bold 12px "Nunito", sans-serif';
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'middle';
-                ctx.fillText(foodData[i].name, 0, 0);
-                ctx.restore();
+                const drawImageContent = (useImage = true) => {
+                    const imageAngle = startAngle + anglePerSection / 2;
+                    const imageRadius = radius * 0.7;
+                    const imageX = centerX + Math.cos(imageAngle) * imageRadius;
+                    const imageY = centerY + Math.sin(imageAngle) * imageRadius;
+                    const imageSize = 30;
+
+                    ctx.save();
+                    ctx.translate(imageX, imageY);
+                    ctx.rotate(imageAngle + Math.PI / 2);
+
+                    if (useImage) {
+                        // 绘制圆形图片
+                        ctx.beginPath();
+                        ctx.arc(0, 0, imageSize / 2, 0, 2 * Math.PI);
+                        ctx.clip();
+                        ctx.drawImage(img, -imageSize / 2, -imageSize / 2, imageSize, imageSize);
+                        ctx.restore();
+
+                        // 绘制白色边框
+                        ctx.beginPath();
+                        ctx.arc(imageX, imageY, imageSize / 2, 0, 2 * Math.PI);
+                        ctx.strokeStyle = '#fff';
+                        ctx.lineWidth = 2;
+                        ctx.stroke();
+                    } else {
+                        // 备用：绘制食物emoji
+                        const foodEmojis = {
+                            '包子': '🥟', '饺子': '🥟', '面条': '🍜', '馄饨': '🥟', '粥类': '🍲',
+                            '炒饭': '🍛', '蛋炒饭': '🍛', '三明治': '🥪', '轻食沙拉': '🥗', '奶茶': '🧋',
+                            '麻辣烫': '🍲', '沙县小吃': '🍜', '盖浇饭': '🍛', '咖喱饭': '🍛', '便当': '🍱',
+                            '兰州拉面': '🍜', '黄焖鸡米饭': '🍛', '重庆小面': '🍜', '煲仔饭': '🍛', '米线': '🍜',
+                            '炸鸡': '🍗', '汉堡': '🍔', '披萨': '🍕', '甜品': '🍰',
+                            '川菜': '🌶️', '粤菜': '🦐', '湘菜': '🌶️', '东北菜': '🥘', '意大利面': '🍝',
+                            '日式料理': '🍣', '韩式料理': '🍖', '寿司': '🍣', '烤肉': '🍖', '火锅': '🍲',
+                            '小龙虾': '🦞', '烧烤': '🍖'
+                        };
+
+                        ctx.fillStyle = '#333';
+                        ctx.font = 'bold 20px "Nunito", sans-serif';
+                        ctx.textAlign = 'center';
+                        ctx.textBaseline = 'middle';
+                        ctx.fillText(foodEmojis[foodData[i].name] || '🍽️', 0, 0);
+                        ctx.restore();
+                    }
+                };
+
+                img.onload = () => {
+                    imagesLoaded++;
+                    drawImageContent(true);
+                };
+
+                img.onerror = () => {
+                    imagesLoaded++;
+                    drawImageContent(false);
+                };
+
+                img.src = foodData[i].image;
             }
 
             // 绘制中心圆
             ctx.beginPath();
-            ctx.arc(centerX, centerY, 20, 0, 2 * Math.PI);
+            ctx.arc(centerX, centerY, 30, 0, 2 * Math.PI);
             ctx.fillStyle = '#fff';
             ctx.fill();
             ctx.strokeStyle = '#333';
-            ctx.lineWidth = 2;
+            ctx.lineWidth = 3;
             ctx.stroke();
+
+            // 绘制中心文字
+            ctx.fillStyle = '#333';
+            ctx.font = 'bold 12px "Nunito", sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('🍽️', centerX, centerY);
         }
 
         // 转盘旋转函数
@@ -453,26 +755,51 @@
             spinButton.disabled = true;
             spinButton.textContent = '转盘中...';
 
-            // 随机选择一个食物
-            const randomIndex = Math.floor(Math.random() * foodData.length);
+            // 使用权重抽取选择食物
+            const selectedFood = getRandomFood();
+            const randomIndex = foodData.findIndex(food => food.name === selectedFood.name);
+
             const anglePerSection = 360 / foodData.length;
             const targetAngle = 360 - (randomIndex * anglePerSection + anglePerSection / 2);
 
-            // 添加多圈旋转 + 随机偏移
+            // 添加多圈旋转
             const extraRotations = 5 + Math.random() * 3; // 5-8圈
-            const finalAngle = currentRotation + extraRotations * 360 + targetAngle;
+            const totalRotation = extraRotations * 360 + targetAngle;
+            const finalAngle = currentRotation + totalRotation;
 
-            // 应用CSS动画
-            wheelCanvas.style.transform = `rotate(${finalAngle}deg)`;
-            currentRotation = finalAngle % 360;
 
-            // 动画结束后显示结果
-            setTimeout(() => {
-                showResult(foodData[randomIndex]);
-                isSpinning = false;
-                spinButton.disabled = false;
-                spinButton.textContent = '开始转盘';
-            }, 4000);
+            // 强制移除任何现有动画
+            wheelCanvas.style.transition = '';
+            wheelCanvas.style.animation = '';
+
+            // 使用更可靠的动画方法
+            let startTime = null;
+            const duration = 4000; // 4秒
+            const startAngle = currentRotation;
+
+            function animate(timestamp) {
+                if (!startTime) startTime = timestamp;
+                const progress = Math.min((timestamp - startTime) / duration, 1);
+
+                // 使用easing函数
+                const easeProgress = 1 - Math.pow(1 - progress, 3);
+                const currentAngle = startAngle + (totalRotation * easeProgress);
+
+                wheelCanvas.style.transform = `rotate(${currentAngle}deg)`;
+
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                } else {
+                    // 动画完成
+                    currentRotation = finalAngle % 360;
+                    showResult(selectedFood);
+                    isSpinning = false;
+                    spinButton.disabled = false;
+                    spinButton.textContent = '开始转盘';
+                }
+            }
+
+            requestAnimationFrame(animate);
         }
 
         // 显示结果弹窗
@@ -480,6 +807,60 @@
             resultImage.src = food.image;
             resultImage.alt = food.name;
             resultName.textContent = food.name;
+
+            // 添加稀有度信息
+            const resultContent = document.querySelector('.result-content');
+            let rarityText = '';
+            let rarityColor = '';
+
+            switch (food.rarity) {
+                case 'common':
+                    rarityText = '普通';
+                    rarityColor = '#5dade2';
+                    break;
+                case 'uncommon':
+                    rarityText = '少见';
+                    rarityColor = '#bb8fce';
+                    break;
+                case 'rare':
+                    rarityText = '稀有';
+                    rarityColor = '#f1948a';
+                    break;
+                case 'epic':
+                    rarityText = '史诗';
+                    rarityColor = '#f8c471';
+                    break;
+                case 'legendary':
+                    rarityText = '传奇';
+                    rarityColor = '#f39c12';
+                    break;
+            }
+
+            // 移除之前的稀有度标签
+            const existingRarity = resultContent.querySelector('.rarity-badge');
+            if (existingRarity) {
+                existingRarity.remove();
+            }
+
+            // 添加新的稀有度标签
+            const rarityBadge = document.createElement('div');
+            rarityBadge.className = 'rarity-badge';
+            rarityBadge.style.cssText = `
+                background: ${rarityColor};
+                color: #fff;
+                padding: 0.25rem 0.75rem;
+                border-radius: 1rem;
+                font-size: 0.8rem;
+                font-weight: 600;
+                margin: 0.5rem 0;
+                display: inline-block;
+            `;
+            rarityBadge.textContent = rarityText;
+
+            // 在标题后插入稀有度标签
+            const nameElement = resultContent.querySelector('h2');
+            nameElement.parentNode.insertBefore(rarityBadge, nameElement.nextSibling);
+
             resultModal.classList.add('show');
         }
 
@@ -784,6 +1165,8 @@
 
             // 转盘相关事件监听器
             spinButton.addEventListener('click', spinWheel);
+            document.getElementById('mystery-box').addEventListener('click', startBoxSpin);
+            document.getElementById('mode-toggle').addEventListener('click', toggleMode);
             closeBtn.addEventListener('click', closeModal);
             resultModal.addEventListener('click', (e) => {
                 if (e.target === resultModal) closeModal();
