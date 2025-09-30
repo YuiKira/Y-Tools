@@ -21,13 +21,24 @@
         [data-theme="dark"] .currency-flag{filter:brightness(1.1) contrast(0.95)}.separator{color:var(--separator-color);margin:0 .2rem}
 
         /* 主题切换按钮 */
-        .theme-switcher{position:fixed;top:2rem;right:2rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:.75rem;padding:.5rem;box-shadow:0 4px 12px rgba(0,0,0,.1);display:flex;align-items:center;gap:.5rem;z-index:1000}.theme-btn{background:none;border:none;padding:.5rem;border-radius:.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--secondary-text-color);transition:all .2s ease;width:32px;height:32px}.theme-btn:hover{background:var(--light-green-bg);color:var(--text-color)}.theme-btn.active{background:var(--primary-green);color:#fff}.theme-btn svg{width:16px;height:16px}.currency-value{flex-grow:1;border:none;background:transparent;font-size:1rem;font-family:'Menlo','Monaco','Consolas',monospace;padding:.25rem;outline:0;width:100%;cursor:pointer;color:var(--text-color)}.currency-name{background-color:var(--currency-name-bg);color:var(--currency-name-color);font-weight:500;padding:.25rem .75rem;border-radius:.25rem;font-size:.8rem;white-space:nowrap}.instructions{margin-top:2rem;padding-top:1.5rem;border-top:1px solid #eee;flex-shrink:0}.instructions p{font-size:.9rem;color:var(--secondary-text-color);line-height:1.6}.copy-notification{position:fixed;left:2rem;bottom:2rem;background-color:var(--primary-green);color:#fff;padding:.75rem 1.5rem;border-radius:.5rem;box-shadow:0 4px 10px rgba(0,0,0,.1);font-size:.9rem;z-index:1000;opacity:0;transform:translateX(-120%);transition:opacity var(--animation-speed) ease,transform var(--animation-speed) ease}.copy-notification.show{opacity:1;transform:translateX(0)}.json-container{display:flex;flex-grow:1;gap:.75rem;min-height:0}.json-pane{flex:1;display:flex;flex-direction:column;background-color:var(--light-green-bg);border-radius:.5rem;overflow:hidden}.json-pane textarea,.json-pane pre{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto}.json-pane pre{white-space:pre-wrap;word-break:break-all}.json-pane pre.error{color:#d9534f;font-weight:700}
+        .theme-switcher{position:fixed;top:2rem;right:2rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:.75rem;padding:.5rem;box-shadow:0 4px 12px rgba(0,0,0,.1);display:flex;align-items:center;gap:.5rem;z-index:1000}.theme-btn{background:none;border:none;padding:.5rem;border-radius:.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--secondary-text-color);transition:all .2s ease;width:32px;height:32px}.theme-btn:hover{background:var(--light-green-bg);color:var(--text-color)}.theme-btn.active{background:var(--primary-green);color:#fff}.theme-btn svg{width:16px;height:16px}.currency-value{flex-grow:1;border:none;background:transparent;font-size:1rem;font-family:'Menlo','Monaco','Consolas',monospace;padding:.25rem;outline:0;width:100%;cursor:pointer;color:var(--text-color)}.currency-name{background-color:var(--currency-name-bg);color:var(--currency-name-color);font-weight:500;padding:.25rem .75rem;border-radius:.25rem;font-size:.8rem;white-space:nowrap}.instructions{margin-top:2rem;padding-top:1.5rem;border-top:1px solid #eee;flex-shrink:0}.instructions p{font-size:.9rem;color:var(--secondary-text-color);line-height:1.6}.copy-notification{position:fixed;left:2rem;bottom:2rem;background-color:var(--primary-green);color:#fff;padding:.75rem 1.5rem;border-radius:.5rem;box-shadow:0 4px 10px rgba(0,0,0,.1);font-size:.9rem;z-index:1000;opacity:0;transform:translateX(-120%);transition:opacity var(--animation-speed) ease,transform var(--animation-speed) ease}.copy-notification.show{opacity:1;transform:translateX(0)}.json-container{display:flex;flex-grow:1;gap:.75rem;min-height:calc(67vh - 8rem)}.json-pane{flex:1;display:flex;flex-direction:column;background-color:var(--light-green-bg);border-radius:.5rem;overflow:hidden;min-height:calc(67vh - 8rem)}.json-pane textarea{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto;min-height:calc(67vh - 10rem)}.json-pane pre{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto}.json-pane pre{white-space:pre-wrap;word-break:break-all}.json-pane pre.error{color:#d9534f;font-weight:700}
 
 /* JSON 树形显示样式 */
-.json-tree{overflow-y:auto;height:100%;padding:.75rem;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;line-height:1.6;color:var(--text-color)}.json-tree.error{color:#d9534f;font-weight:700}.json-node{margin:0}.json-toggle{cursor:pointer;display:inline-block;width:12px;height:12px;margin-right:4px;text-align:center;background:var(--light-green-bg);border:1px solid var(--border-color);border-radius:3px;font-size:10px;line-height:10px;user-select:none;transition:transform .2s ease}.json-toggle:hover{background:var(--primary-green);color:#fff}.json-toggle.collapsed{transform:rotate(-90deg)}.json-toggle.empty{opacity:.3;cursor:default}.json-toggle.empty:hover{background:var(--light-green-bg);color:var(--text-color)}.json-key{color:#0451a5;font-weight:500}.json-string{color:#0a8043}.json-number{color:#098658}.json-boolean{color:#e36209}.json-null{color:#a626a4}.json-bracket{font-weight:bold;cursor:pointer}.json-bracket.level-0{color:#e60000}.json-bracket.level-1{color:#f57c00}.json-bracket.level-2{color:#388e3c}.json-bracket.level-3{color:#1976d2}.json-bracket.level-4{color:#7b1fa2}.json-bracket.level-5{color:#c2185b}.json-bracket:hover{opacity:.7}.json-count{color:var(--secondary-text-color);font-size:.85em;margin-left:4px}.json-collapsed{display:none}.json-ellipsis{color:var(--secondary-text-color);font-style:italic;cursor:pointer}.json-ellipsis:hover{color:var(--primary-green)}
+.json-tree{overflow-y:auto;height:100%;min-height:calc(67vh - 10rem);padding:.75rem;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;line-height:1.6;color:var(--text-color)}.json-tree.error{color:#d9534f;font-weight:700}.json-node{margin:0}.json-toggle{cursor:pointer;display:inline-block;width:12px;height:12px;margin-right:4px;text-align:center;background:var(--light-green-bg);border:1px solid var(--border-color);border-radius:3px;font-size:10px;line-height:10px;user-select:none;transition:transform .2s ease}.json-toggle:hover{background:var(--primary-green);color:#fff}.json-toggle.collapsed{transform:rotate(-90deg)}.json-toggle.empty{opacity:.3;cursor:default}.json-toggle.empty:hover{background:var(--light-green-bg);color:var(--text-color)}.json-key{color:#0451a5;font-weight:500}.json-string{color:#0a8043}.json-number{color:#098658}.json-boolean{color:#e36209}.json-null{color:#a626a4}.json-bracket{font-weight:bold;cursor:pointer}.json-bracket.level-0{color:#e60000}.json-bracket.level-1{color:#f57c00}.json-bracket.level-2{color:#388e3c}.json-bracket.level-3{color:#1976d2}.json-bracket.level-4{color:#7b1fa2}.json-bracket.level-5{color:#c2185b}.json-bracket:hover{opacity:.7}.json-count{color:var(--secondary-text-color);font-size:.85em;margin-left:4px}.json-collapsed{display:none}.json-ellipsis{color:var(--secondary-text-color);font-style:italic;cursor:pointer}.json-ellipsis:hover{color:var(--primary-green)}
 
 /* 深色主题下的 JSON 样式优化 */
 [data-theme="dark"] .json-key{color:#9cdcfe}[data-theme="dark"] .json-string{color:#ce9178}[data-theme="dark"] .json-number{color:#b5cea8}[data-theme="dark"] .json-boolean{color:#569cd6}[data-theme="dark"] .json-null{color:#c586c0}[data-theme="dark"] .json-bracket.level-0{color:#ff6b6b}[data-theme="dark"] .json-bracket.level-1{color:#ffa726}[data-theme="dark"] .json-bracket.level-2{color:#66bb6a}[data-theme="dark"] .json-bracket.level-3{color:#42a5f5}[data-theme="dark"] .json-bracket.level-4{color:#ab47bc}[data-theme="dark"] .json-bracket.level-5{color:#ec407a}
+
+/* 今天吃什么转盘样式 */
+.food-container{display:flex;justify-content:center;align-items:center;flex-grow:1;padding:2rem}.wheel-container{position:relative;display:flex;flex-direction:column;align-items:center;gap:2rem}.wheel-pointer{position:absolute;top:-15px;left:50%;transform:translateX(-50%);font-size:2rem;color:var(--primary-green);z-index:10;text-shadow:0 2px 4px rgba(0,0,0,.3)}#wheel-canvas{border-radius:50%;box-shadow:0 8px 32px rgba(0,0,0,.15);transition:transform 4s cubic-bezier(.23,1,.32,1);border:4px solid var(--primary-green)}.spin-button{background:linear-gradient(135deg,var(--primary-green),#20c063);color:#fff;border:none;padding:1rem 2rem;border-radius:2rem;font-size:1.1rem;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(40,167,69,.3);transition:all .3s ease;font-family:'Nunito',sans-serif}.spin-button:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(40,167,69,.4)}.spin-button:active{transform:translateY(0)}.spin-button:disabled{background:#999;cursor:not-allowed;transform:none}
+
+/* 结果弹窗样式 */
+.modal{display:none;position:fixed;z-index:2000;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,.6);backdrop-filter:blur(5px)}.modal.show{display:flex;align-items:center;justify-content:center}.modal-content{background:var(--content-bg);padding:2rem;border-radius:1rem;text-align:center;position:relative;max-width:400px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.3);animation:modalShow .3s ease-out}.close-btn{position:absolute;top:1rem;right:1.5rem;color:var(--secondary-text-color);font-size:2rem;font-weight:bold;cursor:pointer;line-height:1;transition:color .2s}.close-btn:hover{color:var(--text-color)}.result-content img{width:150px;height:150px;object-fit:cover;border-radius:1rem;margin-bottom:1rem;box-shadow:0 4px 12px rgba(0,0,0,.2)}.result-content h2{margin:0 0 .5rem;color:var(--text-color);font-size:1.5rem}.result-content p{margin:0;color:var(--secondary-text-color);font-size:1rem}
+
+@keyframes modalShow{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+
+/* 响应式设计 */
+@media (max-width:768px){.wheel-container{gap:1.5rem}#wheel-canvas{width:300px!important;height:300px!important}.wheel-pointer{font-size:1.5rem;top:-12px}.spin-button{padding:.8rem 1.5rem;font-size:1rem}.modal-content{margin:1rem;padding:1.5rem}.result-content img{width:120px;height:120px}}
 
 @media (max-width:900px){.rates-grid{grid-template-columns:1fr}}@media (max-width:768px){body{padding:1rem}.container{flex-direction:column}.content{padding:1rem}.page{top:1rem;left:1rem;right:1rem;bottom:1rem}.sidebar{flex-direction:row;flex:1 1 0%;justify-content:center;gap:1rem;width:100%;max-width:none;margin:0 auto}.sidebar-item{flex:1}.copy-notification{left:1rem;bottom:1rem;width:calc(100% - 2rem);text-align:center}.json-container{flex-direction:column}.theme-switcher{top:1rem;right:1rem;padding:.25rem;gap:.25rem}.theme-btn{width:28px;height:28px;padding:.25rem}.theme-btn svg{width:14px;height:14px}}
     </style>
@@ -64,6 +75,10 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" /></svg>
                 <span>JSON 工具</span>
             </div>
+            <div id="nav-food" class="sidebar-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+                <span>今天吃什么</span>
+            </div>
         </aside>
         <main class="content">
             <div id="page-currency" class="page active">
@@ -94,7 +109,30 @@
                     </div>
                 </div>
             </div>
+            <div id="page-food" class="page">
+                <h1>今天吃什么</h1>
+                <p class="subtitle">转盘决定你的下一餐，解决选择困难症！</p>
+                <div class="food-container">
+                    <div class="wheel-container">
+                        <div class="wheel-pointer">▼</div>
+                        <canvas id="wheel-canvas" width="400" height="400"></canvas>
+                        <button id="spin-button" class="spin-button">开始转盘</button>
+                    </div>
+                </div>
+            </div>
         </main>
+    </div>
+
+    <!-- 结果弹窗 -->
+    <div id="result-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="result-content">
+                <img id="result-image" src="" alt="">
+                <h2 id="result-name"></h2>
+                <p>就决定是你了！</p>
+            </div>
+        </div>
     </div>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -143,12 +181,65 @@
 
         const navCurrency = document.getElementById('nav-currency');
         const navJson = document.getElementById('nav-json');
+        const navFood = document.getElementById('nav-food');
         const pageCurrency = document.getElementById('page-currency');
         const pageJson = document.getElementById('page-json');
+        const pageFood = document.getElementById('page-food');
         const jsonInput = document.getElementById('json-input');
         const jsonOutput = document.getElementById('json-output');
 
+        // 食物转盘相关元素
+        const wheelCanvas = document.getElementById('wheel-canvas');
+        const spinButton = document.getElementById('spin-button');
+        const resultModal = document.getElementById('result-modal');
+        const resultImage = document.getElementById('result-image');
+        const resultName = document.getElementById('result-name');
+        const closeBtn = document.querySelector('.close-btn');
+
         let exchangeRates = {}, baseCurrencyForCalc = BASE_CURRENCY, baseAmountForCalc = DEFAULT_AMOUNT, notificationTimeout;
+
+        // 食物数据 - 使用易获取的食物图片占位符
+        const foodData = [
+            { name: '麻辣烫', image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=200&h=200&fit=crop' },
+            { name: '兰州拉面', image: 'https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=200&h=200&fit=crop' },
+            { name: '黄焖鸡米饭', image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=200&h=200&fit=crop' },
+            { name: '沙县小吃', image: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=200&h=200&fit=crop' },
+            { name: '重庆小面', image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=200&h=200&fit=crop' },
+            { name: '煲仔饭', image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=200&h=200&fit=crop' },
+            { name: '川菜', image: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=200&h=200&fit=crop' },
+            { name: '粤菜', image: 'https://images.unsplash.com/photo-1563379091339-03246963d96c?w=200&h=200&fit=crop' },
+            { name: '湘菜', image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=200&h=200&fit=crop' },
+            { name: '东北菜', image: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=200&h=200&fit=crop' },
+            { name: '日式料理', image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=200&h=200&fit=crop' },
+            { name: '韩式料理', image: 'https://images.unsplash.com/photo-1590301157890-4810ed352733?w=200&h=200&fit=crop' },
+            { name: '意大利面', image: 'https://images.unsplash.com/photo-1621996346565-e3dbc92d2e99?w=200&h=200&fit=crop' },
+            { name: '汉堡', image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=200&h=200&fit=crop' },
+            { name: '披萨', image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop' },
+            { name: '炸鸡', image: 'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=200&h=200&fit=crop' },
+            { name: '寿司', image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=200&h=200&fit=crop' },
+            { name: '烤肉', image: 'https://images.unsplash.com/photo-1558030006-450675393462?w=200&h=200&fit=crop' },
+            { name: '火锅', image: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=200&h=200&fit=crop' },
+            { name: '小龙虾', image: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=200&h=200&fit=crop' },
+            { name: '烧烤', image: 'https://images.unsplash.com/photo-1558030006-450675393462?w=200&h=200&fit=crop' },
+            { name: '粥类', image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=200&h=200&fit=crop' },
+            { name: '包子', image: 'https://images.unsplash.com/photo-1563379091339-03246963d96c?w=200&h=200&fit=crop' },
+            { name: '饺子', image: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=200&h=200&fit=crop' },
+            { name: '面条', image: 'https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=200&h=200&fit=crop' },
+            { name: '馄饨', image: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=200&h=200&fit=crop' },
+            { name: '米线', image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=200&h=200&fit=crop' },
+            { name: '盖浇饭', image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=200&h=200&fit=crop' },
+            { name: '炒饭', image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=200&h=200&fit=crop' },
+            { name: '蛋炒饭', image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=200&h=200&fit=crop' },
+            { name: '咖喱饭', image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=200&h=200&fit=crop' },
+            { name: '便当', image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=200&h=200&fit=crop' },
+            { name: '轻食沙拉', image: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=200&h=200&fit=crop' },
+            { name: '三明治', image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=200&h=200&fit=crop' },
+            { name: '奶茶', image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=200&h=200&fit=crop' },
+            { name: '甜品', image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=200&h=200&fit=crop' }
+        ];
+
+        let currentRotation = 0;
+        let isSpinning = false;
 
         function formatNumber(num) { if (num > 1000) return num.toFixed(2); if (num > 1) return num.toFixed(4); return num.toFixed(6); }
         function showNotification() { if (notificationTimeout) clearTimeout(notificationTimeout); notificationEl.classList.add('show'); notificationTimeout = setTimeout(() => notificationEl.classList.remove('show'), 2000); }
@@ -281,7 +372,120 @@
             } else if (pageToShow === 'json') {
                 pageJson.classList.add('active');
                 navJson.classList.add('active');
+            } else if (pageToShow === 'food') {
+                pageFood.classList.add('active');
+                navFood.classList.add('active');
+                drawWheel(); // 切换到转盘页面时重绘转盘
             }
+        }
+
+        // 转盘绘制函数
+        function drawWheel() {
+            if (!wheelCanvas) return;
+
+            const ctx = wheelCanvas.getContext('2d');
+            const centerX = wheelCanvas.width / 2;
+            const centerY = wheelCanvas.height / 2;
+            const radius = Math.min(centerX, centerY) - 10;
+            const totalFoods = foodData.length;
+            const anglePerSection = (2 * Math.PI) / totalFoods;
+
+            ctx.clearRect(0, 0, wheelCanvas.width, wheelCanvas.height);
+
+            // 生成颜色数组
+            const colors = [
+                '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD',
+                '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9', '#F8C471', '#82E0AA',
+                '#F1948A', '#85C1E9', '#F8C471', '#82E0AA', '#F1948A', '#85C1E9',
+                '#F8C471', '#82E0AA', '#F1948A', '#85C1E9', '#F8C471', '#82E0AA',
+                '#F1948A', '#85C1E9', '#F8C471', '#82E0AA', '#F1948A', '#85C1E9',
+                '#F8C471', '#82E0AA', '#F1948A', '#85C1E9', '#F8C471', '#82E0AA'
+            ];
+
+            // 绘制扇形
+            for (let i = 0; i < totalFoods; i++) {
+                const startAngle = i * anglePerSection - Math.PI / 2;
+                const endAngle = (i + 1) * anglePerSection - Math.PI / 2;
+
+                // 绘制扇形背景
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+                ctx.closePath();
+                ctx.fillStyle = colors[i % colors.length];
+                ctx.fill();
+                ctx.strokeStyle = '#fff';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                // 绘制文字
+                const textAngle = startAngle + anglePerSection / 2;
+                const textRadius = radius * 0.75;
+                const textX = centerX + Math.cos(textAngle) * textRadius;
+                const textY = centerY + Math.sin(textAngle) * textRadius;
+
+                ctx.save();
+                ctx.translate(textX, textY);
+                ctx.rotate(textAngle + Math.PI / 2);
+                ctx.fillStyle = '#333';
+                ctx.font = 'bold 12px "Nunito", sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(foodData[i].name, 0, 0);
+                ctx.restore();
+            }
+
+            // 绘制中心圆
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 20, 0, 2 * Math.PI);
+            ctx.fillStyle = '#fff';
+            ctx.fill();
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+        }
+
+        // 转盘旋转函数
+        function spinWheel() {
+            if (isSpinning) return;
+
+            isSpinning = true;
+            spinButton.disabled = true;
+            spinButton.textContent = '转盘中...';
+
+            // 随机选择一个食物
+            const randomIndex = Math.floor(Math.random() * foodData.length);
+            const anglePerSection = 360 / foodData.length;
+            const targetAngle = 360 - (randomIndex * anglePerSection + anglePerSection / 2);
+
+            // 添加多圈旋转 + 随机偏移
+            const extraRotations = 5 + Math.random() * 3; // 5-8圈
+            const finalAngle = currentRotation + extraRotations * 360 + targetAngle;
+
+            // 应用CSS动画
+            wheelCanvas.style.transform = `rotate(${finalAngle}deg)`;
+            currentRotation = finalAngle % 360;
+
+            // 动画结束后显示结果
+            setTimeout(() => {
+                showResult(foodData[randomIndex]);
+                isSpinning = false;
+                spinButton.disabled = false;
+                spinButton.textContent = '开始转盘';
+            }, 4000);
+        }
+
+        // 显示结果弹窗
+        function showResult(food) {
+            resultImage.src = food.image;
+            resultImage.alt = food.name;
+            resultName.textContent = food.name;
+            resultModal.classList.add('show');
+        }
+
+        // 关闭弹窗
+        function closeModal() {
+            resultModal.classList.remove('show');
         }
 
         function formatJson() {
@@ -575,7 +779,16 @@
             refreshButton.addEventListener('click', fetchRates);
             navCurrency.addEventListener('click', () => switchPage('currency'));
             navJson.addEventListener('click', () => switchPage('json'));
+            navFood.addEventListener('click', () => switchPage('food'));
             jsonInput.addEventListener('input', formatJson);
+
+            // 转盘相关事件监听器
+            spinButton.addEventListener('click', spinWheel);
+            closeBtn.addEventListener('click', closeModal);
+            resultModal.addEventListener('click', (e) => {
+                if (e.target === resultModal) closeModal();
+            });
+
             setInterval(fetchRates, 15 * 60 * 1000);
         }
 
