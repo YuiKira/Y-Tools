@@ -560,15 +560,16 @@
         
         async function fetchRates() {
             refreshButton.disabled = true;
-            updateTimeEl.textContent = '正在更新汇率...';
+            updateTimeEl.textContent = '正在刷新汇率数据...';
             try {
                 const response = await fetch('/api/rates');
                 if (!response.ok) throw new Error(`服务器错误: ${response.statusText}`);
                 const data = await response.json();
                 if (data.result === 'success') {
                     exchangeRates = data.conversion_rates;
-                    const lastUpdated = new Date(data.time_last_update_unix * 1000).toLocaleString('zh-CN');
-                    updateTimeEl.innerHTML = `汇率最近更新时间: <strong>${lastUpdated}</strong>`;
+                    const apiLastUpdated = new Date(data.time_last_update_unix * 1000).toLocaleString('zh-CN');
+                    const localRefreshTime = new Date().toLocaleString('zh-CN');
+                    updateTimeEl.innerHTML = `数据更新时间: <strong>${apiLastUpdated}</strong><br>刷新时间: <strong>${localRefreshTime}</strong>`;
                     updateAllValues();
                 } else {
                     throw new Error(data['error-type'] || '获取汇率失败');
