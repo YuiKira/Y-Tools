@@ -13,7 +13,8 @@
         *,*::before,*::after{transition:background-color var(--theme-transition),color var(--theme-transition),border-color var(--theme-transition),box-shadow var(--theme-transition)!important}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;background-color:var(--page-bg);margin:0;padding:2rem;display:flex;justify-content:center;color:var(--text-color)}.container{display:flex;gap:2rem;width:100%;max-width:1100px}.sidebar{flex:0 0 120px;display:flex;flex-direction:column;align-items:center;gap:1.5rem}.sidebar-item{background-color:var(--card-bg);border-radius:1rem;padding:1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;cursor:pointer;box-shadow:0 4px 6px rgba(0,0,0,.05);text-align:center;font-size:.8rem;width:100%;transition:box-shadow var(--animation-speed)}.sidebar-item.active{background:linear-gradient(135deg,#4ad295,#2ab67b);color:#fff;cursor:default}.sidebar-item:not(.active):hover{box-shadow:0 6px 12px rgba(0,0,0,.08)}.sidebar-item.active svg{color:#fff}.content{flex:1;background-color:var(--content-bg);border-radius:1rem;padding:2rem;box-shadow:0 4px 12px rgba(0,0,0,.08);position:relative;overflow:hidden;height:calc(100vh - 8rem);display:flex;flex-direction:column}.page{position:absolute;top:2rem;left:2rem;right:2rem;bottom:2rem;opacity:0;transition:opacity var(--animation-speed) ease-in-out;pointer-events:none;display:flex;flex-direction:column;min-height:calc(100vh - 12rem)}.page.active{opacity:1;position:relative;top:auto;left:auto;right:auto;bottom:auto;pointer-events:auto}h1,h2{margin:0 0 .5rem;font-weight:700;flex-shrink:0}h1{font-size:2rem}h2{font-size:1.5rem}.subtitle{margin:0 0 1.5rem;color:var(--secondary-text-color);flex-shrink:0}.update-info{background-color:var(--light-green-bg);border:1px solid var(--border-color);padding:.75rem 1rem;border-radius:.5rem;margin-bottom:1.5rem;font-size:.9rem;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}.update-info .refresh-btn{background-color:var(--primary-green);color:#fff;border:none;padding:.25rem .75rem;border-radius:.25rem;cursor:pointer;font-size:.85rem;font-family:inherit;transition:background-color var(--animation-speed)}.update-info .refresh-btn:hover{opacity:.9}.update-info .refresh-btn:disabled{background-color:#999;cursor:not-allowed}.rates-grid-wrapper{padding-right:10px;margin-right:-10px}.rates-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}.rate-row{display:flex;align-items:center;background-color:var(--light-green-bg);border-radius:.5rem;padding:.75rem;border:1px solid transparent;transition:transform 0.2s ease-in-out,box-shadow var(--animation-speed) ease,border-color .2s}.rate-row:focus-within{border-color:var(--primary-green)}.rate-row.sortable-ghost{background:#d4f0e2;opacity:.7}.rate-row.sortable-chosen{box-shadow:0 8px 20px rgba(0,0,0,.15);border:1px solid var(--border-color);transform:scale(1.02)}.drag-handle{cursor:grab;color:#b0c9bd;margin-right:.75rem;flex-shrink:0}.drag-handle:active{cursor:grabbing}.currency-code{font-weight:700;width:50px;flex-shrink:0;color:var(--secondary-text-color);margin-left:2px}.white-separator{color:#fff;margin:0 .1rem;font-size:.8rem}.currency-flag{width:18px;height:13px;background-size:cover;background-position:center;border-radius:2px;margin:0;display:inline-block;vertical-align:middle;flex-shrink:0;background-color:var(--flag-bg);border:1px solid var(--flag-border);overflow:hidden;cursor:pointer}.currency-flag.error{background-image:none!important;background-color:var(--flag-bg);position:relative;opacity:.6}.currency-flag.error::after{content:'🏳';font-size:10px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:var(--secondary-text-color)}
 
         [data-theme="dark"] .currency-flag{filter:brightness(1.1) contrast(0.95)}.separator{color:var(--separator-color);margin:0 .2rem}
-        .theme-switcher{position:fixed;top:2rem;right:2rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:.75rem;padding:.5rem;box-shadow:0 4px 12px rgba(0,0,0,.1);display:flex;align-items:center;gap:.5rem;z-index:1000}.theme-btn{background:none;border:none;padding:.5rem;border-radius:.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--secondary-text-color);transition:all .2s ease;width:32px;height:32px}.theme-btn:hover{background:var(--light-green-bg);color:var(--text-color)}.theme-btn.active{background:var(--primary-green);color:#fff}.theme-btn svg{width:16px;height:16px}.currency-value{flex-grow:1;border:none;background:transparent;font-size:1rem;font-family:'Menlo','Monaco','Consolas',monospace;padding:.25rem;outline:0;width:100%;cursor:text;color:var(--text-color)}.currency-name{background-color:var(--currency-name-bg);color:var(--currency-name-color);font-weight:500;padding:.25rem .75rem;border-radius:.25rem;font-size:.8rem;white-space:nowrap}.instructions{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border-color);flex-shrink:0}.instructions p{font-size:.9rem;color:var(--secondary-text-color);line-height:1.6}.copy-notification{position:fixed;left:2rem;bottom:2rem;background-color:var(--primary-green);color:#fff;padding:.75rem 1.5rem;border-radius:.5rem;box-shadow:0 4px 10px rgba(0,0,0,.1);font-size:.9rem;z-index:1000;opacity:0;transform:translateX(-120%);transition:opacity var(--animation-speed) ease,transform var(--animation-speed) ease}.copy-notification.show{opacity:1;transform:translateX(0)}.json-container{display:flex;flex-grow:1;gap:.75rem;min-height:calc(100vh - 28rem)}.json-pane{flex:1;display:flex;flex-direction:column;background-color:var(--light-green-bg);border-radius:.5rem;overflow:hidden;min-height:calc(100vh - 30rem)}.json-pane textarea{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto;min-height:calc(100vh - 32rem)}.json-pane pre{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto}.json-pane pre{white-space:pre-wrap;word-break:break-all}.json-pane pre.error{color:#d9534f;font-weight:700}
+        .theme-switcher{position:fixed;top:2rem;right:2rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:.75rem;padding:.5rem;box-shadow:0 4px 12px rgba(0,0,0,.1);display:flex;align-items:center;gap:.5rem;z-index:1000}.theme-btn{background:none;border:none;padding:.5rem;border-radius:.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--secondary-text-color);transition:all .2s ease;width:40px;height:40px}.theme-btn:hover{background:var(--light-green-bg);color:var(--text-color)}.theme-btn.active{background:var(--primary-green);color:#fff}.theme-btn svg{width:20px;height:20px}
+        .currency-instructions{position:fixed;top:10rem;right:2rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:.5rem;padding:1rem;max-width:280px;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:999}.currency-instructions h2{font-size:.9rem;margin:0 0 .5rem;color:var(--text-color)}.currency-instructions p{margin:.25rem 0;font-size:.8rem;line-height:1.4;color:var(--secondary-text-color)}.currency-value{flex-grow:1;border:none;background:transparent;font-size:1rem;font-family:'Menlo','Monaco','Consolas',monospace;padding:.25rem;outline:0;width:100%;cursor:text;color:var(--text-color)}.currency-name{background-color:var(--currency-name-bg);color:var(--currency-name-color);font-weight:500;padding:.25rem .75rem;border-radius:.25rem;font-size:.8rem;white-space:nowrap}.instructions{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border-color);flex-shrink:0}.instructions p{font-size:.9rem;color:var(--secondary-text-color);line-height:1.6}.copy-notification{position:fixed;left:2rem;bottom:2rem;background-color:var(--primary-green);color:#fff;padding:.75rem 1.5rem;border-radius:.5rem;box-shadow:0 4px 10px rgba(0,0,0,.1);font-size:.9rem;z-index:1000;opacity:0;transform:translateX(-120%);transition:opacity var(--animation-speed) ease,transform var(--animation-speed) ease}.copy-notification.show{opacity:1;transform:translateX(0)}.json-container{display:flex;flex-grow:1;gap:.75rem;min-height:calc(100vh - 28rem)}.json-pane{flex:1;display:flex;flex-direction:column;background-color:var(--light-green-bg);border-radius:.5rem;overflow:hidden;min-height:calc(100vh - 30rem)}.json-pane textarea{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto;min-height:calc(100vh - 32rem)}.json-pane pre{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto}.json-pane pre{white-space:pre-wrap;word-break:break-all}.json-pane pre.error{color:#d9534f;font-weight:700}
 
 .json-tree{overflow-y:auto;height:100%;min-height:calc(100vh - 32rem);padding:.75rem;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;line-height:1.6;color:var(--text-color)}.json-tree.error{color:#d9534f;font-weight:700}.json-node{margin:0}.json-toggle{cursor:pointer;display:inline-block;width:12px;height:12px;margin-right:4px;text-align:center;background:var(--light-green-bg);border:1px solid var(--border-color);border-radius:3px;font-size:10px;line-height:10px;user-select:none;transition:transform .2s ease}.json-toggle:hover{background:var(--primary-green);color:#fff}.json-toggle.collapsed{transform:rotate(-90deg)}.json-toggle.empty{opacity:.3;cursor:default}.json-toggle.empty:hover{background:var(--light-green-bg);color:var(--text-color)}.json-key{color:#0451a5;font-weight:500}.json-string{color:#0a8043}.json-number{color:#098658}.json-boolean{color:#e36209}.json-null{color:#a626a4}.json-bracket{font-weight:bold;cursor:pointer}.json-bracket.level-0{color:#e60000}.json-bracket.level-1{color:#f57c00}.json-bracket.level-2{color:#388e3c}.json-bracket.level-3{color:#1976d2}.json-bracket.level-4{color:#7b1fa2}.json-bracket.level-5{color:#c2185b}.json-bracket:hover{opacity:.7}.json-count{color:var(--secondary-text-color);font-size:.85em;margin-left:4px}.json-collapsed{display:none}.json-ellipsis{color:var(--secondary-text-color);font-style:italic;cursor:pointer}.json-ellipsis:hover{color:var(--primary-green)}
 
@@ -55,7 +56,7 @@
 @keyframes modalShow{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
 @media (max-width:768px){.wheel-container{gap:1.5rem}#wheel-canvas{width:300px!important;height:300px!important}.wheel-pointer{font-size:1.5rem;top:-12px}.spin-button{padding:.8rem 1.5rem;font-size:1rem}.modal-content{margin:1rem;padding:1.5rem}.result-content img{width:120px;height:120px}}
 
-@media (max-width:900px){.rates-grid{grid-template-columns:1fr}}@media (max-width:768px){body{padding:1rem}.container{flex-direction:column}.content{padding:1rem}.page{top:1rem;left:1rem;right:1rem;bottom:1rem}.sidebar{flex-direction:row;flex:1 1 0%;justify-content:center;gap:1rem;width:100%;max-width:none;margin:0 auto}.sidebar-item{flex:1}.copy-notification{left:1rem;bottom:1rem;width:calc(100% - 2rem);text-align:center}.json-container{flex-direction:column}.theme-switcher{top:1rem;right:1rem;padding:.25rem;gap:.25rem}.theme-btn{width:28px;height:28px;padding:.25rem}.theme-btn svg{width:14px;height:14px}}
+@media (max-width:900px){.rates-grid{grid-template-columns:1fr}}@media (max-width:768px){body{padding:1rem}.container{flex-direction:column}.content{padding:1rem}.page{top:1rem;left:1rem;right:1rem;bottom:1rem}.sidebar{flex-direction:row;flex:1 1 0%;justify-content:center;gap:1rem;width:100%;max-width:none;margin:0 auto}.sidebar-item{flex:1}.copy-notification{left:1rem;bottom:1rem;width:calc(100% - 2rem);text-align:center}.json-container{flex-direction:column}.theme-switcher{top:1rem;right:1rem;padding:.5rem;gap:.5rem}.theme-btn{width:36px;height:36px;padding:.5rem}.theme-btn svg{width:18px;height:18px}.currency-instructions{top:8rem;right:1rem;left:1rem;max-width:none;width:auto}}
 
 .testfile-container{display:flex;gap:2rem;flex-grow:1;min-height:0}.testfile-form{flex:1;background-color:var(--light-green-bg);padding:2rem;border-radius:1rem;display:flex;flex-direction:column;gap:1.5rem}.testfile-info{flex:1;background-color:var(--light-green-bg);padding:2rem;border-radius:1rem}.form-group{display:flex;flex-direction:column;gap:.5rem}.form-group label{font-weight:600;color:var(--text-color);font-size:1rem}.size-input-group{display:flex;gap:.5rem}.size-input{flex:1;padding:.75rem 1rem;border:1px solid var(--border-color);border-radius:.5rem;background:var(--input-bg);color:var(--text-color);font-size:1rem;font-family:'Menlo','Monaco','Consolas',monospace;transition:border-color var(--animation-speed)}.size-input:focus{outline:none;border-color:var(--primary-green)}.unit-select{padding:.75rem 1rem;border:1px solid var(--border-color);border-radius:.5rem;background:var(--input-bg);color:var(--text-color);font-size:1rem;cursor:pointer;transition:border-color var(--animation-speed)}.unit-select:focus{outline:none;border-color:var(--primary-green)}.extension-input{padding:.75rem 1rem;border:1px solid var(--border-color);border-radius:.5rem;background:var(--input-bg);color:var(--text-color);font-size:1rem;transition:border-color var(--animation-speed)}.extension-input:focus{outline:none;border-color:var(--primary-green)}.input-hint{font-size:.85rem;color:var(--secondary-text-color)}.generate-btn{background:linear-gradient(135deg,var(--primary-green),#20c063);color:#fff;border:none;padding:1rem 2rem;border-radius:.5rem;font-size:1rem;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(40,167,69,.3);transition:all .3s ease;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:.5rem}.generate-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(40,167,69,.4)}.generate-btn:active{transform:translateY(0)}.generate-btn:disabled{background:#999;cursor:not-allowed;transform:none;box-shadow:none}.generate-btn svg{width:20px;height:20px}.progress-section{display:flex;flex-direction:column;gap:1rem;margin-top:1rem}.progress-bar{width:100%;height:10px;background-color:var(--border-color);border-radius:5rem;overflow:hidden}.progress-fill{height:100%;background:linear-gradient(90deg,var(--primary-green),#20c063);width:0%;transition:width .2s ease;border-radius:5rem}.progress-text{font-size:.9rem;color:var(--secondary-text-color);text-align:center}.testfile-info h2{margin:0 0 1rem;font-size:1.25rem}.testfile-info h3{margin:1.5rem 0 .75rem;font-size:1.1rem}.testfile-info ul{margin:0;padding-left:1.5rem;line-height:1.8}.testfile-info li{color:var(--text-color);margin-bottom:.5rem}.testfile-info strong{color:var(--primary-green)}.size-examples{margin-top:1.5rem}.example-tags{display:flex;flex-wrap:wrap;gap:.5rem}.example-tag{background-color:var(--card-bg);border:1px solid var(--border-color);padding:.5rem 1rem;border-radius:2rem;font-size:.9rem;cursor:pointer;transition:all .2s ease;color:var(--text-color)}.example-tag:hover{background:var(--primary-green);color:#fff;border-color:var(--primary-green);transform:translateY(-2px)}@media (max-width:900px){.testfile-container{flex-direction:column;max-height:none}}@media (max-width:768px){.testfile-form,.testfile-info{padding:1.5rem}.size-input-group{flex-direction:column}}
     </style>
@@ -63,7 +64,7 @@
 <body>
     <div id="copy-notification" class="copy-notification">已复制</div>
 
-    <!-- 主题切换器 -->
+    <!-- Theme switcher -->
     <div class="theme-switcher" id="theme-switcher">
         <button class="theme-btn" id="theme-light" title="浅色模式">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -80,6 +81,13 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
             </svg>
         </button>
+    </div>
+
+    <!-- Instructions - Currency page only -->
+    <div id="currency-instructions" class="currency-instructions" style="display:none;">
+        <h2>汇率工具说明</h2>
+        <p><strong>功能说明:</strong> 使用公开API提供数据，汇率并非毫秒级实时，仅供参考。</p>
+        <p><strong>新手提示:</strong> 您可输入 `100+50` 或 `10*1.1` 等算式后按回车进行计算。点击任意输入框 (数字部分) 可复制当前金额。按住每行最左侧的图标可拖动排序。</p>
     </div>
 
     <div class="container">
@@ -105,11 +113,6 @@
             <div id="page-currency" class="page active" style="display:flex;flex-direction:column;">
                 <h1 style="margin-bottom:.25rem;">汇率换算</h1>
                 <p class="subtitle" style="margin-bottom:.5rem;">简单的汇率换算工具，汇率数据定时更新，仅供参考。</p>
-                <div class="instructions" style="background-color:var(--light-green-bg);border:1px solid var(--border-color);padding:.75rem;border-radius:.5rem;margin-bottom:.75rem;">
-                    <h2 style="font-size:.9rem;margin:0 0 .5rem;">汇率工具说明</h2>
-                    <p style="margin:.25rem 0;font-size:.85rem;line-height:1.5;"><strong>功能说明:</strong> 使用公开API提供数据，汇率并非毫秒级实时，仅供参考。</p>
-                    <p style="margin:.25rem 0;font-size:.85rem;line-height:1.5;"><strong>新手提示:</strong> 您可输入 `100+50` 或 `10*1.1` 等算式后按回车进行计算。点击任意输入框 (数字部分) 可复制当前金额。按住每行最左侧的图标可拖动排序。</p>
-                </div>
                 <div class="update-info" style="margin-bottom:.75rem;">
                     <span id="update-time">正在获取汇率数据...</span>
                     <button class="refresh-btn" id="refresh-button">刷新汇率</button>
@@ -139,7 +142,7 @@
                 <h1>今天吃什么</h1>
                 <p class="subtitle">转盘决定你的下一餐，解决选择困难症！</p>
 
-                <!-- 模式切换按钮 -->
+                <!-- Mode toggle button -->
                 <div class="mode-toggle" id="mode-toggle" title="切换模式">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
@@ -147,21 +150,21 @@
                 </div>
 
                 <div class="food-container" style="flex-grow:1;min-height:0;">
-                    <!-- 转盘模式 -->
+                    <!-- Wheel mode -->
                     <div class="wheel-container" id="wheel-mode">
                         <div class="wheel-pointer">▼</div>
                         <canvas id="wheel-canvas" width="400" height="400"></canvas>
                         <button id="spin-button" class="spin-button">开始转盘</button>
                     </div>
 
-                    <!-- 开箱模式 -->
+                    <!-- Box mode -->
                     <div class="box-container" id="box-mode">
-                        <!-- 盲盒状态 -->
+                        <!-- Mystery box state -->
                         <div class="mystery-box" id="mystery-box">
                             <div class="box-text">神秘宝箱<br>点击开启</div>
                         </div>
 
-                        <!-- 开箱器状态 -->
+                        <!-- Box viewer state -->
                         <div class="box-viewer" id="box-viewer">
                             <div class="box-selector"></div>
                             <div class="box-track" id="box-track"></div>
@@ -236,7 +239,7 @@
         </main>
     </div>
 
-    <!-- 结果弹窗 -->
+    <!-- Result modal -->
     <div id="result-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
@@ -673,19 +676,24 @@
         function switchPage(pageToShow) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
             document.querySelectorAll('.sidebar-item').forEach(n => n.classList.remove('active'));
+            const instructions = document.getElementById('currency-instructions');
             if (pageToShow === 'currency') {
                 pageCurrency.classList.add('active');
                 navCurrency.classList.add('active');
+                instructions.style.display = 'block';
             } else if (pageToShow === 'json') {
                 pageJson.classList.add('active');
                 navJson.classList.add('active');
+                instructions.style.display = 'none';
             } else if (pageToShow === 'food') {
                 pageFood.classList.add('active');
                 navFood.classList.add('active');
+                instructions.style.display = 'none';
                 drawWheel(); // 切换到转盘页面时重绘转盘
             } else if (pageToShow === 'testfile') {
                 pageTestfile.classList.add('active');
                 navTestfile.classList.add('active');
+                instructions.style.display = 'none';
             }
         }
 
@@ -1326,6 +1334,8 @@
             const baseInput = document.querySelector(`.currency-value[data-currency="${BASE_CURRENCY}"]`);
             if (baseInput) { baseInput.value = DEFAULT_AMOUNT; }
             updateAllValues();
+            // 默认显示汇率说明框
+            document.getElementById('currency-instructions').style.display = 'block';
             refreshButton.addEventListener('click', fetchRates);
             navCurrency.addEventListener('click', () => switchPage('currency'));
             navJson.addEventListener('click', () => switchPage('json'));
