@@ -14,11 +14,12 @@
 
         [data-theme="dark"] .currency-flag{filter:brightness(1.1) contrast(0.95)}.separator{color:var(--separator-color);margin:0 .2rem}
         .theme-switcher{position:fixed;top:2rem;right:2rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:.75rem;padding:.5rem;box-shadow:0 4px 12px rgba(0,0,0,.1);display:flex;align-items:center;gap:.5rem;z-index:1000}.theme-btn{background:none;border:none;padding:.5rem;border-radius:.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--secondary-text-color);transition:all .2s ease;width:40px;height:40px}.theme-btn:hover{background:var(--light-green-bg);color:var(--text-color)}.theme-btn.active{background:var(--primary-green);color:#fff}.theme-btn svg{width:20px;height:20px}
-        .currency-instructions{position:fixed;top:10rem;right:2rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:.5rem;padding:1rem;max-width:280px;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:999}.currency-instructions h2{font-size:.9rem;margin:0 0 .5rem;color:var(--text-color)}.currency-instructions p{margin:.25rem 0;font-size:.8rem;line-height:1.4;color:var(--secondary-text-color)}.currency-value{flex-grow:1;border:none;background:transparent;font-size:1rem;font-family:'Menlo','Monaco','Consolas',monospace;padding:.25rem;outline:0;width:100%;cursor:text;color:var(--text-color)}.currency-name{background-color:var(--currency-name-bg);color:var(--currency-name-color);font-weight:500;padding:.25rem .75rem;border-radius:.25rem;font-size:.8rem;white-space:nowrap}.instructions{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border-color);flex-shrink:0}.instructions p{font-size:.9rem;color:var(--secondary-text-color);line-height:1.6}.copy-notification{position:fixed;left:2rem;bottom:2rem;background-color:var(--primary-green);color:#fff;padding:.75rem 1.5rem;border-radius:.5rem;box-shadow:0 4px 10px rgba(0,0,0,.1);font-size:.9rem;z-index:1000;opacity:0;transform:translateX(-120%);transition:opacity var(--animation-speed) ease,transform var(--animation-speed) ease}.copy-notification.show{opacity:1;transform:translateX(0)}.json-container{display:flex;flex-grow:1;gap:.75rem;min-height:calc(100vh - 28rem)}.json-pane{flex:1;display:flex;flex-direction:column;background-color:var(--light-green-bg);border-radius:.5rem;overflow:hidden;min-height:calc(100vh - 30rem)}.json-pane textarea{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto;min-height:calc(100vh - 32rem)}.json-pane pre{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto}.json-pane pre{white-space:pre-wrap;word-break:break-all}.json-pane pre.error{color:#d9534f;font-weight:700}
+        .currency-instructions{position:fixed;top:10rem;right:2rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:.5rem;padding:1rem;max-width:280px;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:999}.currency-instructions h2{font-size:.9rem;margin:0 0 .5rem;color:var(--text-color)}.currency-instructions p{margin:.25rem 0;font-size:.8rem;line-height:1.4;color:var(--secondary-text-color)}.currency-value{flex-grow:1;border:none;background:transparent;font-size:1rem;font-family:'Menlo','Monaco','Consolas',monospace;padding:.25rem;outline:0;width:100%;cursor:text;color:var(--text-color)}.currency-name{background-color:var(--currency-name-bg);color:var(--currency-name-color);font-weight:500;padding:.25rem .75rem;border-radius:.25rem;font-size:.8rem;white-space:nowrap}.instructions{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border-color);flex-shrink:0}.instructions p{font-size:.9rem;color:var(--secondary-text-color);line-height:1.6}.copy-notification{position:fixed;left:2rem;bottom:2rem;background-color:var(--primary-green);color:#fff;padding:.75rem 1.5rem;border-radius:.5rem;box-shadow:0 4px 10px rgba(0,0,0,.1);font-size:.9rem;z-index:1000;opacity:0;transform:translateX(-120%);transition:opacity var(--animation-speed) ease,transform var(--animation-speed) ease}.copy-notification.show{opacity:1;transform:translateX(0)}.json-toolbar{display:flex;gap:.5rem;margin-bottom:.75rem;flex-wrap:wrap;flex-shrink:0;align-items:center}.json-tool-btn{display:inline-flex;align-items:center;padding:.35rem .75rem;border:1px solid var(--border-color);border-radius:.375rem;background:var(--card-bg);color:var(--secondary-text-color);font-size:.8rem;cursor:pointer;transition:all .2s ease;font-family:inherit;white-space:nowrap}.json-tool-btn:hover{background:var(--primary-green);color:#fff;border-color:var(--primary-green)}.json-tool-btn:active{transform:scale(.95)}.json-toolbar-sep{width:1px;height:1.2rem;background:var(--border-color);margin:0 .15rem}
+.json-container{display:flex;flex-grow:1;gap:.75rem}.json-pane{flex:1;display:flex;flex-direction:column;background-color:var(--light-green-bg);border-radius:.5rem;overflow:hidden}.json-pane textarea{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto}.json-pane pre{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto}.json-pane pre{white-space:pre-wrap;word-break:break-all}.json-pane pre.error{color:#d9534f;font-weight:700}
 
-.json-tree{overflow-y:auto;height:100%;min-height:calc(100vh - 32rem);padding:.75rem;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;line-height:1.6;color:var(--text-color)}.json-tree.error{color:#d9534f;font-weight:700}.json-node{margin:0}.json-toggle{cursor:pointer;display:inline-block;width:12px;height:12px;margin-right:4px;text-align:center;background:var(--light-green-bg);border:1px solid var(--border-color);border-radius:3px;font-size:10px;line-height:10px;user-select:none;transition:transform .2s ease}.json-toggle:hover{background:var(--primary-green);color:#fff}.json-toggle.collapsed{transform:rotate(-90deg)}.json-toggle.empty{opacity:.3;cursor:default}.json-toggle.empty:hover{background:var(--light-green-bg);color:var(--text-color)}.json-key{color:#0451a5;font-weight:500}.json-string{color:#0a8043}.json-number{color:#098658}.json-boolean{color:#e36209}.json-null{color:#a626a4}.json-bracket{font-weight:bold;cursor:pointer}.json-bracket.level-0{color:#e60000}.json-bracket.level-1{color:#f57c00}.json-bracket.level-2{color:#388e3c}.json-bracket.level-3{color:#1976d2}.json-bracket.level-4{color:#7b1fa2}.json-bracket.level-5{color:#c2185b}.json-bracket:hover{opacity:.7}.json-count{color:var(--secondary-text-color);font-size:.85em;margin-left:4px}.json-collapsed{display:none}.json-ellipsis{color:var(--secondary-text-color);font-style:italic;cursor:pointer}.json-ellipsis:hover{color:var(--primary-green)}
+.json-tree{overflow-y:auto;height:100%;padding:.75rem;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;line-height:1.6;color:var(--text-color)}.json-tree.error{color:#d9534f;font-weight:700}.json-node{margin:0}.json-toggle{cursor:pointer;display:inline-block;margin-right:2px;text-align:center;font-size:.9rem;line-height:1;user-select:none;color:#e45649;vertical-align:middle}.json-toggle:hover{opacity:.7}.json-toggle.collapsed{color:#50a14f}.json-toggle.empty{opacity:.3;cursor:default}.json-key{color:#a626a4}.json-string{color:#50a14f}.json-number{color:#4078f2}.json-boolean{color:#e36209}.json-null{color:#a626a4}.json-bracket{color:#a626a4}.json-bracket:hover{opacity:.7}.json-count{display:none}.json-summary{color:var(--secondary-text-color);font-style:italic}.json-collapsed{display:none}
 
-[data-theme="dark"] .json-key{color:#9cdcfe}[data-theme="dark"] .json-string{color:#ce9178}[data-theme="dark"] .json-number{color:#b5cea8}[data-theme="dark"] .json-boolean{color:#569cd6}[data-theme="dark"] .json-null{color:#c586c0}[data-theme="dark"] .json-bracket.level-0{color:#ff6b6b}[data-theme="dark"] .json-bracket.level-1{color:#ffa726}[data-theme="dark"] .json-bracket.level-2{color:#66bb6a}[data-theme="dark"] .json-bracket.level-3{color:#42a5f5}[data-theme="dark"] .json-bracket.level-4{color:#ab47bc}[data-theme="dark"] .json-bracket.level-5{color:#ec407a}
+[data-theme="dark"] .json-key{color:#c586c0}[data-theme="dark"] .json-string{color:#98c379}[data-theme="dark"] .json-number{color:#61afef}[data-theme="dark"] .json-boolean{color:#569cd6}[data-theme="dark"] .json-null{color:#c586c0}[data-theme="dark"] .json-bracket{color:#c586c0}[data-theme="dark"] .json-toggle{color:#e06c75}[data-theme="dark"] .json-toggle.collapsed{color:#98c379}[data-theme="dark"] .json-summary{color:#7f848e}
 .food-container{display:flex;justify-content:center;align-items:center;flex-grow:1;padding:2rem;min-height:calc(100vh - 20rem)}.wheel-container{position:relative;display:flex;flex-direction:column;align-items:center;gap:2rem}.wheel-pointer{position:absolute;top:-15px;left:50%;transform:translateX(-50%);font-size:2rem;color:var(--primary-green);z-index:10;text-shadow:0 2px 4px rgba(0,0,0,.3)}#wheel-canvas {
     border-radius: 50%;
     box-shadow: 0 8px 32px rgba(0,0,0,.15);
@@ -123,7 +124,17 @@
             </div>
             <div id="page-json" class="page" style="display:flex;flex-direction:column;">
                 <h1>JSON 格式化</h1>
-                <p class="subtitle">粘贴JSON字符串，工具将自动格式化并高亮显示。</p>
+                <p class="subtitle">粘贴 JSON 字符串，自动格式化并高亮显示。点击 ▼ 可折叠/展开节点。</p>
+                <div class="json-toolbar">
+                    <button class="json-tool-btn" id="json-format-btn" title="格式化（美化缩进）">格式化</button>
+                    <button class="json-tool-btn" id="json-compress-btn" title="压缩为单行 JSON">压缩</button>
+                    <span class="json-toolbar-sep"></span>
+                    <button class="json-tool-btn" id="json-unescape-btn" title="反转义：去除多余的转义斜杠">反转义</button>
+                    <button class="json-tool-btn" id="json-escape-btn" title="转义：将 JSON 转为转义字符串">转义</button>
+                    <span class="json-toolbar-sep"></span>
+                    <button class="json-tool-btn" id="json-copy-btn" title="复制格式化结果">复制</button>
+                    <button class="json-tool-btn" id="json-clear-btn" title="清空输入和输出">清空</button>
+                </div>
                 <div class="json-container" style="flex-grow:1;min-height:0;">
                     <div class="json-pane" style="flex:1;">
                         <textarea id="json-input" placeholder="在此处粘贴 JSON..."></textarea>
@@ -131,11 +142,6 @@
                     <div class="json-pane" style="flex:1;">
                         <div id="json-output" class="json-tree"></div>
                     </div>
-                </div>
-                <div class="instructions">
-                    <h2>JSON 工具说明</h2>
-                    <p><strong>格式化功能:</strong> 实时解析和格式化 JSON 数据，支持语法高亮显示。</p>
-                    <p><strong>操作提示:</strong> 点击 ▼ 按钮可折叠/展开对象和数组。支持多层嵌套结构，便于查看复杂数据。</p>
                 </div>
             </div>
             <div id="page-food" class="page" style="display:flex;flex-direction:column;">
@@ -1046,6 +1052,84 @@
             resultModal.classList.remove('show');
         }
 
+        // JSON 工具栏函数
+        function jsonFormatInput() {
+            const raw = jsonInput.value.trim();
+            if (!raw) return;
+            try {
+                const parsed = JSON.parse(raw);
+                jsonInput.value = JSON.stringify(parsed, null, 2);
+                formatJson();
+            } catch (e) {
+                jsonOutput.textContent = '格式化失败: ' + e.message;
+                jsonOutput.classList.add('error');
+            }
+        }
+
+        function jsonCompress() {
+            const raw = jsonInput.value.trim();
+            if (!raw) return;
+            try {
+                const parsed = JSON.parse(raw);
+                jsonInput.value = JSON.stringify(parsed);
+                formatJson();
+            } catch (e) {
+                jsonOutput.textContent = '压缩失败: ' + e.message;
+                jsonOutput.classList.add('error');
+            }
+        }
+
+        function jsonUnescape() {
+            let raw = jsonInput.value.trim();
+            if (!raw) return;
+            try {
+                let result = raw;
+                let iterations = 0;
+                const maxIterations = 10;
+                while (iterations++ < maxIterations) {
+                    let parsed;
+                    try { parsed = JSON.parse(result); } catch { break; }
+                    if (typeof parsed === 'string') {
+                        result = parsed;
+                    } else {
+                        result = JSON.stringify(parsed, null, 2);
+                        break;
+                    }
+                }
+                jsonInput.value = result;
+                formatJson();
+            } catch (e) {
+                jsonOutput.textContent = '反转义失败: ' + e.message;
+                jsonOutput.classList.add('error');
+            }
+        }
+
+        function jsonEscape() {
+            const raw = jsonInput.value.trim();
+            if (!raw) return;
+            jsonInput.value = JSON.stringify(raw);
+            formatJson();
+        }
+
+        function jsonCopy() {
+            const raw = jsonInput.value.trim();
+            if (!raw) return;
+            try {
+                const parsed = JSON.parse(raw);
+                const formatted = JSON.stringify(parsed, null, 2);
+                navigator.clipboard.writeText(formatted);
+            } catch {
+                navigator.clipboard.writeText(raw);
+            }
+            notificationEl.textContent = '已复制';
+            showNotification();
+        }
+
+        function jsonClear() {
+            jsonInput.value = '';
+            jsonOutput.innerHTML = '';
+        }
+
         function formatJson() {
             const rawJson = jsonInput.value.trim();
             jsonOutput.classList.remove('error');
@@ -1076,29 +1160,33 @@
                 container.innerHTML = `${key ? `<span class="json-key">"${key}"</span>: ` : ''}<span class="json-number">${value}</span>`;
             } else if (typeof value === 'string') {
                 container.innerHTML = `${key ? `<span class="json-key">"${key}"</span>: ` : ''}<span class="json-string">"${escapeHtml(value)}"</span>`;
-            } else if (Array.isArray(value)) {
-                const isArray = true;
-                const length = value.length;
+            } else if (Array.isArray(value) || typeof value === 'object') {
+                const isArray = Array.isArray(value);
+                const entries = isArray ? value : Object.keys(value);
+                const length = entries.length;
                 const levelClass = `level-${depth % 6}`;
+                const openChar = isArray ? '[' : '{';
+                const closeChar = isArray ? ']' : '}';
+                const countLabel = isArray
+                    ? `${length} ${length === 1 ? 'item' : 'items'}`
+                    : `${length} ${length === 1 ? 'property' : 'properties'}`;
 
                 const toggleBtn = document.createElement('span');
                 toggleBtn.className = length === 0 ? 'json-toggle empty' : 'json-toggle';
-                toggleBtn.textContent = '▼';
+                toggleBtn.textContent = '⊖';
 
                 const openBracket = document.createElement('span');
                 openBracket.className = `json-bracket ${levelClass}`;
-                openBracket.textContent = '[';
-
-                const closeBracket = document.createElement('span');
-                closeBracket.className = `json-bracket ${levelClass}`;
-                closeBracket.textContent = ']';
+                openBracket.textContent = openChar;
 
                 const count = document.createElement('span');
                 count.className = 'json-count';
-                count.textContent = `${length} ${length === 1 ? 'item' : 'items'}`;
+                count.textContent = countLabel;
 
-                const content = document.createElement('div');
-                content.className = 'json-content';
+                const summary = document.createElement('span');
+                summary.className = 'json-summary';
+                summary.textContent = isArray ? `Array[${length}]` : `Object{...}`;
+                summary.style.display = 'none';
 
                 const header = document.createElement('div');
                 header.appendChild(toggleBtn);
@@ -1110,151 +1198,47 @@
                 }
                 header.appendChild(openBracket);
                 header.appendChild(count);
+                header.appendChild(summary);
 
                 container.appendChild(header);
 
                 if (length > 0) {
-                    value.forEach((item, index) => {
-                        const itemNode = createJsonTree(item, depth + 1);
+                    const content = document.createElement('div');
+                    content.className = 'json-content';
+
+                    entries.forEach((entry, index) => {
+                        const itemNode = isArray
+                            ? createJsonTree(entry, depth + 1)
+                            : createJsonTree(value[entry], depth + 1, entry);
                         itemNode.style.marginLeft = '20px';
                         if (index < length - 1) {
-                            itemNode.innerHTML += ',';
+                            itemNode.appendChild(document.createTextNode(','));
                         }
                         content.appendChild(itemNode);
                     });
 
                     const closeBracketDiv = document.createElement('div');
+                    const closeBracket = document.createElement('span');
+                    closeBracket.className = `json-bracket ${levelClass}`;
+                    closeBracket.textContent = closeChar;
                     closeBracketDiv.appendChild(closeBracket);
                     content.appendChild(closeBracketDiv);
 
                     container.appendChild(content);
 
-                    toggleBtn.addEventListener('click', () => {
+                    toggleBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
                         const isCollapsed = content.style.display === 'none';
                         content.style.display = isCollapsed ? 'block' : 'none';
-                        toggleBtn.textContent = isCollapsed ? '▼' : '▶';
+                        openBracket.style.display = isCollapsed ? 'inline' : 'none';
+                        summary.style.display = isCollapsed ? 'none' : 'inline';
+                        toggleBtn.textContent = isCollapsed ? '⊖' : '⊕';
                         toggleBtn.classList.toggle('collapsed', !isCollapsed);
-
-                        if (!isCollapsed) {
-                            const ellipsis = document.createElement('span');
-                            ellipsis.className = 'json-ellipsis';
-                            ellipsis.textContent = ` ... `;
-                            ellipsis.addEventListener('click', () => {
-                                content.style.display = 'block';
-                                toggleBtn.textContent = '▼';
-                                toggleBtn.classList.remove('collapsed');
-                                ellipsis.remove();
-                            });
-                            header.appendChild(ellipsis);
-                        } else {
-                            const ellipsis = header.querySelector('.json-ellipsis');
-                            if (ellipsis) ellipsis.remove();
-                        }
-
-                        if (!isCollapsed) {
-                            header.appendChild(closeBracket);
-                        } else {
-                            const inlineCloseBracket = header.querySelector('.json-bracket:last-child');
-                            if (inlineCloseBracket && inlineCloseBracket !== openBracket) {
-                                inlineCloseBracket.remove();
-                            }
-                        }
                     });
                 } else {
                     const inlineClose = document.createElement('span');
                     inlineClose.className = `json-bracket ${levelClass}`;
-                    inlineClose.textContent = ']';
-                    header.appendChild(inlineClose);
-                }
-
-            } else if (typeof value === 'object') {
-                const keys = Object.keys(value);
-                const length = keys.length;
-                const levelClass = `level-${depth % 6}`;
-
-                const toggleBtn = document.createElement('span');
-                toggleBtn.className = length === 0 ? 'json-toggle empty' : 'json-toggle';
-                toggleBtn.textContent = '▼';
-
-                const openBracket = document.createElement('span');
-                openBracket.className = `json-bracket ${levelClass}`;
-                openBracket.textContent = '{';
-
-                const closeBracket = document.createElement('span');
-                closeBracket.className = `json-bracket ${levelClass}`;
-                closeBracket.textContent = '}';
-
-                const count = document.createElement('span');
-                count.className = 'json-count';
-                count.textContent = `${length} ${length === 1 ? 'property' : 'properties'}`;
-
-                const content = document.createElement('div');
-                content.className = 'json-content';
-
-                const header = document.createElement('div');
-                header.appendChild(toggleBtn);
-                if (key) {
-                    const keySpan = document.createElement('span');
-                    keySpan.className = 'json-key';
-                    keySpan.textContent = `"${key}": `;
-                    header.appendChild(keySpan);
-                }
-                header.appendChild(openBracket);
-                header.appendChild(count);
-
-                container.appendChild(header);
-
-                if (length > 0) {
-                    keys.forEach((objKey, index) => {
-                        const itemNode = createJsonTree(value[objKey], depth + 1, objKey);
-                        itemNode.style.marginLeft = '20px';
-                        if (index < length - 1) {
-                            itemNode.innerHTML += ',';
-                        }
-                        content.appendChild(itemNode);
-                    });
-
-                    const closeBracketDiv = document.createElement('div');
-                    closeBracketDiv.appendChild(closeBracket);
-                    content.appendChild(closeBracketDiv);
-
-                    container.appendChild(content);
-
-                    toggleBtn.addEventListener('click', () => {
-                        const isCollapsed = content.style.display === 'none';
-                        content.style.display = isCollapsed ? 'block' : 'none';
-                        toggleBtn.textContent = isCollapsed ? '▼' : '▶';
-                        toggleBtn.classList.toggle('collapsed', !isCollapsed);
-
-                        if (!isCollapsed) {
-                            const ellipsis = document.createElement('span');
-                            ellipsis.className = 'json-ellipsis';
-                            ellipsis.textContent = ` ... `;
-                            ellipsis.addEventListener('click', () => {
-                                content.style.display = 'block';
-                                toggleBtn.textContent = '▼';
-                                toggleBtn.classList.remove('collapsed');
-                                ellipsis.remove();
-                            });
-                            header.appendChild(ellipsis);
-                        } else {
-                            const ellipsis = header.querySelector('.json-ellipsis');
-                            if (ellipsis) ellipsis.remove();
-                        }
-
-                        if (!isCollapsed) {
-                            header.appendChild(closeBracket);
-                        } else {
-                            const inlineCloseBracket = header.querySelector('.json-bracket:last-child');
-                            if (inlineCloseBracket && inlineCloseBracket !== openBracket) {
-                                inlineCloseBracket.remove();
-                            }
-                        }
-                    });
-                } else {
-                    const inlineClose = document.createElement('span');
-                    inlineClose.className = `json-bracket ${levelClass}`;
-                    inlineClose.textContent = '}';
+                    inlineClose.textContent = closeChar;
                     header.appendChild(inlineClose);
                 }
             }
@@ -1342,6 +1326,12 @@
             navFood.addEventListener('click', () => switchPage('food'));
             navTestfile.addEventListener('click', () => switchPage('testfile'));
             jsonInput.addEventListener('input', formatJson);
+            document.getElementById('json-format-btn').addEventListener('click', jsonFormatInput);
+            document.getElementById('json-compress-btn').addEventListener('click', jsonCompress);
+            document.getElementById('json-unescape-btn').addEventListener('click', jsonUnescape);
+            document.getElementById('json-escape-btn').addEventListener('click', jsonEscape);
+            document.getElementById('json-copy-btn').addEventListener('click', jsonCopy);
+            document.getElementById('json-clear-btn').addEventListener('click', jsonClear);
 
             // 测试文件生成事件监听器
             generateBtn.addEventListener('click', generateTestFile);
