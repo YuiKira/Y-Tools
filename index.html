@@ -23,6 +23,8 @@
 body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}.container.json-mode .content{height:calc(100vh - 4rem)}.container.json-mode #page-json{flex:1;min-height:0}.json-page-heading{display:flex;align-items:flex-end;justify-content:flex-start;gap:1.25rem;margin-bottom:.85rem;flex-shrink:0}.json-page-heading h1{font-size:1.6rem;margin-bottom:.2rem}.json-page-heading .subtitle{font-size:.86rem;margin:0}.json-status{display:inline-flex;align-items:center;gap:.4rem;color:var(--secondary-text-color);font-size:.78rem;white-space:nowrap}.json-status::before{content:'';width:.45rem;height:.45rem;border-radius:50%;background:#a3a3a3}.json-status.valid::before{background:var(--primary-green)}.json-status.invalid{color:#c73e45}.json-status.invalid::before{background:#dc3545}.json-toolbar{padding:.5rem;background:var(--light-green-bg);border:1px solid var(--border-color);border-radius:.5rem}.json-tool-btn{background:var(--content-bg);font-weight:500}.json-container{--json-input-width:42%;display:grid;grid-template-columns:minmax(280px,var(--json-input-width)) 7px minmax(360px,1fr);gap:0;min-height:0}.json-pane{min-width:0;background:var(--content-bg);border:1px solid var(--border-color);border-radius:.5rem}.json-pane:focus-within{border-color:var(--primary-green);box-shadow:0 0 0 2px rgba(40,167,69,.1)}.json-pane-header{height:2.5rem;display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:0 .8rem;background:var(--light-green-bg);border-bottom:1px solid var(--border-color);flex-shrink:0}.json-pane-title{font-size:.82rem;font-weight:700;color:var(--text-color)}.json-pane-meta{font-size:.72rem;color:var(--secondary-text-color);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.json-pane textarea{box-sizing:border-box;padding:1rem;font-size:.9rem;line-height:1.65;tab-size:2;background:var(--content-bg);white-space:pre;overflow:auto}.json-resizer{position:relative;cursor:col-resize;touch-action:none}.json-resizer::after{content:'';position:absolute;top:0;bottom:0;left:3px;width:1px;background:var(--border-color)}.json-resizer:hover::after,.json-resizer.dragging::after{width:3px;left:2px;background:var(--primary-green)}.json-pane-output{background:var(--content-bg)}.json-tree{box-sizing:border-box;padding:1rem;font-size:.88rem;line-height:1.7;overflow:auto;white-space:nowrap}.json-tree:empty::before{content:'解析结果将在这里显示';color:var(--secondary-text-color);opacity:.6}.json-tree.error{padding:1rem;color:#c73e45;font-weight:500;white-space:pre-wrap;line-height:1.6}.json-node{min-height:1.5em}.json-node + .json-node{margin-top:.08rem}.json-node-header{display:flex;align-items:baseline;min-width:max-content}.json-content{border-left:1px solid var(--separator-color);margin-left:.5rem;padding-left:1.25rem}.json-toggle{width:1.05rem;margin-right:.25rem;color:var(--secondary-text-color);font-size:.75rem}.json-toggle:hover{color:var(--primary-green);opacity:1}.json-toggle.collapsed{color:var(--secondary-text-color)}.json-toggle.empty{visibility:hidden}.json-key{color:#8b3f91;font-weight:500}.json-string{color:#26863d}.json-number{color:#1769aa}.json-boolean{color:#b95700}.json-null{color:#8b3f91;font-style:italic}.json-copyable{border-radius:.2rem;cursor:copy;outline:1px solid transparent;outline-offset:1px}.json-copyable:empty{display:inline-block;min-width:.35rem;height:.9em;vertical-align:-.08em}.json-copyable:hover{background:rgba(40,167,69,.1);outline-color:rgba(40,167,69,.3)}.json-bracket{color:var(--secondary-text-color);font-weight:600}.json-count{display:inline-block;margin-left:.45rem;padding:0 .35rem;border:1px solid var(--border-color);border-radius:.25rem;color:var(--secondary-text-color);font:500 .65rem/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;vertical-align:middle}.json-summary{margin-left:.25rem;color:var(--secondary-text-color);font-style:normal}.json-load-more{display:block;margin:.35rem 0 .35rem 1.2rem;padding:.3rem .65rem;border:1px solid var(--border-color);border-radius:.25rem;background:var(--light-green-bg);color:var(--secondary-text-color);font:500 .72rem/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;cursor:pointer}.json-load-more:hover{border-color:var(--primary-green);color:var(--primary-green)}.copy-notification.restarting{transition:none!important}.copy-notification.json-copy-notification{left:auto;right:0;top:50%;bottom:auto;width:auto;max-width:8rem;display:flex;align-items:center;gap:.4rem;padding:.6rem .85rem;border:1px solid var(--primary-green);border-right:none;border-radius:.4rem 0 0 .4rem;background:var(--card-bg);color:var(--text-color);font-size:.8rem;font-weight:600;text-align:center;pointer-events:none;transform:translate(1rem,-50%);transition:opacity .7s ease,transform .7s ease,background-color var(--theme-transition),color var(--theme-transition),border-color var(--theme-transition),box-shadow var(--theme-transition)!important}.copy-notification.json-copy-notification::before{content:'✓';display:grid;place-items:center;width:1.15rem;height:1.15rem;border-radius:50%;background:var(--primary-green);color:#fff;font-size:.7rem}.copy-notification.json-copy-notification.show{transform:translate(0,-50%)}[data-theme="dark"] .json-key{color:#d19ad6}[data-theme="dark"] .json-string{color:#8fd694}[data-theme="dark"] .json-number{color:#75bfff}[data-theme="dark"] .json-boolean{color:#f0a45d}[data-theme="dark"] .json-null{color:#d19ad6}
 @media (max-width:768px){.container.json-mode .sidebar{flex:none}.container.json-mode .content{height:900px;min-height:900px}.json-page-heading{align-items:flex-start;flex-direction:column;gap:.35rem}.json-container{grid-template-columns:1fr;grid-template-rows:minmax(310px,1fr) minmax(360px,1fr);gap:.75rem}.json-resizer{display:none}.json-pane{min-height:0}.json-toolbar{overflow-x:auto;flex-wrap:nowrap}.json-toolbar-sep{flex-shrink:0}}
 .copy-notification.json-copy-notification.restarting{transition:none!important}
+.json-token-group{position:relative;display:inline-flex;align-items:baseline}.json-edit-btn{position:absolute;top:-.75rem;right:-.7rem;z-index:3;width:1.15rem;height:1.15rem;padding:0;display:grid;place-items:center;border:1px solid var(--border-color);border-radius:50%;background:var(--card-bg);color:var(--secondary-text-color);font:700 .72rem/1 sans-serif;cursor:pointer;opacity:0;transform:scale(.85);box-shadow:0 2px 6px rgba(0,0,0,.12);transition:opacity .15s ease,transform .15s ease,color .15s ease,border-color .15s ease!important}.json-token-group:hover .json-edit-btn,.json-edit-btn:focus{opacity:1;transform:scale(1)}.json-edit-btn:hover{color:var(--primary-green);border-color:var(--primary-green)}.json-inline-editor{display:inline-flex;align-items:center;gap:.3rem;max-width:min(34rem,70vw);vertical-align:middle}.json-edit-input,.json-edit-select{height:1.7rem;box-sizing:border-box;padding:.15rem .4rem;border:1px solid var(--primary-green);border-radius:.25rem;background:var(--content-bg);color:var(--text-color);font:inherit;outline:none}.json-edit-input:focus,.json-edit-select:focus{box-shadow:0 0 0 2px rgba(40,167,69,.12)}.json-edit-extra{display:none}.json-edit-extra.visible{display:inline-block}.json-edit-action{width:1.55rem;height:1.55rem;padding:0;display:grid;place-items:center;border:1px solid var(--border-color);border-radius:.25rem;background:var(--card-bg);color:var(--secondary-text-color);font:700 .75rem/1 sans-serif;cursor:pointer}.json-edit-save{color:var(--primary-green);border-color:var(--primary-green)}.json-edit-action:hover{background:var(--light-green-bg)}.json-edit-error{color:#c73e45;font:500 .7rem/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;white-space:nowrap}@media (hover:none){.json-edit-btn{opacity:.7;transform:scale(.92)}}
+.json-pane-meta.invalid{color:#c73e45;font-weight:600}.json-pane-meta.actionable{cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}.json-error-panel{max-width:48rem;padding:.25rem;white-space:normal}.json-error-title{margin:0 0 .65rem;font:700 .95rem/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#c73e45}.json-error-location{margin-bottom:.55rem;color:#c73e45;font-weight:600}.json-error-message{margin:0 0 .9rem;color:#c73e45;font:500 .82rem/1.55 'Menlo','Monaco','Consolas',monospace;white-space:pre-wrap;word-break:break-word}.json-locate-btn{display:inline-flex;align-items:center;gap:.35rem;padding:.4rem .7rem;border:1px solid #c73e45;border-radius:.3rem;background:var(--card-bg);color:#c73e45;font:600 .78rem/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;cursor:pointer}.json-locate-btn:hover{background:rgba(199,62,69,.08)}.json-pane.error-located{border-color:#c73e45;box-shadow:0 0 0 3px rgba(199,62,69,.14)}
 .food-container{display:flex;justify-content:center;align-items:center;flex-grow:1;padding:2rem;min-height:calc(100vh - 20rem)}.wheel-container{position:relative;display:flex;flex-direction:column;align-items:center;gap:2rem}.wheel-pointer{position:absolute;top:-15px;left:50%;transform:translateX(-50%);font-size:2rem;color:var(--primary-green);z-index:10;text-shadow:0 2px 4px rgba(0,0,0,.3)}#wheel-canvas {
     border-radius: 50%;
     box-shadow: 0 8px 32px rgba(0,0,0,.15);
@@ -1325,6 +1327,8 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
         // JSON 工具栏函数
         const JSON_RENDER_BATCH_SIZE = 200;
         let jsonFormatTimer;
+        let currentJsonData;
+        let currentJsonError;
 
         function scheduleJsonFormat() {
             clearTimeout(jsonFormatTimer);
@@ -1338,6 +1342,11 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
             const value = jsonInput.value;
             const lineCount = value ? value.split('\n').length : 0;
             jsonInputMeta.textContent = `${lineCount} 行 · ${value.length.toLocaleString()} 字符`;
+            jsonInputMeta.classList.remove('invalid', 'actionable');
+            jsonInputMeta.removeAttribute('role');
+            jsonInputMeta.removeAttribute('tabindex');
+            jsonInputMeta.removeAttribute('title');
+            currentJsonError = undefined;
         }
 
         function getJsonTypeLabel(value) {
@@ -1350,38 +1359,131 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
             return typeLabels[typeof value] || typeof value;
         }
 
-        function getJsonErrorLocation(raw, message) {
+        function getJsonErrorDetails(raw, message) {
             const positionMatch = message.match(/position\s+(\d+)/i);
-            if (!positionMatch) return message;
-            const position = Number(positionMatch[1]);
-            const beforeError = raw.slice(0, position);
-            const lines = beforeError.split('\n');
-            return `第 ${lines.length} 行，第 ${lines[lines.length - 1].length + 1} 列\n${message}`;
+            const lineColumnMatch = message.match(/line\s+(\d+)\s+column\s+(\d+)/i);
+            let position = positionMatch ? Number(positionMatch[1]) : null;
+            let line = lineColumnMatch ? Number(lineColumnMatch[1]) : null;
+            let column = lineColumnMatch ? Number(lineColumnMatch[2]) : null;
+            if (position !== null) {
+                const lines = raw.slice(0, position).split('\n');
+                line = lines.length;
+                column = lines[lines.length - 1].length + 1;
+            } else if (line !== null && column !== null) {
+                const lines = raw.split('\n');
+                position = lines.slice(0, line - 1).reduce((total, item) => total + item.length + 1, 0)
+                    + column - 1;
+            }
+            return { message, position, line, column };
+        }
+
+        function renderJsonError(raw, error, title = 'JSON 格式错误') {
+            const details = getJsonErrorDetails(raw, error.message);
+            currentJsonError = { ...details, raw };
+            jsonOutput.innerHTML = '';
+            jsonOutput.classList.add('error');
+            const panel = document.createElement('div');
+            panel.className = 'json-error-panel';
+            const heading = document.createElement('div');
+            heading.className = 'json-error-title';
+            heading.textContent = title;
+            panel.appendChild(heading);
+
+            if (details.line !== null && details.column !== null) {
+                const location = document.createElement('div');
+                location.className = 'json-error-location';
+                location.textContent = `第 ${details.line} 行，第 ${details.column} 列`;
+                panel.appendChild(location);
+                jsonInputMeta.textContent = `第 ${details.line} 行 · 第 ${details.column} 列`;
+                jsonInputMeta.classList.add('invalid', 'actionable');
+                jsonInputMeta.setAttribute('role', 'button');
+                jsonInputMeta.setAttribute('tabindex', '0');
+                jsonInputMeta.title = '点击定位错误';
+                jsonOutputMeta.textContent = `第 ${details.line} 行，第 ${details.column} 列`;
+            } else {
+                jsonOutputMeta.textContent = '无法确定错误位置';
+            }
+
+            const message = document.createElement('pre');
+            message.className = 'json-error-message';
+            message.textContent = details.message;
+            panel.appendChild(message);
+            if (details.position !== null) {
+                const locateButton = document.createElement('button');
+                locateButton.type = 'button';
+                locateButton.className = 'json-locate-btn';
+                locateButton.textContent = '定位错误';
+                locateButton.addEventListener('click', locateCurrentJsonError);
+                panel.appendChild(locateButton);
+            }
+            jsonOutput.appendChild(panel);
+            jsonStatus.className = 'json-status invalid';
+            jsonStatus.textContent = '格式错误';
+        }
+
+        function locateCurrentJsonError() {
+            if (!currentJsonError || currentJsonError.position === null) return;
+            const raw = jsonInput.value;
+            let start = Math.min(currentJsonError.position, raw.length);
+            while (start < raw.length && /[ \t\r\n]/.test(raw[start])) start++;
+            if (start >= raw.length) start = Math.max(0, raw.length - 1);
+            let end = Math.min(raw.length, start + 1);
+            if (raw[start] === '"') {
+                let escaped = false;
+                for (let index = start + 1; index < raw.length; index++) {
+                    const char = raw[index];
+                    if (char === '"' && !escaped) {
+                        end = index + 1;
+                        break;
+                    }
+                    escaped = char === '\\' && !escaped;
+                    if (char !== '\\') escaped = false;
+                }
+            } else {
+                while (end < raw.length && !/[\s,\]}]/.test(raw[end])) end++;
+            }
+
+            jsonInput.focus({ preventScroll: true });
+            jsonInput.setSelectionRange(start, Math.max(start + 1, end));
+            const style = getComputedStyle(jsonInput);
+            const lineHeight = parseFloat(style.lineHeight) || parseFloat(style.fontSize) * 1.65;
+            const characterWidth = parseFloat(style.fontSize) * 0.62;
+            jsonInput.scrollTop = Math.max(0,
+                (currentJsonError.line - 1) * lineHeight - jsonInput.clientHeight / 2
+            );
+            jsonInput.scrollLeft = Math.max(0,
+                (currentJsonError.column - 1) * characterWidth - jsonInput.clientWidth / 2
+            );
+            const pane = jsonInput.closest('.json-pane');
+            pane.classList.remove('error-located');
+            void pane.offsetWidth;
+            pane.classList.add('error-located');
+            setTimeout(() => pane.classList.remove('error-located'), 900);
         }
 
         function jsonFormatInput() {
-            const raw = jsonInput.value.trim();
-            if (!raw) return;
+            const raw = jsonInput.value;
+            if (!raw.trim()) return;
             try {
                 const parsed = JSON.parse(raw);
                 jsonInput.value = JSON.stringify(parsed, null, 2);
                 formatJson();
             } catch (e) {
-                jsonOutput.textContent = '格式化失败: ' + e.message;
-                jsonOutput.classList.add('error');
+                currentJsonData = undefined;
+                renderJsonError(raw, e, '格式化失败');
             }
         }
 
         function jsonCompress() {
-            const raw = jsonInput.value.trim();
-            if (!raw) return;
+            const raw = jsonInput.value;
+            if (!raw.trim()) return;
             try {
                 const parsed = JSON.parse(raw);
                 jsonInput.value = JSON.stringify(parsed);
                 formatJson();
             } catch (e) {
-                jsonOutput.textContent = '压缩失败: ' + e.message;
-                jsonOutput.classList.add('error');
+                currentJsonData = undefined;
+                renderJsonError(raw, e, '压缩失败');
             }
         }
 
@@ -1433,20 +1535,24 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
 
         function jsonClear() {
             clearTimeout(jsonFormatTimer);
+            currentJsonData = undefined;
+            currentJsonError = undefined;
             jsonInput.value = '';
             jsonOutput.innerHTML = '';
             jsonOutput.classList.remove('error');
             jsonStatus.className = 'json-status';
             jsonStatus.textContent = '等待输入';
             jsonInputMeta.textContent = '0 行 · 0 字符';
+            jsonInputMeta.classList.remove('invalid', 'actionable');
             jsonOutputMeta.textContent = '尚未解析';
         }
 
         function formatJson() {
-            const rawJson = jsonInput.value.trim();
+            const rawJson = jsonInput.value;
             jsonOutput.classList.remove('error');
             updateJsonInputMeta();
-            if (!rawJson) {
+            if (!rawJson.trim()) {
+                currentJsonData = undefined;
                 jsonOutput.innerHTML = '';
                 jsonStatus.className = 'json-status';
                 jsonStatus.textContent = '等待输入';
@@ -1455,40 +1561,49 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
             }
             try {
                 const parsed = JSON.parse(rawJson);
-                jsonOutput.innerHTML = '';
-                const treeNode = createJsonTree(parsed, 0);
-                jsonOutput.appendChild(treeNode);
-                jsonStatus.className = 'json-status valid';
-                jsonStatus.textContent = 'JSON 有效';
-                jsonOutputMeta.textContent = getJsonTypeLabel(parsed);
+                currentJsonData = parsed;
+                renderJsonData(parsed);
             } catch (e) {
-                const errorMessage = getJsonErrorLocation(rawJson, e.message);
-                jsonOutput.textContent = `JSON 格式错误\n${errorMessage}`;
-                jsonOutput.classList.add('error');
-                jsonStatus.className = 'json-status invalid';
-                jsonStatus.textContent = '格式错误';
-                jsonOutputMeta.textContent = errorMessage.split('\n')[0];
+                currentJsonData = undefined;
+                renderJsonError(rawJson, e);
             }
         }
 
-        function createJsonTree(value, depth = 0, key = null) {
+        function renderJsonData(data, viewState = null) {
+            currentJsonError = undefined;
+            jsonInputMeta.classList.remove('invalid', 'actionable');
+            jsonOutput.classList.remove('error');
+            jsonOutput.innerHTML = '';
+            jsonOutput.appendChild(createJsonTree(data, 0, null, []));
+            jsonStatus.className = 'json-status valid';
+            jsonStatus.textContent = 'JSON 有效';
+            jsonOutputMeta.textContent = getJsonTypeLabel(data);
+            if (viewState) restoreJsonTreeState(viewState);
+        }
+
+        function createJsonTree(value, depth = 0, key = null, path = []) {
             const container = document.createElement('div');
             container.className = 'json-node';
             const isCollection = value !== null && typeof value === 'object';
 
             if (!isCollection) {
-                appendJsonKey(container, key);
+                appendJsonKey(container, key, path);
                 const type = value === null ? 'null' : typeof value;
                 if (type === 'string') {
-                    appendJsonQuotedToken(container, value, 'json-string', '点击复制字符串内容');
+                    appendJsonQuotedToken(container, value, 'json-string', '点击复制字符串内容', {
+                        kind: 'value', path, type
+                    });
                 } else {
+                    const tokenGroup = document.createElement('span');
+                    tokenGroup.className = 'json-token-group';
                     const valueSpan = document.createElement('span');
                     valueSpan.className = `json-${type}`;
                     valueSpan.textContent = String(value);
                     valueSpan.classList.add('json-copyable');
                     valueSpan.dataset.jsonCopy = String(value);
                     valueSpan.title = '点击复制值';
-                    container.appendChild(valueSpan);
+                    tokenGroup.append(valueSpan, createJsonEditButton('value', path, type));
+                    container.appendChild(tokenGroup);
                 }
             } else {
                 const isArray = Array.isArray(value);
@@ -1503,6 +1618,7 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
                 toggleBtn.className = length === 0 ? 'json-toggle empty' : 'json-toggle';
                 toggleBtn.textContent = length === 0 ? '' : depth === 0 ? '▼' : '▶';
                 toggleBtn.dataset.expanded = depth === 0 ? 'true' : 'false';
+                toggleBtn.dataset.jsonPath = JSON.stringify(path);
 
                 const openBracket = document.createElement('span');
                 openBracket.className = `json-bracket ${levelClass}`;
@@ -1520,7 +1636,7 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
                 const header = document.createElement('div');
                 header.className = 'json-node-header';
                 header.appendChild(toggleBtn);
-                appendJsonKey(header, key);
+                appendJsonKey(header, key, path);
                 header.appendChild(openBracket);
                 header.appendChild(count);
                 header.appendChild(summary);
@@ -1531,6 +1647,7 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
                     const content = document.createElement('div');
                     content.className = 'json-content';
                     const children = document.createElement('div');
+                    children.dataset.jsonChildrenPath = JSON.stringify(path);
                     content.appendChild(children);
                     const closeBracketDiv = document.createElement('div');
                     const closeBracket = document.createElement('span');
@@ -1545,7 +1662,7 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
                     const renderChildren = () => {
                         if (rendered) return;
                         rendered = true;
-                        renderJsonBatch(value, entries, isArray, depth, children, 0);
+                        renderJsonBatch(value, entries, isArray, depth, path, children, 0);
                     };
                     if (depth === 0) renderChildren();
 
@@ -1570,14 +1687,18 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
             return container;
         }
 
-        function appendJsonKey(container, key) {
+        function appendJsonKey(container, key, path) {
             if (key === null) return;
-            appendJsonQuotedToken(container, String(key), 'json-key', '点击复制键名');
+            appendJsonQuotedToken(container, String(key), 'json-key', '点击复制键名', {
+                kind: 'key', path, type: 'string'
+            });
             container.appendChild(document.createTextNode(': '));
         }
 
-        function appendJsonQuotedToken(container, value, className, title) {
+        function appendJsonQuotedToken(container, value, className, title, editOptions) {
             const serialized = JSON.stringify(value);
+            const tokenGroup = document.createElement('span');
+            tokenGroup.className = 'json-token-group';
             const openingQuote = document.createElement('span');
             openingQuote.className = className;
             openingQuote.textContent = '"';
@@ -1591,7 +1712,26 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
             const closingQuote = document.createElement('span');
             closingQuote.className = className;
             closingQuote.textContent = '"';
-            container.append(openingQuote, content, closingQuote);
+            tokenGroup.append(openingQuote, content, closingQuote);
+            if (editOptions) {
+                tokenGroup.appendChild(createJsonEditButton(
+                    editOptions.kind, editOptions.path, editOptions.type
+                ));
+            }
+            container.appendChild(tokenGroup);
+        }
+
+        function createJsonEditButton(kind, path, type) {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'json-edit-btn';
+            button.textContent = '✎';
+            button.title = kind === 'key' ? '编辑字段名' : '编辑值';
+            button.setAttribute('aria-label', button.title);
+            button.dataset.jsonEdit = kind;
+            button.dataset.jsonPath = JSON.stringify(path);
+            button.dataset.jsonType = type;
+            return button;
         }
 
         function copyJsonToken(event) {
@@ -1603,18 +1743,250 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
             });
         }
 
-        function renderJsonBatch(value, entries, isArray, depth, children, startIndex) {
+        function startJsonEdit(event) {
+            const button = event.target.closest('.json-edit-btn[data-json-edit]');
+            if (!button) return;
+            event.stopPropagation();
+
+            const activeEditor = jsonOutput.querySelector('.json-inline-editor');
+            if (activeEditor) cancelJsonEdit(activeEditor);
+
+            const tokenGroup = button.closest('.json-token-group');
+            const path = JSON.parse(button.dataset.jsonPath);
+            const kind = button.dataset.jsonEdit;
+            const type = button.dataset.jsonType;
+            const currentValue = kind === 'key'
+                ? path[path.length - 1]
+                : getJsonValueAtPath(currentJsonData, path);
+            const editor = document.createElement('span');
+            editor.className = 'json-inline-editor';
+            editor.dataset.jsonEdit = kind;
+            editor.dataset.jsonPath = JSON.stringify(path);
+            editor.dataset.jsonType = type;
+            editor._jsonOriginalToken = tokenGroup;
+
+            let primaryControl;
+            let extraInput;
+            if (kind === 'key' || type === 'string' || type === 'number') {
+                primaryControl = document.createElement('input');
+                primaryControl.type = 'text';
+                primaryControl.className = 'json-edit-input';
+                primaryControl.value = String(currentValue);
+                primaryControl.style.width = `${Math.min(32, Math.max(6, primaryControl.value.length + 1))}ch`;
+            } else {
+                primaryControl = document.createElement('select');
+                primaryControl.className = 'json-edit-select';
+                const options = type === 'boolean'
+                    ? [['true', 'true'], ['false', 'false']]
+                    : [['null', 'null'], ['string', '字符串'], ['number', '数字'], ['true', 'true'], ['false', 'false']];
+                options.forEach(([optionValue, label]) => {
+                    const option = document.createElement('option');
+                    option.value = optionValue;
+                    option.textContent = label;
+                    primaryControl.appendChild(option);
+                });
+                primaryControl.value = type === 'boolean' ? String(currentValue) : 'null';
+                if (type === 'null') {
+                    extraInput = document.createElement('input');
+                    extraInput.type = 'text';
+                    extraInput.className = 'json-edit-input json-edit-extra';
+                    extraInput.style.width = '12ch';
+                    primaryControl.addEventListener('change', () => {
+                        const needsValue = primaryControl.value === 'string' || primaryControl.value === 'number';
+                        extraInput.classList.toggle('visible', needsValue);
+                        if (needsValue) extraInput.focus();
+                    });
+                }
+            }
+
+            const saveButton = document.createElement('button');
+            saveButton.type = 'button';
+            saveButton.className = 'json-edit-action json-edit-save';
+            saveButton.textContent = '✓';
+            saveButton.title = '保存';
+            const cancelButton = document.createElement('button');
+            cancelButton.type = 'button';
+            cancelButton.className = 'json-edit-action';
+            cancelButton.textContent = '×';
+            cancelButton.title = '取消';
+            const error = document.createElement('span');
+            error.className = 'json-edit-error';
+            editor._jsonPrimaryControl = primaryControl;
+            editor._jsonExtraInput = extraInput;
+            editor._jsonError = error;
+            editor.appendChild(primaryControl);
+            if (extraInput) editor.appendChild(extraInput);
+            editor.append(saveButton, cancelButton, error);
+            tokenGroup.replaceWith(editor);
+
+            saveButton.addEventListener('click', () => commitJsonEdit(editor));
+            cancelButton.addEventListener('click', () => cancelJsonEdit(editor));
+            editor.addEventListener('keydown', (keyEvent) => {
+                if (keyEvent.key === 'Escape') {
+                    keyEvent.preventDefault();
+                    cancelJsonEdit(editor);
+                } else if (keyEvent.key === 'Enter' && !keyEvent.isComposing) {
+                    keyEvent.preventDefault();
+                    commitJsonEdit(editor);
+                }
+            });
+            primaryControl.focus();
+            if (primaryControl.select) primaryControl.select();
+        }
+
+        function cancelJsonEdit(editor) {
+            if (!editor?.isConnected) return;
+            editor.replaceWith(editor._jsonOriginalToken);
+        }
+
+        function commitJsonEdit(editor) {
+            const path = JSON.parse(editor.dataset.jsonPath);
+            const kind = editor.dataset.jsonEdit;
+            const type = editor.dataset.jsonType;
+            const primaryControl = editor._jsonPrimaryControl;
+            const viewState = captureJsonTreeState();
+            editor._jsonError.textContent = '';
+
+            try {
+                if (kind === 'key') {
+                    const newKey = primaryControl.value;
+                    const oldKey = path[path.length - 1];
+                    if (newKey !== oldKey) {
+                        const newPath = renameJsonKey(path, newKey);
+                        remapJsonTreeState(viewState, path, newPath);
+                    }
+                } else {
+                    let newValue;
+                    if (type === 'string') {
+                        newValue = primaryControl.value;
+                    } else if (type === 'number') {
+                        newValue = parseJsonNumber(primaryControl.value);
+                    } else if (type === 'boolean') {
+                        newValue = primaryControl.value === 'true';
+                    } else {
+                        const selectedType = primaryControl.value;
+                        if (selectedType === 'null') newValue = null;
+                        else if (selectedType === 'true' || selectedType === 'false') newValue = selectedType === 'true';
+                        else if (selectedType === 'number') newValue = parseJsonNumber(editor._jsonExtraInput.value);
+                        else newValue = editor._jsonExtraInput.value;
+                    }
+                    setJsonValueAtPath(path, newValue);
+                }
+
+                jsonInput.value = JSON.stringify(currentJsonData, null, 2);
+                updateJsonInputMeta();
+                renderJsonData(currentJsonData, viewState);
+            } catch (error) {
+                editor._jsonError.textContent = error.message;
+                primaryControl.focus();
+            }
+        }
+
+        function parseJsonNumber(value) {
+            const source = value.trim();
+            if (!source) throw new Error('请输入数字');
+            let parsed;
+            try {
+                parsed = JSON.parse(source);
+            } catch {
+                throw new Error('数字格式无效');
+            }
+            if (typeof parsed !== 'number' || !Number.isFinite(parsed)) {
+                throw new Error('数字格式无效');
+            }
+            return parsed;
+        }
+
+        function getJsonValueAtPath(root, path) {
+            return path.reduce((value, segment) => value[segment], root);
+        }
+
+        function setJsonValueAtPath(path, value) {
+            if (path.length === 0) {
+                currentJsonData = value;
+                return;
+            }
+            const parent = getJsonValueAtPath(currentJsonData, path.slice(0, -1));
+            parent[path[path.length - 1]] = value;
+        }
+
+        function renameJsonKey(path, newKey) {
+            const parentPath = path.slice(0, -1);
+            const oldKey = path[path.length - 1];
+            const parent = getJsonValueAtPath(currentJsonData, parentPath);
+            if (Object.prototype.hasOwnProperty.call(parent, newKey)) {
+                throw new Error('字段名已存在');
+            }
+            const renamedParent = Object.fromEntries(
+                Object.entries(parent).map(([key, value]) => [key === oldKey ? newKey : key, value])
+            );
+            setJsonValueAtPath(parentPath, renamedParent);
+            return parentPath.concat(newKey);
+        }
+
+        function captureJsonTreeState() {
+            return {
+                expanded: Array.from(jsonOutput.querySelectorAll('.json-toggle[data-expanded="true"]'))
+                    .map(toggle => toggle.dataset.jsonPath),
+                loaded: Array.from(jsonOutput.querySelectorAll('[data-json-children-path]'))
+                    .map(children => ({
+                        path: children.dataset.jsonChildrenPath,
+                        count: Number(children.dataset.renderedCount || 0)
+                    })),
+                scrollTop: jsonOutput.scrollTop,
+                scrollLeft: jsonOutput.scrollLeft
+            };
+        }
+
+        function restoreJsonTreeState(state) {
+            const loadedCounts = new Map(state.loaded.map(item => [item.path, item.count]));
+            const paths = state.expanded.slice().sort((left, right) => {
+                return JSON.parse(left).length - JSON.parse(right).length;
+            });
+            paths.forEach(path => {
+                const toggle = Array.from(jsonOutput.querySelectorAll('.json-toggle'))
+                    .find(item => item.dataset.jsonPath === path);
+                if (toggle?.dataset.expanded === 'false') toggle.click();
+                const children = Array.from(jsonOutput.querySelectorAll('[data-json-children-path]'))
+                    .find(item => item.dataset.jsonChildrenPath === path);
+                const targetCount = loadedCounts.get(path) || 0;
+                while (children && Number(children.dataset.renderedCount || 0) < targetCount) {
+                    const loadMore = Array.from(children.children)
+                        .find(child => child.classList.contains('json-load-more'));
+                    if (!loadMore) break;
+                    loadMore.click();
+                }
+            });
+            jsonOutput.scrollTop = state.scrollTop;
+            jsonOutput.scrollLeft = state.scrollLeft;
+        }
+
+        function remapJsonTreeState(state, oldPath, newPath) {
+            const remap = pathString => {
+                const path = JSON.parse(pathString);
+                const hasPrefix = oldPath.every((segment, index) => path[index] === segment);
+                return hasPrefix
+                    ? JSON.stringify(newPath.concat(path.slice(oldPath.length)))
+                    : pathString;
+            };
+            state.expanded = state.expanded.map(remap);
+            state.loaded = state.loaded.map(item => ({ ...item, path: remap(item.path) }));
+        }
+
+        function renderJsonBatch(value, entries, isArray, depth, parentPath, children, startIndex) {
             const endIndex = Math.min(startIndex + JSON_RENDER_BATCH_SIZE, entries.length);
             const fragment = document.createDocumentFragment();
             for (let index = startIndex; index < endIndex; index++) {
                 const entry = entries[index];
+                const childPath = parentPath.concat(isArray ? index : entry);
                 const itemNode = isArray
-                    ? createJsonTree(entry, depth + 1)
-                    : createJsonTree(value[entry], depth + 1, entry);
+                    ? createJsonTree(entry, depth + 1, null, childPath)
+                    : createJsonTree(value[entry], depth + 1, entry, childPath);
                 if (index < entries.length - 1) itemNode.appendChild(document.createTextNode(','));
                 fragment.appendChild(itemNode);
             }
             children.appendChild(fragment);
+            children.dataset.renderedCount = String(endIndex);
 
             const oldLoadMore = children.querySelector('.json-load-more');
             if (oldLoadMore) oldLoadMore.remove();
@@ -1625,7 +1997,7 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
                 loadMore.textContent = `继续显示 ${Math.min(JSON_RENDER_BATCH_SIZE, remaining)} 项（剩余 ${remaining.toLocaleString()} 项）`;
                 loadMore.addEventListener('click', () => {
                     loadMore.remove();
-                    renderJsonBatch(value, entries, isArray, depth, children, endIndex);
+                    renderJsonBatch(value, entries, isArray, depth, parentPath, children, endIndex);
                 });
                 children.appendChild(loadMore);
             }
@@ -1745,7 +2117,14 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
             document.getElementById('json-copy-btn').addEventListener('click', jsonCopy);
             document.getElementById('json-collapse-btn').addEventListener('click', collapseJsonTree);
             document.getElementById('json-clear-btn').addEventListener('click', jsonClear);
+            jsonOutput.addEventListener('click', startJsonEdit);
             jsonOutput.addEventListener('click', copyJsonToken);
+            jsonInputMeta.addEventListener('click', locateCurrentJsonError);
+            jsonInputMeta.addEventListener('keydown', (event) => {
+                if (event.key !== 'Enter' && event.key !== ' ') return;
+                event.preventDefault();
+                locateCurrentJsonError();
+            });
             initJsonResizer();
 
             // 测试文件生成事件监听器
