@@ -20,6 +20,9 @@
 .json-tree{overflow-y:auto;height:100%;padding:.75rem;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;line-height:1.6;color:var(--text-color)}.json-tree.error{color:#d9534f;font-weight:700}.json-node{margin:0}.json-toggle{cursor:pointer;display:inline-block;margin-right:2px;text-align:center;font-size:.9rem;line-height:1;user-select:none;color:#e45649;vertical-align:middle}.json-toggle:hover{opacity:.7}.json-toggle.collapsed{color:#50a14f}.json-toggle.empty{opacity:.3;cursor:default}.json-key{color:#a626a4}.json-string{color:#50a14f}.json-number{color:#4078f2}.json-boolean{color:#e36209}.json-null{color:#a626a4}.json-bracket{color:#a626a4}.json-bracket:hover{opacity:.7}.json-count{display:none}.json-summary{color:var(--secondary-text-color);font-style:italic}.json-collapsed{display:none}
 
 [data-theme="dark"] .json-key{color:#c586c0}[data-theme="dark"] .json-string{color:#98c379}[data-theme="dark"] .json-number{color:#61afef}[data-theme="dark"] .json-boolean{color:#569cd6}[data-theme="dark"] .json-null{color:#c586c0}[data-theme="dark"] .json-bracket{color:#c586c0}[data-theme="dark"] .json-toggle{color:#e06c75}[data-theme="dark"] .json-toggle.collapsed{color:#98c379}[data-theme="dark"] .json-summary{color:#7f848e}
+body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}.container.json-mode .content{height:calc(100vh - 4rem)}.container.json-mode #page-json{flex:1;min-height:0}.json-page-heading{display:flex;align-items:flex-end;justify-content:flex-start;gap:1.25rem;margin-bottom:.85rem;flex-shrink:0}.json-page-heading h1{font-size:1.6rem;margin-bottom:.2rem}.json-page-heading .subtitle{font-size:.86rem;margin:0}.json-status{display:inline-flex;align-items:center;gap:.4rem;color:var(--secondary-text-color);font-size:.78rem;white-space:nowrap}.json-status::before{content:'';width:.45rem;height:.45rem;border-radius:50%;background:#a3a3a3}.json-status.valid::before{background:var(--primary-green)}.json-status.invalid{color:#c73e45}.json-status.invalid::before{background:#dc3545}.json-toolbar{padding:.5rem;background:var(--light-green-bg);border:1px solid var(--border-color);border-radius:.5rem}.json-tool-btn{background:var(--content-bg);font-weight:500}.json-container{--json-input-width:42%;display:grid;grid-template-columns:minmax(280px,var(--json-input-width)) 7px minmax(360px,1fr);gap:0;min-height:0}.json-pane{min-width:0;background:var(--content-bg);border:1px solid var(--border-color);border-radius:.5rem}.json-pane:focus-within{border-color:var(--primary-green);box-shadow:0 0 0 2px rgba(40,167,69,.1)}.json-pane-header{height:2.5rem;display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:0 .8rem;background:var(--light-green-bg);border-bottom:1px solid var(--border-color);flex-shrink:0}.json-pane-title{font-size:.82rem;font-weight:700;color:var(--text-color)}.json-pane-meta{font-size:.72rem;color:var(--secondary-text-color);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.json-pane textarea{box-sizing:border-box;padding:1rem;font-size:.9rem;line-height:1.65;tab-size:2;background:var(--content-bg);white-space:pre;overflow:auto}.json-resizer{position:relative;cursor:col-resize;touch-action:none}.json-resizer::after{content:'';position:absolute;top:0;bottom:0;left:3px;width:1px;background:var(--border-color)}.json-resizer:hover::after,.json-resizer.dragging::after{width:3px;left:2px;background:var(--primary-green)}.json-pane-output{background:var(--content-bg)}.json-tree{box-sizing:border-box;padding:1rem;font-size:.88rem;line-height:1.7;overflow:auto;white-space:nowrap}.json-tree:empty::before{content:'解析结果将在这里显示';color:var(--secondary-text-color);opacity:.6}.json-tree.error{padding:1rem;color:#c73e45;font-weight:500;white-space:pre-wrap;line-height:1.6}.json-node{min-height:1.5em}.json-node + .json-node{margin-top:.08rem}.json-node-header{display:flex;align-items:baseline;min-width:max-content}.json-content{border-left:1px solid var(--separator-color);margin-left:.5rem;padding-left:1.25rem}.json-toggle{width:1.05rem;margin-right:.25rem;color:var(--secondary-text-color);font-size:.75rem}.json-toggle:hover{color:var(--primary-green);opacity:1}.json-toggle.collapsed{color:var(--secondary-text-color)}.json-toggle.empty{visibility:hidden}.json-key{color:#8b3f91;font-weight:500}.json-string{color:#26863d}.json-number{color:#1769aa}.json-boolean{color:#b95700}.json-null{color:#8b3f91;font-style:italic}.json-copyable{border-radius:.2rem;cursor:copy;outline:1px solid transparent;outline-offset:1px}.json-copyable:empty{display:inline-block;min-width:.35rem;height:.9em;vertical-align:-.08em}.json-copyable:hover{background:rgba(40,167,69,.1);outline-color:rgba(40,167,69,.3)}.json-bracket{color:var(--secondary-text-color);font-weight:600}.json-count{display:inline-block;margin-left:.45rem;padding:0 .35rem;border:1px solid var(--border-color);border-radius:.25rem;color:var(--secondary-text-color);font:500 .65rem/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;vertical-align:middle}.json-summary{margin-left:.25rem;color:var(--secondary-text-color);font-style:normal}.json-load-more{display:block;margin:.35rem 0 .35rem 1.2rem;padding:.3rem .65rem;border:1px solid var(--border-color);border-radius:.25rem;background:var(--light-green-bg);color:var(--secondary-text-color);font:500 .72rem/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;cursor:pointer}.json-load-more:hover{border-color:var(--primary-green);color:var(--primary-green)}.copy-notification.restarting{transition:none!important}.copy-notification.json-copy-notification{left:auto;right:0;top:50%;bottom:auto;width:auto;max-width:8rem;display:flex;align-items:center;gap:.4rem;padding:.6rem .85rem;border:1px solid var(--primary-green);border-right:none;border-radius:.4rem 0 0 .4rem;background:var(--card-bg);color:var(--text-color);font-size:.8rem;font-weight:600;text-align:center;pointer-events:none;transform:translate(1rem,-50%);transition:opacity .7s ease,transform .7s ease,background-color var(--theme-transition),color var(--theme-transition),border-color var(--theme-transition),box-shadow var(--theme-transition)!important}.copy-notification.json-copy-notification::before{content:'✓';display:grid;place-items:center;width:1.15rem;height:1.15rem;border-radius:50%;background:var(--primary-green);color:#fff;font-size:.7rem}.copy-notification.json-copy-notification.show{transform:translate(0,-50%)}[data-theme="dark"] .json-key{color:#d19ad6}[data-theme="dark"] .json-string{color:#8fd694}[data-theme="dark"] .json-number{color:#75bfff}[data-theme="dark"] .json-boolean{color:#f0a45d}[data-theme="dark"] .json-null{color:#d19ad6}
+@media (max-width:768px){.container.json-mode .sidebar{flex:none}.container.json-mode .content{height:900px;min-height:900px}.json-page-heading{align-items:flex-start;flex-direction:column;gap:.35rem}.json-container{grid-template-columns:1fr;grid-template-rows:minmax(310px,1fr) minmax(360px,1fr);gap:.75rem}.json-resizer{display:none}.json-pane{min-height:0}.json-toolbar{overflow-x:auto;flex-wrap:nowrap}.json-toolbar-sep{flex-shrink:0}}
+.copy-notification.json-copy-notification.restarting{transition:none!important}
 .food-container{display:flex;justify-content:center;align-items:center;flex-grow:1;padding:2rem;min-height:calc(100vh - 20rem)}.wheel-container{position:relative;display:flex;flex-direction:column;align-items:center;gap:2rem}.wheel-pointer{position:absolute;top:-15px;left:50%;transform:translateX(-50%);font-size:2rem;color:var(--primary-green);z-index:10;text-shadow:0 2px 4px rgba(0,0,0,.3)}#wheel-canvas {
     border-radius: 50%;
     box-shadow: 0 8px 32px rgba(0,0,0,.15);
@@ -64,7 +67,7 @@
     </style>
 </head>
 <body>
-    <div id="copy-notification" class="copy-notification">已复制</div>
+    <div id="copy-notification" class="copy-notification" role="status" aria-live="polite">已复制</div>
 
     <!-- Theme switcher -->
     <div class="theme-switcher" id="theme-switcher">
@@ -128,8 +131,13 @@
                 </div>
             </div>
             <div id="page-json" class="page" style="display:flex;flex-direction:column;">
-                <h1>JSON 格式化</h1>
-                <p class="subtitle">粘贴 JSON 字符串，自动格式化并高亮显示。点击 ▼ 可折叠/展开节点。</p>
+                <div class="json-page-heading">
+                    <div>
+                        <h1>JSON 格式化</h1>
+                        <p class="subtitle">自动校验、语法高亮与可折叠树形浏览</p>
+                    </div>
+                    <span id="json-status" class="json-status">等待输入</span>
+                </div>
                 <div class="json-toolbar">
                     <button class="json-tool-btn" id="json-format-btn" title="格式化（美化缩进）">格式化</button>
                     <button class="json-tool-btn" id="json-compress-btn" title="压缩为单行 JSON">压缩</button>
@@ -138,13 +146,23 @@
                     <button class="json-tool-btn" id="json-escape-btn" title="转义：将 JSON 转为转义字符串">转义</button>
                     <span class="json-toolbar-sep"></span>
                     <button class="json-tool-btn" id="json-copy-btn" title="复制格式化结果">复制</button>
+                    <button class="json-tool-btn" id="json-collapse-btn" title="折叠结果中的全部节点">全部折叠</button>
                     <button class="json-tool-btn" id="json-clear-btn" title="清空输入和输出">清空</button>
                 </div>
                 <div class="json-container" style="flex-grow:1;min-height:0;">
-                    <div class="json-pane" style="flex:1;">
-                        <textarea id="json-input" placeholder="在此处粘贴 JSON..."></textarea>
+                    <div class="json-pane">
+                        <div class="json-pane-header">
+                            <span class="json-pane-title">原始 JSON</span>
+                            <span id="json-input-meta" class="json-pane-meta">0 字符</span>
+                        </div>
+                        <textarea id="json-input" spellcheck="false" placeholder="在此处粘贴 JSON..."></textarea>
                     </div>
-                    <div class="json-pane" style="flex:1;">
+                    <div id="json-resizer" class="json-resizer" role="separator" aria-label="调整 JSON 输入和结果区域宽度" aria-orientation="vertical" tabindex="0"></div>
+                    <div class="json-pane json-pane-output">
+                        <div class="json-pane-header">
+                            <span class="json-pane-title">解析结果</span>
+                            <span id="json-output-meta" class="json-pane-meta">尚未解析</span>
+                        </div>
                         <div id="json-output" class="json-tree"></div>
                     </div>
                 </div>
@@ -391,6 +409,12 @@
         const pageTimestamp = document.getElementById('page-timestamp');
         const jsonInput = document.getElementById('json-input');
         const jsonOutput = document.getElementById('json-output');
+        const jsonStatus = document.getElementById('json-status');
+        const jsonInputMeta = document.getElementById('json-input-meta');
+        const jsonOutputMeta = document.getElementById('json-output-meta');
+        const jsonContainer = document.querySelector('.json-container');
+        const jsonResizer = document.getElementById('json-resizer');
+        const appContainer = document.querySelector('.container');
 
         // 食物转盘相关元素
         const wheelCanvas = document.getElementById('wheel-canvas');
@@ -467,7 +491,17 @@
         let isSpinning = false;
 
         function formatNumber(num) { if (num > 1000) return num.toFixed(2); if (num > 1) return num.toFixed(4); return num.toFixed(6); }
-        function showNotification() { if (notificationTimeout) clearTimeout(notificationTimeout); notificationEl.classList.add('show'); notificationTimeout = setTimeout(() => notificationEl.classList.remove('show'), 2000); }
+        function showNotification(useJsonPosition = false) {
+            if (notificationTimeout) clearTimeout(notificationTimeout);
+            notificationEl.classList.add('restarting');
+            notificationEl.classList.remove('show');
+            notificationEl.classList.toggle('json-copy-notification', useJsonPosition);
+            void notificationEl.offsetWidth;
+            notificationEl.classList.remove('restarting');
+            void notificationEl.offsetWidth;
+            notificationEl.classList.add('show');
+            notificationTimeout = setTimeout(() => notificationEl.classList.remove('show'), 2000);
+        }
 
         // 权重抽取函数
         function getRandomFood() {
@@ -762,6 +796,7 @@
         function switchPage(pageToShow) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
             document.querySelectorAll('.sidebar-item').forEach(n => n.classList.remove('active'));
+            appContainer.classList.toggle('json-mode', pageToShow === 'json');
             const instructions = document.getElementById('currency-instructions');
             if (pageToShow === 'currency') {
                 pageCurrency.classList.add('active');
@@ -1288,6 +1323,42 @@
         }
 
         // JSON 工具栏函数
+        const JSON_RENDER_BATCH_SIZE = 200;
+        let jsonFormatTimer;
+
+        function scheduleJsonFormat() {
+            clearTimeout(jsonFormatTimer);
+            updateJsonInputMeta();
+            jsonStatus.className = 'json-status';
+            jsonStatus.textContent = jsonInput.value.trim() ? '正在检查...' : '等待输入';
+            jsonFormatTimer = setTimeout(formatJson, 220);
+        }
+
+        function updateJsonInputMeta() {
+            const value = jsonInput.value;
+            const lineCount = value ? value.split('\n').length : 0;
+            jsonInputMeta.textContent = `${lineCount} 行 · ${value.length.toLocaleString()} 字符`;
+        }
+
+        function getJsonTypeLabel(value) {
+            if (Array.isArray(value)) return `数组 · ${value.length.toLocaleString()} 项`;
+            if (value !== null && typeof value === 'object') {
+                return `对象 · ${Object.keys(value).length.toLocaleString()} 个字段`;
+            }
+            if (value === null) return '空值';
+            const typeLabels = { string: '字符串', number: '数字', boolean: '布尔值' };
+            return typeLabels[typeof value] || typeof value;
+        }
+
+        function getJsonErrorLocation(raw, message) {
+            const positionMatch = message.match(/position\s+(\d+)/i);
+            if (!positionMatch) return message;
+            const position = Number(positionMatch[1]);
+            const beforeError = raw.slice(0, position);
+            const lines = beforeError.split('\n');
+            return `第 ${lines.length} 行，第 ${lines[lines.length - 1].length + 1} 列\n${message}`;
+        }
+
         function jsonFormatInput() {
             const raw = jsonInput.value.trim();
             if (!raw) return;
@@ -1357,19 +1428,29 @@
                 navigator.clipboard.writeText(raw);
             }
             notificationEl.textContent = '已复制';
-            showNotification();
+            showNotification(true);
         }
 
         function jsonClear() {
+            clearTimeout(jsonFormatTimer);
             jsonInput.value = '';
             jsonOutput.innerHTML = '';
+            jsonOutput.classList.remove('error');
+            jsonStatus.className = 'json-status';
+            jsonStatus.textContent = '等待输入';
+            jsonInputMeta.textContent = '0 行 · 0 字符';
+            jsonOutputMeta.textContent = '尚未解析';
         }
 
         function formatJson() {
             const rawJson = jsonInput.value.trim();
             jsonOutput.classList.remove('error');
+            updateJsonInputMeta();
             if (!rawJson) {
                 jsonOutput.innerHTML = '';
+                jsonStatus.className = 'json-status';
+                jsonStatus.textContent = '等待输入';
+                jsonOutputMeta.textContent = '尚未解析';
                 return;
             }
             try {
@@ -1377,38 +1458,51 @@
                 jsonOutput.innerHTML = '';
                 const treeNode = createJsonTree(parsed, 0);
                 jsonOutput.appendChild(treeNode);
+                jsonStatus.className = 'json-status valid';
+                jsonStatus.textContent = 'JSON 有效';
+                jsonOutputMeta.textContent = getJsonTypeLabel(parsed);
             } catch (e) {
-                jsonOutput.textContent = `JSON 格式错误:\n${e.message}`;
+                const errorMessage = getJsonErrorLocation(rawJson, e.message);
+                jsonOutput.textContent = `JSON 格式错误\n${errorMessage}`;
                 jsonOutput.classList.add('error');
+                jsonStatus.className = 'json-status invalid';
+                jsonStatus.textContent = '格式错误';
+                jsonOutputMeta.textContent = errorMessage.split('\n')[0];
             }
         }
 
         function createJsonTree(value, depth = 0, key = null) {
             const container = document.createElement('div');
             container.className = 'json-node';
+            const isCollection = value !== null && typeof value === 'object';
 
-            if (value === null) {
-                container.innerHTML = `${key ? `<span class="json-key">"${key}"</span>: ` : ''}<span class="json-null">null</span>`;
-            } else if (typeof value === 'boolean') {
-                container.innerHTML = `${key ? `<span class="json-key">"${key}"</span>: ` : ''}<span class="json-boolean">${value}</span>`;
-            } else if (typeof value === 'number') {
-                container.innerHTML = `${key ? `<span class="json-key">"${key}"</span>: ` : ''}<span class="json-number">${value}</span>`;
-            } else if (typeof value === 'string') {
-                container.innerHTML = `${key ? `<span class="json-key">"${key}"</span>: ` : ''}<span class="json-string">"${escapeHtml(value)}"</span>`;
-            } else if (Array.isArray(value) || typeof value === 'object') {
+            if (!isCollection) {
+                appendJsonKey(container, key);
+                const type = value === null ? 'null' : typeof value;
+                if (type === 'string') {
+                    appendJsonQuotedToken(container, value, 'json-string', '点击复制字符串内容');
+                } else {
+                    const valueSpan = document.createElement('span');
+                    valueSpan.className = `json-${type}`;
+                    valueSpan.textContent = String(value);
+                    valueSpan.classList.add('json-copyable');
+                    valueSpan.dataset.jsonCopy = String(value);
+                    valueSpan.title = '点击复制值';
+                    container.appendChild(valueSpan);
+                }
+            } else {
                 const isArray = Array.isArray(value);
                 const entries = isArray ? value : Object.keys(value);
                 const length = entries.length;
                 const levelClass = `level-${depth % 6}`;
                 const openChar = isArray ? '[' : '{';
                 const closeChar = isArray ? ']' : '}';
-                const countLabel = isArray
-                    ? `${length} ${length === 1 ? 'item' : 'items'}`
-                    : `${length} ${length === 1 ? 'property' : 'properties'}`;
+                const countLabel = isArray ? `${length} 项` : `${length} 个字段`;
 
                 const toggleBtn = document.createElement('span');
                 toggleBtn.className = length === 0 ? 'json-toggle empty' : 'json-toggle';
-                toggleBtn.textContent = '⊖';
+                toggleBtn.textContent = length === 0 ? '' : depth === 0 ? '▼' : '▶';
+                toggleBtn.dataset.expanded = depth === 0 ? 'true' : 'false';
 
                 const openBracket = document.createElement('span');
                 openBracket.className = `json-bracket ${levelClass}`;
@@ -1420,17 +1514,13 @@
 
                 const summary = document.createElement('span');
                 summary.className = 'json-summary';
-                summary.textContent = isArray ? `Array[${length}]` : `Object{...}`;
-                summary.style.display = 'none';
+                summary.textContent = ` … ${closeChar}`;
+                summary.style.display = depth === 0 || length === 0 ? 'none' : 'inline';
 
                 const header = document.createElement('div');
+                header.className = 'json-node-header';
                 header.appendChild(toggleBtn);
-                if (key) {
-                    const keySpan = document.createElement('span');
-                    keySpan.className = 'json-key';
-                    keySpan.textContent = `"${key}": `;
-                    header.appendChild(keySpan);
-                }
+                appendJsonKey(header, key);
                 header.appendChild(openBracket);
                 header.appendChild(count);
                 header.appendChild(summary);
@@ -1440,35 +1530,34 @@
                 if (length > 0) {
                     const content = document.createElement('div');
                     content.className = 'json-content';
-
-                    entries.forEach((entry, index) => {
-                        const itemNode = isArray
-                            ? createJsonTree(entry, depth + 1)
-                            : createJsonTree(value[entry], depth + 1, entry);
-                        itemNode.style.marginLeft = '20px';
-                        if (index < length - 1) {
-                            itemNode.appendChild(document.createTextNode(','));
-                        }
-                        content.appendChild(itemNode);
-                    });
-
+                    const children = document.createElement('div');
+                    content.appendChild(children);
                     const closeBracketDiv = document.createElement('div');
                     const closeBracket = document.createElement('span');
                     closeBracket.className = `json-bracket ${levelClass}`;
                     closeBracket.textContent = closeChar;
                     closeBracketDiv.appendChild(closeBracket);
                     content.appendChild(closeBracketDiv);
-
+                    content.style.display = depth === 0 ? 'block' : 'none';
                     container.appendChild(content);
+
+                    let rendered = false;
+                    const renderChildren = () => {
+                        if (rendered) return;
+                        rendered = true;
+                        renderJsonBatch(value, entries, isArray, depth, children, 0);
+                    };
+                    if (depth === 0) renderChildren();
 
                     toggleBtn.addEventListener('click', (e) => {
                         e.stopPropagation();
-                        const isCollapsed = content.style.display === 'none';
-                        content.style.display = isCollapsed ? 'block' : 'none';
-                        openBracket.style.display = isCollapsed ? 'inline' : 'none';
-                        summary.style.display = isCollapsed ? 'none' : 'inline';
-                        toggleBtn.textContent = isCollapsed ? '⊖' : '⊕';
-                        toggleBtn.classList.toggle('collapsed', !isCollapsed);
+                        const shouldExpand = content.style.display === 'none';
+                        if (shouldExpand) renderChildren();
+                        content.style.display = shouldExpand ? 'block' : 'none';
+                        summary.style.display = shouldExpand ? 'none' : 'inline';
+                        toggleBtn.textContent = shouldExpand ? '▼' : '▶';
+                        toggleBtn.dataset.expanded = String(shouldExpand);
+                        toggleBtn.classList.toggle('collapsed', !shouldExpand);
                     });
                 } else {
                     const inlineClose = document.createElement('span');
@@ -1481,10 +1570,97 @@
             return container;
         }
 
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
+        function appendJsonKey(container, key) {
+            if (key === null) return;
+            appendJsonQuotedToken(container, String(key), 'json-key', '点击复制键名');
+            container.appendChild(document.createTextNode(': '));
+        }
+
+        function appendJsonQuotedToken(container, value, className, title) {
+            const serialized = JSON.stringify(value);
+            const openingQuote = document.createElement('span');
+            openingQuote.className = className;
+            openingQuote.textContent = '"';
+
+            const content = document.createElement('span');
+            content.className = `${className} json-copyable`;
+            content.textContent = serialized.slice(1, -1);
+            content.dataset.jsonCopy = value;
+            content.title = title;
+
+            const closingQuote = document.createElement('span');
+            closingQuote.className = className;
+            closingQuote.textContent = '"';
+            container.append(openingQuote, content, closingQuote);
+        }
+
+        function copyJsonToken(event) {
+            const target = event.target.closest('[data-json-copy]');
+            if (!target) return;
+            navigator.clipboard.writeText(target.dataset.jsonCopy).then(() => {
+                notificationEl.textContent = '已复制';
+                showNotification(true);
+            });
+        }
+
+        function renderJsonBatch(value, entries, isArray, depth, children, startIndex) {
+            const endIndex = Math.min(startIndex + JSON_RENDER_BATCH_SIZE, entries.length);
+            const fragment = document.createDocumentFragment();
+            for (let index = startIndex; index < endIndex; index++) {
+                const entry = entries[index];
+                const itemNode = isArray
+                    ? createJsonTree(entry, depth + 1)
+                    : createJsonTree(value[entry], depth + 1, entry);
+                if (index < entries.length - 1) itemNode.appendChild(document.createTextNode(','));
+                fragment.appendChild(itemNode);
+            }
+            children.appendChild(fragment);
+
+            const oldLoadMore = children.querySelector('.json-load-more');
+            if (oldLoadMore) oldLoadMore.remove();
+            if (endIndex < entries.length) {
+                const loadMore = document.createElement('button');
+                const remaining = entries.length - endIndex;
+                loadMore.className = 'json-load-more';
+                loadMore.textContent = `继续显示 ${Math.min(JSON_RENDER_BATCH_SIZE, remaining)} 项（剩余 ${remaining.toLocaleString()} 项）`;
+                loadMore.addEventListener('click', () => {
+                    loadMore.remove();
+                    renderJsonBatch(value, entries, isArray, depth, children, endIndex);
+                });
+                children.appendChild(loadMore);
+            }
+        }
+
+        function collapseJsonTree() {
+            jsonOutput.querySelectorAll('.json-toggle[data-expanded="true"]').forEach(toggle => toggle.click());
+        }
+
+        function setJsonSplit(percent) {
+            const safePercent = Math.min(68, Math.max(28, percent));
+            jsonContainer.style.setProperty('--json-input-width', `${safePercent}%`);
+            jsonResizer.setAttribute('aria-valuenow', String(Math.round(safePercent)));
+        }
+
+        function initJsonResizer() {
+            jsonResizer.addEventListener('pointerdown', (event) => {
+                jsonResizer.classList.add('dragging');
+                jsonResizer.setPointerCapture(event.pointerId);
+            });
+            jsonResizer.addEventListener('pointermove', (event) => {
+                if (!jsonResizer.hasPointerCapture(event.pointerId)) return;
+                const bounds = jsonContainer.getBoundingClientRect();
+                setJsonSplit(((event.clientX - bounds.left) / bounds.width) * 100);
+            });
+            jsonResizer.addEventListener('pointerup', (event) => {
+                jsonResizer.classList.remove('dragging');
+                jsonResizer.releasePointerCapture(event.pointerId);
+            });
+            jsonResizer.addEventListener('keydown', (event) => {
+                if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+                event.preventDefault();
+                const current = parseFloat(getComputedStyle(jsonContainer).getPropertyValue('--json-input-width')) || 42;
+                setJsonSplit(current + (event.key === 'ArrowRight' ? 2 : -2));
+            });
         }
 
         // 主题管理
@@ -1561,13 +1737,16 @@
             navFood.addEventListener('click', () => switchPage('food'));
             navTestfile.addEventListener('click', () => switchPage('testfile'));
             navTimestamp.addEventListener('click', () => switchPage('timestamp'));
-            jsonInput.addEventListener('input', formatJson);
+            jsonInput.addEventListener('input', scheduleJsonFormat);
             document.getElementById('json-format-btn').addEventListener('click', jsonFormatInput);
             document.getElementById('json-compress-btn').addEventListener('click', jsonCompress);
             document.getElementById('json-unescape-btn').addEventListener('click', jsonUnescape);
             document.getElementById('json-escape-btn').addEventListener('click', jsonEscape);
             document.getElementById('json-copy-btn').addEventListener('click', jsonCopy);
+            document.getElementById('json-collapse-btn').addEventListener('click', collapseJsonTree);
             document.getElementById('json-clear-btn').addEventListener('click', jsonClear);
+            jsonOutput.addEventListener('click', copyJsonToken);
+            initJsonResizer();
 
             // 测试文件生成事件监听器
             generateBtn.addEventListener('click', generateTestFile);
