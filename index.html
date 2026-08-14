@@ -7,13 +7,21 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHJ4PSI2IiBmaWxsPSIjMjhhNzQ1Ii8+CiAgPHBhdGggZD0iTTggOGgzdjZoNlY4aDN2MTZoLTN2LTZIOXY2SDhWOHoiIGZpbGw9IndoaXRlIi8+CiAgPGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMi41IiBmaWxsPSIjZmZkNzAwIi8+Cjwvc3ZnPgo=">
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
     <style>
-        :root{--primary-green:#28a745;--light-green-bg:#e9f5ee;--border-color:#d8e6de;--text-color:#333;--secondary-text-color:#555;--page-bg:#f8f9fa;--content-bg:#fff;--card-bg:#fff;--input-bg:transparent;--separator-color:#c9d9d1;--currency-name-bg:#c1e5d4;--currency-name-color:#1a593b;--flag-bg:#f0f0f0;--flag-border:#ddd;--animation-speed:0.2s;--theme-transition:0.3s}
+        :root{--primary-green:#28a745;--accent-secondary:#54d68c;--accent-gradient:linear-gradient(135deg,#34c759,#20b56f);--theme-shadow:rgba(40,167,69,.14);--light-green-bg:#e9f5ee;--border-color:#d8e6de;--text-color:#26332c;--secondary-text-color:#55635b;--page-bg:#f3f8f5;--content-bg:#fff;--card-bg:#fff;--input-bg:#f7fbf9;--separator-color:#c9d9d1;--currency-name-bg:#c1e5d4;--currency-name-color:#1a593b;--flag-bg:#f0f0f0;--flag-border:#ddd;--animation-speed:0.2s;--theme-transition:0.3s}
 
-        [data-theme="dark"]{--primary-green:#10b981;--light-green-bg:#374151;--border-color:#4b5563;--text-color:#f3f4f6;--secondary-text-color:#d1d5db;--page-bg:#111827;--content-bg:#1f2937;--card-bg:#374151;--input-bg:#374151;--separator-color:#6b7280;--currency-name-bg:#047857;--currency-name-color:#ecfdf5;--flag-bg:#4b5563;--flag-border:#6b7280}
+        [data-theme="dark"]{--primary-green:#30d58a;--accent-secondary:#65e6aa;--accent-gradient:linear-gradient(135deg,#30d58a,#0c9f69);--theme-shadow:rgba(48,213,138,.16);--light-green-bg:#263b33;--border-color:#3c554b;--text-color:#f1f7f4;--secondary-text-color:#c4d2cc;--page-bg:#101713;--content-bg:#19231f;--card-bg:#26332d;--input-bg:#223029;--separator-color:#536a60;--currency-name-bg:#126643;--currency-name-color:#ecfff6;--flag-bg:#46534d;--flag-border:#65736d}
         *,*::before,*::after{transition:background-color var(--theme-transition),color var(--theme-transition),border-color var(--theme-transition),box-shadow var(--theme-transition)!important}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;background-color:var(--page-bg);margin:0;padding:2rem;display:flex;justify-content:center;color:var(--text-color)}.container{display:flex;gap:2rem;width:100%;max-width:1100px}.sidebar{flex:0 0 120px;display:flex;flex-direction:column;align-items:center;gap:1.5rem}.sidebar-item{background-color:var(--card-bg);border-radius:1rem;padding:1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;cursor:pointer;box-shadow:0 4px 6px rgba(0,0,0,.05);text-align:center;font-size:.8rem;width:100%;transition:box-shadow var(--animation-speed)}.sidebar-item.active{background:linear-gradient(135deg,#4ad295,#2ab67b);color:#fff;cursor:default}.sidebar-item:not(.active):hover{box-shadow:0 6px 12px rgba(0,0,0,.08)}.sidebar-item.active svg{color:#fff}.content{flex:1;background-color:var(--content-bg);border-radius:1rem;padding:2rem;box-shadow:0 4px 12px rgba(0,0,0,.08);position:relative;overflow:hidden;height:calc(100vh - 8rem);display:flex;flex-direction:column}.page{position:absolute;top:2rem;left:2rem;right:2rem;bottom:2rem;opacity:0;transition:opacity var(--animation-speed) ease-in-out;pointer-events:none;display:flex;flex-direction:column;min-height:calc(100vh - 12rem)}.page.active{opacity:1;position:relative;top:auto;left:auto;right:auto;bottom:auto;pointer-events:auto}h1,h2{margin:0 0 .5rem;font-weight:700;flex-shrink:0}h1{font-size:2rem}h2{font-size:1.5rem}.subtitle{margin:0 0 1.5rem;color:var(--secondary-text-color);flex-shrink:0}.update-info{background-color:var(--light-green-bg);border:1px solid var(--border-color);padding:.75rem 1rem;border-radius:.5rem;margin-bottom:1.5rem;font-size:.9rem;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}.update-info .refresh-btn{background-color:var(--primary-green);color:#fff;border:none;padding:.25rem .75rem;border-radius:.25rem;cursor:pointer;font-size:.85rem;font-family:inherit;transition:background-color var(--animation-speed)}.update-info .refresh-btn:hover{opacity:.9}.update-info .refresh-btn:disabled{background-color:#999;cursor:not-allowed}.rates-grid-wrapper{padding-right:10px;margin-right:-10px}.rates-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}.rate-row{display:flex;align-items:center;background-color:var(--light-green-bg);border-radius:.5rem;padding:.75rem;border:1px solid transparent;transition:transform 0.2s ease-in-out,box-shadow var(--animation-speed) ease,border-color .2s}.rate-row:focus-within{border-color:var(--primary-green)}.rate-row.sortable-ghost{background:#d4f0e2;opacity:.7}.rate-row.sortable-chosen{box-shadow:0 8px 20px rgba(0,0,0,.15);border:1px solid var(--border-color);transform:scale(1.02)}.drag-handle{cursor:grab;color:#b0c9bd;margin-right:.75rem;flex-shrink:0}.drag-handle:active{cursor:grabbing}.currency-code{font-weight:700;width:50px;flex-shrink:0;color:var(--secondary-text-color);margin-left:2px}.white-separator{color:#fff;margin:0 .1rem;font-size:.8rem}.currency-flag{width:18px;height:13px;background-size:cover;background-position:center;border-radius:2px;margin:0;display:inline-block;vertical-align:middle;flex-shrink:0;background-color:var(--flag-bg);border:1px solid var(--flag-border);overflow:hidden;cursor:pointer}.currency-flag.error{background-image:none!important;background-color:var(--flag-bg);position:relative;opacity:.6}.currency-flag.error::after{content:'🏳';font-size:10px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:var(--secondary-text-color)}
 
         [data-theme="dark"] .currency-flag{filter:brightness(1.1) contrast(0.95)}.separator{color:var(--separator-color);margin:0 .2rem}
-        .theme-switcher{position:fixed;top:2rem;right:2rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:.75rem;padding:.5rem;box-shadow:0 4px 12px rgba(0,0,0,.1);display:flex;align-items:center;gap:.5rem;z-index:1000}.theme-btn{background:none;border:none;padding:.5rem;border-radius:.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--secondary-text-color);transition:all .2s ease;width:40px;height:40px}.theme-btn:hover{background:var(--light-green-bg);color:var(--text-color)}.theme-btn.active{background:var(--primary-green);color:#fff}.theme-btn svg{width:20px;height:20px}
+        [data-palette="ocean"]{--primary-green:#0a84ff;--accent-secondary:#5ac8fa;--accent-gradient:linear-gradient(135deg,#0a84ff,#32ade6);--theme-shadow:rgba(10,132,255,.15);--light-green-bg:#e6f1ff;--border-color:#c8dcf4;--text-color:#18293a;--secondary-text-color:#536a80;--page-bg:#edf4fb;--content-bg:#fbfdff;--card-bg:#fff;--input-bg:#f3f8ff;--separator-color:#bdd2e9;--currency-name-bg:#d8eaff;--currency-name-color:#164f86}
+        [data-palette="coral"]{--primary-green:#ff4f58;--accent-secondary:#ff9f6e;--accent-gradient:linear-gradient(135deg,#ff4f58,#ff8b65);--theme-shadow:rgba(255,79,88,.14);--light-green-bg:#ffeaec;--border-color:#f2ced1;--text-color:#3a2427;--secondary-text-color:#76575b;--page-bg:#fff3f4;--content-bg:#fffafb;--card-bg:#fffefe;--input-bg:#fff5f6;--separator-color:#e9c2c6;--currency-name-bg:#ffdde0;--currency-name-color:#8b3037}
+        [data-palette="graphite"]{--primary-green:#3a3a3c;--accent-secondary:#8e8e93;--accent-gradient:linear-gradient(135deg,#2c2c2e,#636366);--theme-shadow:rgba(44,44,46,.13);--light-green-bg:#e8e8ec;--border-color:#d2d2d8;--text-color:#242426;--secondary-text-color:#66666b;--page-bg:#eff0f3;--content-bg:#fafafd;--card-bg:#fff;--input-bg:#f2f2f5;--separator-color:#c8c8ce;--currency-name-bg:#dfdfe4;--currency-name-color:#353538}
+        [data-theme="dark"][data-palette="ocean"]{--primary-green:#64d2ff;--accent-secondary:#0a84ff;--accent-gradient:linear-gradient(135deg,#64d2ff,#0a84ff);--theme-shadow:rgba(100,210,255,.18);--light-green-bg:#20384c;--border-color:#315571;--text-color:#eff9ff;--secondary-text-color:#bbd3e2;--page-bg:#0d1720;--content-bg:#142431;--card-bg:#203440;--input-bg:#1c303e;--separator-color:#42657c;--currency-name-bg:#155b85;--currency-name-color:#e7f7ff}
+        [data-theme="dark"][data-palette="coral"]{--primary-green:#ff6961;--accent-secondary:#ff9f6e;--accent-gradient:linear-gradient(135deg,#ff6961,#ff8d63);--theme-shadow:rgba(255,105,97,.17);--light-green-bg:#422d31;--border-color:#644249;--text-color:#fff3f4;--secondary-text-color:#ddbec2;--page-bg:#1d1315;--content-bg:#291d20;--card-bg:#39292c;--input-bg:#362529;--separator-color:#705057;--currency-name-bg:#813a40;--currency-name-color:#fff0f1}
+        [data-theme="dark"][data-palette="graphite"]{--primary-green:#f2f2f7;--accent-secondary:#8e8e93;--accent-gradient:linear-gradient(135deg,#e5e5ea,#8e8e93);--theme-shadow:rgba(209,209,214,.13);--light-green-bg:#303033;--border-color:#505054;--text-color:#f2f2f7;--secondary-text-color:#c7c7cc;--page-bg:#111113;--content-bg:#1f1f22;--card-bg:#303033;--input-bg:#2a2a2d;--separator-color:#606065;--currency-name-bg:#4c4c50;--currency-name-color:#f2f2f7}
+        .theme-switcher{position:relative;width:max-content;margin:0 max(0px,calc((100vw - 2rem - 1520px)/2)) .75rem auto;background:color-mix(in srgb,var(--card-bg) 88%,transparent);border:1px solid color-mix(in srgb,var(--border-color) 78%,transparent);border-radius:1rem;padding:.45rem;box-shadow:0 8px 28px rgba(0,0,0,.12),inset 0 1px 0 rgba(255,255,255,.45);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);display:flex;align-items:center;gap:.35rem;z-index:1000}.theme-btn{background:none;border:none;padding:.5rem;border-radius:.7rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--secondary-text-color);transition:transform .22s cubic-bezier(.2,.8,.2,1),background-color .2s ease,color .2s ease!important;width:40px;height:40px}.theme-btn:hover{background:var(--light-green-bg);color:var(--text-color);transform:translateY(-1px)}.theme-btn:active{transform:scale(.9)}.theme-btn.active{background:var(--accent-gradient);color:#fff;box-shadow:0 4px 12px color-mix(in srgb,var(--primary-green) 30%,transparent)}[data-theme="dark"][data-palette="graphite"] .theme-btn.active{color:#1c1c1e}.theme-btn svg{width:20px;height:20px}.palette-trigger{position:relative;margin-left:.15rem}.palette-trigger::before{content:'';position:absolute;left:-.25rem;top:.5rem;bottom:.5rem;width:1px;background:var(--border-color)}.palette-trigger.open{background:var(--light-green-bg);color:var(--primary-green)}
+        .theme-popover{position:absolute;top:calc(100% + .7rem);right:0;width:292px;box-sizing:border-box;padding:1rem;background:color-mix(in srgb,var(--card-bg) 90%,transparent);border:1px solid color-mix(in srgb,var(--border-color) 80%,transparent);border-radius:1.25rem;box-shadow:0 20px 55px rgba(0,0,0,.2),inset 0 1px 0 rgba(255,255,255,.5);backdrop-filter:blur(32px) saturate(180%);-webkit-backdrop-filter:blur(32px) saturate(180%);opacity:0;visibility:hidden;transform:translateY(-10px) scale(.94);transform-origin:top right;pointer-events:none;transition:opacity .18s ease,transform .38s cubic-bezier(.2,1.35,.35,1),visibility .18s!important}.theme-popover.open{opacity:1;visibility:visible;transform:translateY(0) scale(1);pointer-events:auto}.theme-popover-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.85rem}.theme-popover-title{font-size:.96rem;font-weight:700;color:var(--text-color)}.theme-popover-value{font-size:.72rem;font-weight:600;color:var(--secondary-text-color);padding:.25rem .5rem;border-radius:2rem;background:var(--light-green-bg)}.palette-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.55rem}.palette-option{position:relative;display:flex;align-items:center;gap:.55rem;min-width:0;height:60px;box-sizing:border-box;padding:.5rem;border:1px solid var(--border-color);border-radius:.85rem;background:color-mix(in srgb,var(--content-bg) 75%,transparent);color:var(--text-color);font:600 .78rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;cursor:pointer;overflow:hidden;text-align:left;transition:transform .22s cubic-bezier(.2,.8,.2,1),border-color .2s ease,box-shadow .2s ease!important}.palette-option:hover{transform:translateY(-2px);border-color:var(--option-accent);box-shadow:0 7px 16px color-mix(in srgb,var(--option-accent) 16%,transparent)}.palette-option:active{transform:scale(.96)}.palette-option.active{border-color:var(--option-accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--option-accent) 18%,transparent)}.palette-swatch{position:relative;width:38px;height:38px;flex:0 0 38px;border-radius:.7rem;background:linear-gradient(145deg,var(--option-accent) 0 46%,var(--option-soft) 48% 100%);box-shadow:inset 0 0 0 1px rgba(0,0,0,.08),inset 9px 9px 0 color-mix(in srgb,var(--option-accent) 12%,transparent)}.palette-option.active .palette-swatch::after{content:'\2713';position:absolute;inset:7px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.92);color:var(--option-accent);font-size:.75rem;font-weight:800;animation:paletteCheck .42s cubic-bezier(.2,1.5,.4,1)}.palette-option::after{content:'';position:absolute;width:90px;height:90px;border-radius:50%;background:var(--option-accent);opacity:0;transform:scale(0);pointer-events:none}.palette-option.pulse::after{animation:paletteRipple .55s ease-out}.palette-label{display:flex;flex-direction:column;gap:.28rem;min-width:0}.palette-label small{font-size:.62rem;font-weight:500;color:var(--secondary-text-color)}.palette-mint{--option-accent:#28a745;--option-soft:#dff4e8}.palette-ocean{--option-accent:#0a84ff;--option-soft:#dcecff}.palette-coral{--option-accent:#ff5a5f;--option-soft:#ffe1e3}.palette-graphite{--option-accent:#48484a;--option-soft:#e2e2e7}body{display:block}.container{margin:0 auto}.content{border:1px solid color-mix(in srgb,var(--border-color) 76%,transparent);background:color-mix(in srgb,var(--content-bg) 96%,var(--primary-green) 4%);box-shadow:0 16px 38px rgba(0,0,0,.07),0 8px 28px var(--theme-shadow)}.sidebar-item{box-sizing:border-box;border:1px solid color-mix(in srgb,var(--border-color) 72%,transparent)}.sidebar-item.active{background:var(--accent-gradient);box-shadow:0 10px 22px var(--theme-shadow)}[data-theme="dark"][data-palette="graphite"] .sidebar-item.active{color:#1c1c1e}.theme-changing::after{content:'';position:fixed;inset:0;z-index:900;pointer-events:none;background:var(--primary-green);animation:themeWash .58s cubic-bezier(.2,.75,.25,1) forwards}.theme-changing .content{animation:themeContent .58s cubic-bezier(.2,.8,.2,1)}@keyframes paletteCheck{from{opacity:0;transform:scale(.4) rotate(-15deg)}to{opacity:1;transform:scale(1) rotate(0)}}@keyframes paletteRipple{0%{opacity:.18;transform:scale(0)}100%{opacity:0;transform:scale(1)}}@keyframes themeWash{0%{opacity:.14;clip-path:circle(0 at calc(100% - 3.5rem) 3.5rem)}55%{opacity:.08}100%{opacity:0;clip-path:circle(150vmax at calc(100% - 3.5rem) 3.5rem)}}@keyframes themeContent{0%{transform:scale(.992)}55%{transform:scale(1.004)}100%{transform:scale(1)}}@media (prefers-reduced-motion:reduce){.theme-popover,.theme-btn,.palette-option{transition-duration:.01ms!important}.palette-option.pulse::after,.palette-option.active .palette-swatch::after,.theme-changing::after,.theme-changing .content{animation:none}}
+        @media (prefers-reduced-motion:reduce){.theme-changing::after{display:none}}
         .currency-instructions{position:fixed;top:10rem;right:2rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:.5rem;padding:1rem;max-width:280px;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:999}.currency-instructions h2{font-size:.9rem;margin:0 0 .5rem;color:var(--text-color)}.currency-instructions p{margin:.25rem 0;font-size:.8rem;line-height:1.4;color:var(--secondary-text-color)}.currency-value{flex-grow:1;border:none;background:transparent;font-size:1rem;font-family:'Menlo','Monaco','Consolas',monospace;padding:.25rem;outline:0;width:100%;cursor:text;color:var(--text-color)}.currency-name{background-color:var(--currency-name-bg);color:var(--currency-name-color);font-weight:500;padding:.25rem .75rem;border-radius:.25rem;font-size:.8rem;white-space:nowrap}.instructions{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border-color);flex-shrink:0}.instructions p{font-size:.9rem;color:var(--secondary-text-color);line-height:1.6}.copy-notification{position:fixed;left:2rem;bottom:2rem;background-color:var(--primary-green);color:#fff;padding:.75rem 1.5rem;border-radius:.5rem;box-shadow:0 4px 10px rgba(0,0,0,.1);font-size:.9rem;z-index:1000;opacity:0;transform:translateX(-120%);transition:opacity var(--animation-speed) ease,transform var(--animation-speed) ease}.copy-notification.show{opacity:1;transform:translateX(0)}.json-toolbar{display:flex;gap:.5rem;margin-bottom:.75rem;flex-wrap:wrap;flex-shrink:0;align-items:center}.json-tool-btn{display:inline-flex;align-items:center;padding:.35rem .75rem;border:1px solid var(--border-color);border-radius:.375rem;background:var(--card-bg);color:var(--secondary-text-color);font-size:.8rem;cursor:pointer;transition:all .2s ease;font-family:inherit;white-space:nowrap}.json-tool-btn:hover{background:var(--primary-green);color:#fff;border-color:var(--primary-green)}.json-tool-btn:active{transform:scale(.95)}.json-toolbar-sep{width:1px;height:1.2rem;background:var(--border-color);margin:0 .15rem}
 .json-container{display:flex;flex-grow:1;gap:.75rem}.json-pane{flex:1;display:flex;flex-direction:column;background-color:var(--light-green-bg);border-radius:.5rem;overflow:hidden}.json-pane textarea{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto}.json-pane pre{width:100%;height:100%;flex-grow:1;padding:.75rem;margin:0;border:none;background:transparent;resize:none;outline:none;font-family:'Menlo','Monaco','Consolas',monospace;font-size:1rem;color:var(--text-color);line-height:1.6;overflow-y:auto}.json-pane pre{white-space:pre-wrap;word-break:break-all}.json-pane pre.error{color:#d9534f;font-weight:700}
 
@@ -55,7 +63,7 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
 
 @keyframes shine{0%{background-position:0 0,5px 5px}100%{background-position:20px 20px,25px 25px}}
 
-.spin-button{background:linear-gradient(135deg,var(--primary-green),#20c063);color:#fff;border:none;padding:1rem 2rem;border-radius:2rem;font-size:1.1rem;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(40,167,69,.3);transition:all .3s ease;font-family:inherit}.spin-button:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(40,167,69,.4)}.spin-button:active{transform:translateY(0)}.spin-button:disabled{background:#999;cursor:not-allowed;transform:none}
+.spin-button{background:var(--accent-gradient);color:#fff;border:none;padding:1rem 2rem;border-radius:2rem;font-size:1.1rem;font-weight:600;cursor:pointer;box-shadow:0 4px 12px var(--theme-shadow);transition:all .3s ease;font-family:inherit}.spin-button:hover{transform:translateY(-2px);box-shadow:0 8px 22px var(--theme-shadow)}.spin-button:active{transform:translateY(0)}.spin-button:disabled{background:#999;cursor:not-allowed;transform:none}
 
 /* 结果弹窗样式 */
 .modal{display:none;position:fixed;z-index:2000;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,.6);backdrop-filter:blur(5px)}.modal.show{display:flex;align-items:center;justify-content:center}.modal-content{background:var(--content-bg);padding:2rem;border-radius:1rem;text-align:center;position:relative;max-width:400px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.3);animation:modalShow .3s ease-out}.close-btn{position:absolute;top:1rem;right:1.5rem;color:var(--secondary-text-color);font-size:2rem;font-weight:bold;cursor:pointer;line-height:1;transition:color .2s}.close-btn:hover{color:var(--text-color)}.result-content img{width:150px;height:150px;object-fit:cover;border-radius:1rem;margin-bottom:1rem;box-shadow:0 4px 12px rgba(0,0,0,.2)}.result-content h2{margin:0 0 .5rem;color:var(--text-color);font-size:1.5rem}.result-content p{margin:0;color:var(--secondary-text-color);font-size:1rem}
@@ -63,10 +71,21 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
 @keyframes modalShow{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
 @media (max-width:768px){.wheel-container{gap:1.5rem}#wheel-canvas{width:300px!important;height:300px!important}.wheel-pointer{font-size:1.5rem;top:-12px}.spin-button{padding:.8rem 1.5rem;font-size:1rem}.modal-content{margin:1rem;padding:1.5rem}.result-content img{width:120px;height:120px}}
 
-@media (max-width:900px){.rates-grid{grid-template-columns:1fr}}@media (max-width:768px){body{padding:1rem}.container{flex-direction:column}.content{padding:1rem}.page{top:1rem;left:1rem;right:1rem;bottom:1rem}.sidebar{flex-direction:row;flex:1 1 0%;justify-content:center;gap:1rem;width:100%;max-width:none;margin:0 auto}.sidebar-item{flex:1}.copy-notification{left:1rem;bottom:1rem;width:calc(100% - 2rem);text-align:center}.json-container{flex-direction:column}.theme-switcher{top:1rem;right:1rem;padding:.5rem;gap:.5rem}.theme-btn{width:36px;height:36px;padding:.5rem}.theme-btn svg{width:18px;height:18px}.currency-instructions{top:8rem;right:1rem;left:1rem;max-width:none;width:auto}}
+@media (max-width:900px){.rates-grid{grid-template-columns:1fr}}@media (max-width:768px){body{padding:1rem}.container{flex-direction:column}.content{padding:1rem}.page{top:1rem;left:1rem;right:1rem;bottom:1rem}.sidebar{flex-direction:row;flex:1 1 0%;justify-content:center;gap:1rem;width:100%;max-width:none;margin:0 auto}.sidebar-item{flex:1}.copy-notification{left:1rem;bottom:1rem;width:calc(100% - 2rem);text-align:center}.json-container{flex-direction:column}.theme-switcher{margin-right:0;padding:.4rem;gap:.25rem}.theme-btn{width:36px;height:36px;padding:.5rem}.theme-btn svg{width:18px;height:18px}.theme-popover{width:min(292px,calc(100vw - 2rem))}.currency-instructions{top:8rem;right:1rem;left:1rem;max-width:none;width:auto}}
 
-.testfile-container{display:flex;gap:2rem;flex-grow:1;min-height:0}.testfile-form{flex:1;background-color:var(--light-green-bg);padding:2rem;border-radius:1rem;display:flex;flex-direction:column;gap:1.5rem}.testfile-info{flex:1;background-color:var(--light-green-bg);padding:2rem;border-radius:1rem}.form-group{display:flex;flex-direction:column;gap:.5rem}.form-group label{font-weight:600;color:var(--text-color);font-size:1rem}.size-input-group{display:flex;gap:.5rem}.size-input{flex:1;padding:.75rem 1rem;border:1px solid var(--border-color);border-radius:.5rem;background:var(--input-bg);color:var(--text-color);font-size:1rem;font-family:'Menlo','Monaco','Consolas',monospace;transition:border-color var(--animation-speed)}.size-input:focus{outline:none;border-color:var(--primary-green)}.unit-select{padding:.75rem 1rem;border:1px solid var(--border-color);border-radius:.5rem;background:var(--input-bg);color:var(--text-color);font-size:1rem;cursor:pointer;transition:border-color var(--animation-speed)}.unit-select:focus{outline:none;border-color:var(--primary-green)}.extension-input{padding:.75rem 1rem;border:1px solid var(--border-color);border-radius:.5rem;background:var(--input-bg);color:var(--text-color);font-size:1rem;transition:border-color var(--animation-speed)}.extension-input:focus{outline:none;border-color:var(--primary-green)}.input-hint{font-size:.85rem;color:var(--secondary-text-color)}.generate-btn{background:linear-gradient(135deg,var(--primary-green),#20c063);color:#fff;border:none;padding:1rem 2rem;border-radius:.5rem;font-size:1rem;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(40,167,69,.3);transition:all .3s ease;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:.5rem}.generate-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(40,167,69,.4)}.generate-btn:active{transform:translateY(0)}.generate-btn:disabled{background:#999;cursor:not-allowed;transform:none;box-shadow:none}.generate-btn svg{width:20px;height:20px}.progress-section{display:flex;flex-direction:column;gap:1rem;margin-top:1rem}.progress-bar{width:100%;height:10px;background-color:var(--border-color);border-radius:5rem;overflow:hidden}.progress-fill{height:100%;background:linear-gradient(90deg,var(--primary-green),#20c063);width:0%;transition:width .2s ease;border-radius:5rem}.progress-text{font-size:.9rem;color:var(--secondary-text-color);text-align:center}.testfile-info h2{margin:0 0 1rem;font-size:1.25rem}.testfile-info h3{margin:1.5rem 0 .75rem;font-size:1.1rem}.testfile-info ul{margin:0;padding-left:1.5rem;line-height:1.8}.testfile-info li{color:var(--text-color);margin-bottom:.5rem}.testfile-info strong{color:var(--primary-green)}.size-examples{margin-top:1.5rem}.example-tags{display:flex;flex-wrap:wrap;gap:.5rem}.example-tag{background-color:var(--card-bg);border:1px solid var(--border-color);padding:.5rem 1rem;border-radius:2rem;font-size:.9rem;cursor:pointer;transition:all .2s ease;color:var(--text-color)}.example-tag:hover{background:var(--primary-green);color:#fff;border-color:var(--primary-green);transform:translateY(-2px)}@media (max-width:900px){.testfile-container{flex-direction:column;max-height:none}}@media (max-width:768px){.testfile-form,.testfile-info{padding:1.5rem}.size-input-group{flex-direction:column}}
+.testfile-container{display:flex;gap:2rem;flex-grow:1;min-height:0}.testfile-form{flex:1;background-color:var(--light-green-bg);padding:2rem;border-radius:1rem;display:flex;flex-direction:column;gap:1.5rem}.testfile-info{flex:1;background-color:var(--light-green-bg);padding:2rem;border-radius:1rem}.form-group{display:flex;flex-direction:column;gap:.5rem}.form-group label{font-weight:600;color:var(--text-color);font-size:1rem}.size-input-group{display:flex;gap:.5rem}.size-input{flex:1;padding:.75rem 1rem;border:1px solid var(--border-color);border-radius:.5rem;background:var(--input-bg);color:var(--text-color);font-size:1rem;font-family:'Menlo','Monaco','Consolas',monospace;transition:border-color var(--animation-speed)}.size-input:focus{outline:none;border-color:var(--primary-green)}.unit-select{padding:.75rem 1rem;border:1px solid var(--border-color);border-radius:.5rem;background:var(--input-bg);color:var(--text-color);font-size:1rem;cursor:pointer;transition:border-color var(--animation-speed)}.unit-select:focus{outline:none;border-color:var(--primary-green)}.extension-input{padding:.75rem 1rem;border:1px solid var(--border-color);border-radius:.5rem;background:var(--input-bg);color:var(--text-color);font-size:1rem;transition:border-color var(--animation-speed)}.extension-input:focus{outline:none;border-color:var(--primary-green)}.input-hint{font-size:.85rem;color:var(--secondary-text-color)}.generate-btn{background:var(--accent-gradient);color:#fff;border:none;padding:1rem 2rem;border-radius:.5rem;font-size:1rem;font-weight:600;cursor:pointer;box-shadow:0 4px 12px var(--theme-shadow);transition:all .3s ease;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:.5rem}.generate-btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px var(--theme-shadow)}.generate-btn:active{transform:translateY(0)}.generate-btn:disabled{background:#999;cursor:not-allowed;transform:none;box-shadow:none}.generate-btn svg{width:20px;height:20px}.progress-section{display:flex;flex-direction:column;gap:1rem;margin-top:1rem}.progress-bar{width:100%;height:10px;background-color:var(--border-color);border-radius:5rem;overflow:hidden}.progress-fill{height:100%;background:var(--accent-gradient);width:0%;transition:width .2s ease;border-radius:5rem}.progress-text{font-size:.9rem;color:var(--secondary-text-color);text-align:center}.testfile-info h2{margin:0 0 1rem;font-size:1.25rem}.testfile-info h3{margin:1.5rem 0 .75rem;font-size:1.1rem}.testfile-info ul{margin:0;padding-left:1.5rem;line-height:1.8}.testfile-info li{color:var(--text-color);margin-bottom:.5rem}.testfile-info strong{color:var(--primary-green)}.size-examples{margin-top:1.5rem}.example-tags{display:flex;flex-wrap:wrap;gap:.5rem}.example-tag{background-color:var(--card-bg);border:1px solid var(--border-color);padding:.5rem 1rem;border-radius:2rem;font-size:.9rem;cursor:pointer;transition:all .2s ease;color:var(--text-color)}.example-tag:hover{background:var(--primary-green);color:#fff;border-color:var(--primary-green);transform:translateY(-2px)}@media (max-width:900px){.testfile-container{flex-direction:column;max-height:none}}@media (max-width:768px){.testfile-form,.testfile-info{padding:1.5rem}.size-input-group{flex-direction:column}}
 .timestamp-container{display:flex;flex-direction:column;gap:1.5rem;flex-grow:1;overflow-y:auto}.ts-current{background-color:var(--light-green-bg);border-radius:.75rem;padding:1.5rem;border:1px solid var(--border-color)}.ts-current h3{margin:0 0 .75rem;font-size:1rem;font-weight:600;color:var(--text-color)}.ts-current-value{font-size:2.5rem;font-weight:700;font-family:'Menlo','Monaco','Consolas',monospace;color:var(--text-color)}.ts-current-unit{font-size:1rem;color:var(--secondary-text-color);margin-left:.5rem;font-weight:400}.ts-actions{display:flex;gap:.5rem;margin-top:.75rem}.ts-action-btn{display:inline-flex;align-items:center;gap:.35rem;padding:.4rem .85rem;border:1px solid var(--border-color);border-radius:.375rem;background:var(--card-bg);color:var(--secondary-text-color);font-size:.85rem;cursor:pointer;transition:all .2s ease;font-family:inherit;white-space:nowrap}.ts-action-btn:hover{background:var(--primary-green);color:#fff;border-color:var(--primary-green)}.ts-action-btn.stop-active{background:#dc3545;color:#fff;border-color:#dc3545}.ts-action-btn.stop-active:hover{background:#c82333;border-color:#c82333}.ts-tabs{display:flex;border:1px solid var(--border-color);border-radius:.5rem;overflow:hidden}.ts-tab{flex:1;padding:.75rem;text-align:center;cursor:pointer;border:none;background:var(--card-bg);font-size:.95rem;color:var(--secondary-text-color);font-family:inherit;transition:all .2s ease}.ts-tab.active{background:var(--light-green-bg);color:var(--text-color);font-weight:600}.ts-tab:hover:not(.active){color:var(--text-color)}.ts-panel{display:none}.ts-panel.active{display:block}.ts-section{margin-top:1.25rem}.ts-section h3{font-size:1rem;margin:0 0 .75rem;display:flex;align-items:center;gap:.5rem;color:var(--text-color)}.ts-row{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.ts-input{flex:1;min-width:150px;padding:.6rem .85rem;border:1px solid var(--border-color);border-radius:.375rem;background:var(--input-bg);color:var(--text-color);font-size:.95rem;font-family:'Menlo','Monaco','Consolas',monospace;transition:border-color .2s}.ts-input:focus{outline:none;border-color:var(--primary-green)}.ts-select{padding:.6rem .85rem;border:1px solid var(--border-color);border-radius:.375rem;background:var(--input-bg);color:var(--text-color);font-size:.9rem;cursor:pointer;transition:border-color .2s}.ts-select:focus{outline:none;border-color:var(--primary-green)}.ts-convert-btn{padding:.6rem 1.2rem;background:var(--primary-green);color:#fff;border:none;border-radius:.375rem;font-size:.9rem;cursor:pointer;font-family:inherit;transition:all .2s ease;font-weight:600;white-space:nowrap}.ts-convert-btn:hover{opacity:.9}.ts-result{flex:1;min-width:150px;padding:.6rem .85rem;border:1px solid var(--border-color);border-radius:.375rem;background:var(--light-green-bg);color:var(--text-color);font-size:.95rem;font-family:'Menlo','Monaco','Consolas',monospace;cursor:pointer}.ts-result:hover{border-color:var(--primary-green)}.ts-batch-area{width:100%;min-height:120px;padding:.75rem;border:1px solid var(--border-color);border-radius:.375rem;background:var(--input-bg);color:var(--text-color);font-size:.9rem;font-family:'Menlo','Monaco','Consolas',monospace;resize:vertical;transition:border-color .2s;box-sizing:border-box}.ts-batch-area:focus{outline:none;border-color:var(--primary-green)}.ts-batch-row{display:flex;gap:.5rem;margin-top:.75rem;align-items:center;flex-wrap:wrap}@media (max-width:768px){.ts-row{flex-direction:column}.ts-input,.ts-result,.ts-select{min-width:100%;width:100%}.ts-current-value{font-size:1.8rem}.ts-batch-row{flex-direction:column}}
+        /* 紧凑悬浮工具条：固定在视口，不参与页面高度计算 */
+        .theme-switcher{position:fixed;top:1rem;right:1rem;width:auto;margin:0;padding:.3rem;gap:.2rem;border-radius:.85rem}
+        .theme-btn{box-sizing:border-box;width:34px;height:34px;padding:.35rem;border-radius:.6rem}
+        .theme-btn svg{width:17px;height:17px}
+        .theme-popover{width:276px}
+        @media (max-width:768px){.theme-switcher{top:1rem;right:1rem;margin:0;padding:.25rem;gap:.15rem}.theme-btn{width:32px;height:32px;padding:.3rem}.theme-btn svg{width:16px;height:16px}.theme-popover{width:min(276px,calc(100vw - 2rem))}}
+        .cron-page-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:.85rem;flex-shrink:0}.cron-page-heading h1{margin:0 0 .2rem}.cron-page-heading .subtitle{margin:0}.cron-format-control{display:flex;align-items:center;gap:.5rem;color:var(--secondary-text-color);font-size:.78rem;font-weight:600;white-space:nowrap}.cron-select{padding:.55rem .7rem;border:1px solid var(--border-color);border-radius:.5rem;background:var(--card-bg);color:var(--text-color);font:600 .8rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;cursor:pointer;outline:none}.cron-select:focus{border-color:var(--primary-green);box-shadow:0 0 0 3px color-mix(in srgb,var(--primary-green) 14%,transparent)}.cron-expression-card,.cron-builder-panel,.cron-preview-panel,.cron-presets-panel{border:1px solid var(--border-color);background:var(--card-bg);border-radius:.75rem;box-shadow:0 8px 24px rgba(0,0,0,.045)}.cron-expression-card{padding:1rem 1.1rem;margin-bottom:.85rem;flex-shrink:0}.cron-expression-meta{display:flex;align-items:center;justify-content:space-between;color:var(--secondary-text-color);font-size:.75rem;font-weight:600;margin-bottom:.5rem}.cron-validity{display:inline-flex;align-items:center;gap:.3rem}.cron-validity::before{content:'';width:.45rem;height:.45rem;border-radius:50%;background:var(--primary-green)}.cron-validity.invalid{color:#c73e45}.cron-validity.invalid::before{background:#dc3545}.cron-expression-row{display:flex;align-items:center;gap:.55rem}.cron-expression-input{min-width:0;flex:1;padding:.72rem .8rem;border:1px solid var(--border-color);border-radius:.55rem;background:var(--input-bg);color:var(--text-color);font:700 1.15rem/1.2 'SFMono-Regular',Menlo,Monaco,Consolas,monospace;letter-spacing:.02em;outline:none}.cron-expression-input:focus{border-color:var(--primary-green);box-shadow:0 0 0 3px color-mix(in srgb,var(--primary-green) 14%,transparent)}.cron-copy-btn{padding:.65rem .85rem;border:1px solid var(--border-color);border-radius:.5rem;background:var(--light-green-bg);color:var(--primary-green);font:700 .78rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;cursor:pointer;white-space:nowrap}.cron-copy-btn:hover{background:var(--primary-green);color:#fff}.cron-description{margin:.6rem 0 .75rem;color:var(--secondary-text-color);font-size:.8rem;line-height:1.5}.cron-field-chips{display:flex;flex-wrap:wrap;gap:.4rem}.cron-field-chip{display:inline-flex;align-items:center;gap:.35rem;padding:.3rem .55rem;border:1px solid var(--border-color);border-radius:2rem;background:var(--light-green-bg);color:var(--text-color);font:600 .7rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.cron-field-chip b{color:var(--primary-green);font-weight:700}.cron-workspace{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(250px,.75fr);gap:.85rem;min-height:0;flex:1;margin-bottom:.85rem}.cron-builder-panel,.cron-preview-panel{min-width:0;overflow:hidden;display:flex;flex-direction:column}.cron-panel-heading{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.8rem 1rem;border-bottom:1px solid var(--border-color);flex-shrink:0}.cron-panel-heading div{display:flex;align-items:baseline;gap:.55rem;min-width:0}.cron-panel-heading strong{color:var(--text-color);font-size:.86rem}.cron-panel-heading span{color:var(--secondary-text-color);font-size:.7rem;font-weight:500}.cron-panel-meta{color:var(--primary-green)!important;white-space:nowrap}.cron-live-dot{color:var(--primary-green)!important}.cron-live-dot::before{content:'';display:inline-block;width:.4rem;height:.4rem;border-radius:50%;background:var(--primary-green);margin-right:.3rem;vertical-align:.05em}.cron-field-tabs{display:flex;gap:.35rem;padding:.65rem .8rem .55rem;overflow-x:auto;border-bottom:1px solid var(--border-color);flex-shrink:0}.cron-field-tab{border:0;border-radius:.45rem;background:transparent;color:var(--secondary-text-color);padding:.42rem .55rem;font:600 .72rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;cursor:pointer;white-space:nowrap}.cron-field-tab:hover{background:var(--light-green-bg);color:var(--text-color)}.cron-field-tab.active{background:var(--primary-green);color:#fff}.cron-panels{padding:.85rem 1rem 1rem;overflow:auto;min-height:0;flex:1}.cron-field-panel{display:none}.cron-field-panel.active{display:block;animation:cronPanelIn .25s ease-out}.cron-field-top{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-bottom:.75rem}.cron-field-title{color:var(--text-color);font-size:.82rem;font-weight:700}.cron-field-range{color:var(--secondary-text-color);font:500 .68rem/1 'SFMono-Regular',Menlo,monospace}.cron-mode-row{display:flex;align-items:center;gap:.55rem;margin-bottom:.7rem}.cron-mode-label{color:var(--secondary-text-color);font-size:.72rem;font-weight:600}.cron-mode{padding:.42rem .55rem;border:1px solid var(--border-color);border-radius:.45rem;background:var(--input-bg);color:var(--text-color);font:600 .72rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;outline:none}.cron-token-input{flex:1;min-width:0;padding:.42rem .55rem;border:1px solid var(--border-color);border-radius:.45rem;background:var(--input-bg);color:var(--text-color);font:600 .72rem/1 'SFMono-Regular',Menlo,monospace;outline:none}.cron-token-input:focus{border-color:var(--primary-green)}.cron-choice-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(42px,1fr));gap:.35rem;max-height:185px;overflow:auto;padding:.15rem}.cron-choice{position:relative;display:block}.cron-choice input{position:absolute;opacity:0;pointer-events:none}.cron-choice span{display:grid;place-items:center;min-height:30px;border:1px solid var(--border-color);border-radius:.4rem;background:var(--content-bg);color:var(--secondary-text-color);font:600 .7rem/1 'SFMono-Regular',Menlo,monospace;cursor:pointer;transition:background-color .16s ease,border-color .16s ease,color .16s ease!important}.cron-choice span:hover{border-color:var(--primary-green);color:var(--primary-green)}.cron-choice input:checked+span{border-color:var(--primary-green);background:var(--light-green-bg);color:var(--primary-green);box-shadow:inset 0 0 0 1px var(--primary-green)}.cron-field-hint{margin:.65rem 0 0;color:var(--secondary-text-color);font-size:.7rem;line-height:1.5}.cron-next-runs{padding:.8rem 1rem;overflow:auto;min-height:0;flex:1}.cron-next-run{display:flex;align-items:center;gap:.65rem;padding:.65rem 0;border-bottom:1px solid var(--border-color)}.cron-next-run:last-child{border-bottom:0}.cron-next-index{display:grid;place-items:center;width:1.45rem;height:1.45rem;border-radius:50%;background:var(--light-green-bg);color:var(--primary-green);font:700 .65rem/1 'SFMono-Regular',Menlo,monospace;flex:0 0 auto}.cron-next-time{color:var(--text-color);font:600 .76rem/1.35 'SFMono-Regular',Menlo,monospace}.cron-next-relative{margin-top:.15rem;color:var(--secondary-text-color);font-size:.65rem}.cron-empty{padding:1.5rem .5rem;color:var(--secondary-text-color);font-size:.75rem;line-height:1.5;text-align:center}.cron-presets-panel{flex-shrink:0;overflow:hidden}.cron-presets{display:flex;flex-wrap:wrap;gap:.45rem;padding:.75rem 1rem}.cron-preset{display:inline-flex;align-items:center;gap:.45rem;padding:.45rem .6rem;border:1px solid var(--border-color);border-radius:.5rem;background:var(--content-bg);color:var(--text-color);cursor:pointer;text-align:left;transition:transform .18s ease,border-color .18s ease,background-color .18s ease!important}.cron-preset:hover{border-color:var(--primary-green);background:var(--light-green-bg);transform:translateY(-1px)}.cron-preset code{color:var(--primary-green);font:700 .68rem/1 'SFMono-Regular',Menlo,monospace}.cron-preset span{color:var(--secondary-text-color);font-size:.68rem;white-space:nowrap}@keyframes cronPanelIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}@media (max-width:900px){.cron-workspace{grid-template-columns:1fr}.cron-preview-panel{min-height:220px}.cron-page-heading{align-items:flex-start;flex-direction:column;gap:.55rem}.cron-format-control{align-self:flex-start}}@media (max-width:768px){.cron-expression-card{padding:.85rem}.cron-expression-input{font-size:.95rem}.cron-copy-btn{padding:.58rem .7rem}.cron-panel-heading{padding:.7rem .8rem}.cron-panels{padding:.75rem}.cron-presets{padding:.7rem .8rem}.cron-preset{flex:1 1 145px}}
+        @media (max-width:768px){.container{width:auto;max-width:none;margin:0}.sidebar{box-sizing:border-box;justify-content:flex-start;width:calc(100% - 156px);margin-right:156px;overflow-x:auto;padding:.1rem 0 .35rem;scrollbar-width:thin}.sidebar-item{flex:0 0 88px;width:88px;min-width:88px;box-sizing:border-box;padding:.75rem .45rem}}
+        .cron-visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.cron-studio{display:grid;grid-template-columns:84px minmax(0,1fr);height:min(390px,46vh);min-height:350px;border:1px solid var(--border-color);border-radius:.65rem;background:var(--content-bg);overflow:hidden;flex-shrink:0}.cron-dialect-panel{min-height:0;background:color-mix(in srgb,var(--light-green-bg) 55%,var(--content-bg));border-right:1px solid var(--border-color)}.cron-dialect-title{padding:.8rem .55rem .65rem;color:var(--text-color);font-size:.72rem;font-weight:700;text-align:center}.cron-dialects{display:flex;flex-direction:column;gap:.35rem;padding:0 .4rem}.cron-dialect-btn{height:42px;border:0;border-radius:.45rem;background:transparent;color:var(--secondary-text-color);font:700 .68rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;cursor:pointer}.cron-dialect-btn:hover{background:var(--content-bg);color:var(--primary-green)}.cron-dialect-btn.active{background:var(--content-bg);color:var(--primary-green);box-shadow:0 3px 10px rgba(0,0,0,.07)}.cron-editor-shell{min-width:0;min-height:0;display:flex;flex-direction:column}.cron-editor-shell .cron-field-tabs{--cron-field-count:7;display:grid;grid-template-columns:repeat(var(--cron-field-count),minmax(58px,1fr));gap:.2rem;padding:.4rem;border-bottom:1px solid var(--border-color);overflow-x:auto;background:color-mix(in srgb,var(--light-green-bg) 34%,var(--content-bg));flex-shrink:0}.cron-editor-shell .cron-field-tab{height:38px;padding:.35rem;border-radius:.45rem;color:var(--secondary-text-color);font-size:.75rem}.cron-editor-shell .cron-field-tab.active{background:color-mix(in srgb,var(--primary-green) 12%,var(--content-bg));color:var(--primary-green);box-shadow:none}.cron-editor-shell .cron-panels{padding:0;overflow:auto;flex:1}.cron-editor-shell .cron-field-panel.active{display:block;animation:cronPanelIn .2s ease-out}.cron-rule-list{min-width:600px}.cron-rule-row{display:grid;grid-template-columns:116px minmax(0,1fr);align-items:center;min-height:54px;padding:.4rem .75rem;border-bottom:1px solid color-mix(in srgb,var(--border-color) 62%,transparent)}.cron-rule-row:last-child{border-bottom:0}.cron-rule-row.active{background:color-mix(in srgb,var(--primary-green) 7%,var(--content-bg))}.cron-rule-label{display:flex;align-items:center;gap:.5rem;color:var(--secondary-text-color);font-size:.76rem;font-weight:700;cursor:pointer}.cron-rule-label input{width:17px;height:17px;margin:0;accent-color:var(--primary-green)}.cron-rule-row.active .cron-rule-label{color:var(--primary-green)}.cron-rule-content{display:flex;align-items:center;gap:.55rem;min-width:0;color:var(--secondary-text-color);font-size:.72rem}.cron-rule-content strong{color:var(--text-color)}.cron-number-input{width:54px;height:30px;box-sizing:border-box;border:1px solid var(--border-color);border-radius:.4rem;background:var(--input-bg);color:var(--text-color);font:700 .72rem/1 'SFMono-Regular',Menlo,monospace;text-align:center;outline:none}.cron-number-input:focus{border-color:var(--primary-green);box-shadow:0 0 0 2px color-mix(in srgb,var(--primary-green) 12%,transparent)}.cron-specific-row{align-items:start;padding-top:.65rem;padding-bottom:.65rem}.cron-specific-body{min-width:0}.cron-specific-meta{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-bottom:.45rem;color:var(--secondary-text-color);font-size:.65rem}.cron-specific-actions{display:flex;gap:.3rem}.cron-specific-action{border:0;background:transparent;color:var(--primary-green);font-size:.65rem;font-weight:700;cursor:pointer}.cron-specific-body .cron-choice-grid{display:grid!important;grid-template-columns:repeat(12,minmax(38px,1fr));gap:.3rem;max-height:none;overflow:visible;padding:0}.cron-specific-body .cron-choice span{min-height:29px;border-radius:.4rem;background:var(--content-bg);font-size:.66rem}.cron-expression-section{margin-top:.7rem;flex-shrink:0}.cron-section-title,.cron-presets-heading,.cron-preview-heading{display:flex;align-items:baseline;gap:.6rem;margin-bottom:.45rem;color:var(--text-color);font-size:.75rem;font-weight:700}.cron-presets-heading small,.cron-preview-heading small{color:var(--secondary-text-color);font-size:.64rem;font-weight:500}.cron-expression-section .cron-field-chips{display:grid;grid-template-columns:repeat(var(--cron-field-count,7),minmax(70px,1fr));gap:.35rem;margin-bottom:.55rem}.cron-expression-section .cron-field-chip{display:flex;flex-direction:column;gap:.35rem;padding:0;border:0;border-radius:0;background:transparent}.cron-field-chip-label{color:var(--secondary-text-color);font-size:.66rem;font-weight:700;text-align:center}.cron-field-token-input{width:100%;height:34px;box-sizing:border-box;border:1px solid var(--border-color);border-radius:.45rem;background:var(--input-bg);color:var(--text-color);font:700 .72rem/1 'SFMono-Regular',Menlo,monospace;text-align:center;outline:none}.cron-field-token-input:focus{border-color:var(--primary-green);box-shadow:0 0 0 2px color-mix(in srgb,var(--primary-green) 12%,transparent)}.cron-expression-controls{display:grid;grid-template-columns:minmax(0,1fr) 165px;gap:.55rem;align-items:end}.cron-expression-control,.cron-timezone-control{display:flex;flex-direction:column;gap:.35rem;color:var(--text-color);font-size:.7rem;font-weight:700}.cron-expression-controls .cron-expression-row{display:grid;grid-template-columns:minmax(0,1fr) 34px auto;gap:.35rem}.cron-expression-controls .cron-expression-input{height:38px;padding:.55rem .7rem;font-size:.78rem;border-color:var(--primary-green)}.cron-icon-btn{width:34px;height:38px;border:1px solid var(--border-color);border-radius:.45rem;background:var(--content-bg);color:var(--primary-green);font-size:1rem;cursor:pointer}.cron-parse-btn{height:38px;padding:0 .9rem;border:0;border-radius:.45rem;background:var(--primary-green);color:#fff;font-size:.72rem;font-weight:700;cursor:pointer}.cron-timezone-control .cron-select{height:38px}.cron-expression-status{display:flex;align-items:center;gap:.65rem;min-height:24px}.cron-expression-status .cron-description{margin:.25rem 0 0;font-size:.68rem}.cron-presets-section{margin-top:.45rem;flex-shrink:0}.cron-presets-section .cron-presets{display:flex;gap:.35rem;padding:0;max-height:70px;overflow:auto}.cron-presets-section .cron-preset{padding:.4rem .55rem;border-radius:.45rem}.cron-presets-section .cron-preset code{display:none}.cron-presets-section .cron-preset span{font-size:.66rem;font-weight:650;color:var(--secondary-text-color)}.cron-preview-section{margin-top:.55rem;padding:.55rem .7rem;border:1px solid var(--border-color);border-radius:.55rem;background:color-mix(in srgb,var(--light-green-bg) 38%,var(--content-bg));flex-shrink:0}.cron-preview-section .cron-next-runs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.45rem;padding:0;overflow:visible}.cron-preview-section .cron-next-run{min-width:0;padding:.35rem .45rem;border:0;border-radius:.45rem;background:var(--content-bg)}.cron-preview-section .cron-next-time{font-size:.66rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.cron-preview-section .cron-next-relative{font-size:.6rem}.cron-preview-section .cron-next-index{width:1.25rem;height:1.25rem}.cron-preview-heading{margin-bottom:.35rem}#page-cron.active{overflow-y:auto;padding-right:.2rem;box-sizing:border-box}@media (max-width:1100px){.cron-editor-shell .cron-field-tabs{padding-right:.4rem}.cron-specific-body .cron-choice-grid{grid-template-columns:repeat(8,minmax(38px,1fr))}.cron-preview-section .cron-next-runs{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:768px){.cron-studio{grid-template-columns:72px minmax(0,1fr);height:470px;min-height:470px}.cron-dialect-btn{height:38px}.cron-editor-shell .cron-field-tabs{grid-template-columns:repeat(var(--cron-field-count),58px)}.cron-rule-list{min-width:540px}.cron-rule-row{grid-template-columns:100px minmax(0,1fr)}.cron-specific-body .cron-choice-grid{grid-template-columns:repeat(6,minmax(38px,1fr))}.cron-expression-section .cron-field-chips{grid-template-columns:repeat(var(--cron-field-count,7),74px);overflow-x:auto;padding-bottom:.3rem}.cron-expression-controls{grid-template-columns:1fr}.cron-presets-section .cron-presets{max-height:110px}.cron-preview-section .cron-next-runs{grid-template-columns:1fr}.cron-expression-controls .cron-expression-row{grid-template-columns:minmax(0,1fr) 34px auto}}
+        .cron-studio{height:min(420px,49vh);min-height:390px}.cron-rule-row{min-height:47px;padding:.25rem .75rem}.cron-specific-row{padding-top:.45rem;padding-bottom:.45rem}@media (max-width:768px){.cron-studio{height:500px;min-height:500px}}
+        @media (min-width:769px){body{padding:.5rem}.container{max-width:min(1520px,calc(100vw - 8rem))}.content{box-sizing:border-box;height:calc(100vh - 1rem);padding:.75rem}.theme-switcher{top:50%;right:.5rem;flex-direction:column;transform:translateY(-50%)}.theme-popover{top:50%;right:calc(100% + .65rem);transform:translate(10px,-50%) scale(.94);transform-origin:right center}.theme-popover.open{transform:translate(0,-50%) scale(1)}}
     </style>
 </head>
 <body>
@@ -89,6 +108,23 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
             </svg>
         </button>
+        <button class="theme-btn palette-trigger" id="palette-trigger" type="button" title="更换主题配色" aria-label="更换主题配色" aria-expanded="false" aria-controls="theme-popover">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+            </svg>
+        </button>
+        <div class="theme-popover" id="theme-popover" role="dialog" aria-label="主题配色" aria-hidden="true">
+            <div class="theme-popover-header">
+                <span class="theme-popover-title">主题配色</span>
+                <span class="theme-popover-value" id="palette-current">薄荷</span>
+            </div>
+            <div class="palette-grid" role="radiogroup" aria-label="选择主题配色">
+                <button class="palette-option palette-mint" type="button" data-palette="mint" data-label="薄荷" role="radio" aria-checked="false"><span class="palette-swatch" aria-hidden="true"></span><span class="palette-label">薄荷<small>清透自然</small></span></button>
+                <button class="palette-option palette-ocean" type="button" data-palette="ocean" data-label="海湾" role="radio" aria-checked="false"><span class="palette-swatch" aria-hidden="true"></span><span class="palette-label">海湾<small>冷静专注</small></span></button>
+                <button class="palette-option palette-coral" type="button" data-palette="coral" data-label="珊瑚" role="radio" aria-checked="false"><span class="palette-swatch" aria-hidden="true"></span><span class="palette-label">珊瑚<small>明快温暖</small></span></button>
+                <button class="palette-option palette-graphite" type="button" data-palette="graphite" data-label="石墨" role="radio" aria-checked="false"><span class="palette-swatch" aria-hidden="true"></span><span class="palette-label">石墨<small>克制中性</small></span></button>
+            </div>
+        </div>
     </div>
 
     <div class="container">
@@ -112,6 +148,10 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
             <div id="nav-timestamp" class="sidebar-item">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 <span>时间戳转换</span>
+            </div>
+            <div id="nav-cron" class="sidebar-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3.75h10.5A2.25 2.25 0 0119.5 6v12a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 18V6a2.25 2.25 0 012.25-2.25zM8.25 7.5h7.5m-7.5 3.75h7.5m-7.5 3.75h4.5" /></svg>
+                <span>Cron 计划</span>
             </div>
         </aside>
         <main class="content">
@@ -343,6 +383,51 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
                     </div>
                 </div>
             </div>
+            <div id="page-cron" class="page" style="display:flex;flex-direction:column;">
+                <h1 class="cron-visually-hidden">Cron 表达式生成器</h1>
+                <div class="cron-studio">
+                    <aside class="cron-dialect-panel" aria-label="表达式类型">
+                        <div class="cron-dialect-title">表达式类型</div>
+                        <div id="cron-dialects" class="cron-dialects"></div>
+                    </aside>
+                    <section class="cron-editor-shell" aria-label="Cron 字段编辑器">
+                        <div id="cron-field-tabs" class="cron-field-tabs" role="tablist"></div>
+                        <div id="cron-panels" class="cron-panels"></div>
+                    </section>
+                </div>
+                <section class="cron-expression-section">
+                    <div class="cron-section-title">表达式字段</div>
+                    <div id="cron-field-chips" class="cron-field-chips" aria-label="Cron 字段"></div>
+                    <div class="cron-expression-controls">
+                        <label class="cron-expression-control">
+                            <span>Cron 表达式</span>
+                            <div class="cron-expression-row">
+                                <input id="cron-expression-input" class="cron-expression-input" value="* * * * * ? *" spellcheck="false" aria-label="Cron 表达式">
+                                <button id="cron-copy" class="cron-icon-btn" type="button" title="复制表达式" aria-label="复制表达式">⧉</button>
+                                <button id="cron-parse" class="cron-parse-btn" type="button">反解析</button>
+                            </div>
+                        </label>
+                        <label class="cron-timezone-control">
+                            <span>计算时区</span>
+                            <select id="cron-timezone" class="cron-select">
+                                <option value="Asia/Shanghai">中国标准时间</option>
+                                <option value="UTC">协调世界时</option>
+                                <option value="Asia/Tokyo">日本标准时间</option>
+                                <option value="America/New_York">美国东部时间</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="cron-expression-status"><span id="cron-validity" class="cron-validity valid">有效</span><span id="cron-description" class="cron-description"></span></div>
+                </section>
+                <section class="cron-presets-section">
+                    <div class="cron-presets-heading"><span>常用定时</span><small>点击即可快速应用</small></div>
+                    <div id="cron-presets" class="cron-presets"></div>
+                </section>
+                <section class="cron-preview-section">
+                    <div class="cron-preview-heading"><span>最近执行时间</span><small>根据当前表达式自动计算</small></div>
+                    <div id="cron-next-runs" class="cron-next-runs"></div>
+                </section>
+            </div>
         </main>
     </div>
 
@@ -407,11 +492,13 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
         const navFood = document.getElementById('nav-food');
         const navTestfile = document.getElementById('nav-testfile');
         const navTimestamp = document.getElementById('nav-timestamp');
+        const navCron = document.getElementById('nav-cron');
         const pageCurrency = document.getElementById('page-currency');
         const pageJson = document.getElementById('page-json');
         const pageFood = document.getElementById('page-food');
         const pageTestfile = document.getElementById('page-testfile');
         const pageTimestamp = document.getElementById('page-timestamp');
+        const pageCron = document.getElementById('page-cron');
         const jsonInput = document.getElementById('json-input');
         const jsonOutput = document.getElementById('json-output');
         const jsonStatus = document.getElementById('json-status');
@@ -798,6 +885,339 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
             });
         }
 
+        const CRON_FIELDS = [
+            { key: 'second', label: '秒', min: 0, max: 59 },
+            { key: 'minute', label: '分', min: 0, max: 59 },
+            { key: 'hour', label: '时', min: 0, max: 23 },
+            { key: 'day', label: '日', min: 1, max: 31 },
+            { key: 'month', label: '月', min: 1, max: 12, names: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'] },
+            { key: 'weekday', label: '周', min: 0, max: 6, names: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'] },
+            { key: 'year', label: '年', min: 1970, max: 2099 }
+        ];
+        const CRON_FORMAT_FIELDS = {
+            5: ['minute', 'hour', 'day', 'month', 'weekday'],
+            6: ['second', 'minute', 'hour', 'day', 'month', 'weekday'],
+            7: ['second', 'minute', 'hour', 'day', 'month', 'weekday', 'year']
+        };
+        const CRON_DIALECTS = {
+            quartz: { label: 'Quartz', format: 7, expression: '* * * * * ? *' },
+            spring: { label: 'Spring', format: 6, expression: '0 */5 * * * *' },
+            linux: { label: 'Linux', format: 5, expression: '*/5 * * * *' },
+            node: { label: 'Node', format: 6, expression: '*/10 * * * * *' },
+            go: { label: 'Go cron', format: 5, expression: '*/5 * * * *' }
+        };
+        const CRON_PRESETS = [
+            ['* * * * *', '每分钟'], ['*/5 * * * *', '每5分钟'], ['*/10 * * * *', '每10分钟'], ['*/15 * * * *', '每15分钟'],
+            ['*/30 * * * *', '每30分钟'], ['0 * * * *', '每小时'], ['0 */2 * * *', '每2小时'], ['0 */6 * * *', '每6小时'],
+            ['0 0 * * *', '每天零点'], ['0 8 * * *', '每天8点'], ['30 9 * * *', '每天9:30'], ['0 12 * * *', '每天中午'],
+            ['0 18 * * *', '每天18点'], ['0 23 * * *', '每天23点'], ['0 9 * * 1-5', '工作日9点'], ['0 18 * * 1-5', '工作日18点'],
+            ['0 9 * * 1', '每周一9点'], ['0 18 * * 5', '每周五18点'], ['0 0 1 * *', '每月1号'], ['0 0 15 * *', '每月15号'],
+            ['0 0 1 1 *', '每年元旦'], ['*/5 * * * *', 'Linux每5分钟'], ['*/10 * * * * *', 'Node每10分钟'], ['0 9 * * 1-5', 'Node工作日9点']
+        ];
+        const cronState = { dialect: 'quartz', format: 7, activeField: 'second', timezone: 'Asia/Shanghai', fields: {} };
+        const cronDateFormatters = new Map();
+
+        function getCronField(key) { return CRON_FIELDS.find(field => field.key === key); }
+        function getCronKeys(format = cronState.format) { return CRON_FORMAT_FIELDS[format] || CRON_FORMAT_FIELDS[5]; }
+        function createCronFieldState(field) {
+            if (field.key === 'second') return { mode: 'specific', values: new Set([0]), rangeStart: field.min, rangeEnd: field.max, stepStart: field.min, step: 1, token: '0' };
+            return { mode: 'every', values: new Set(), rangeStart: field.min, rangeEnd: field.max, stepStart: field.min, step: 1, token: '*' };
+        }
+        function ensureCronFields() { CRON_FIELDS.forEach(field => { if (!cronState.fields[field.key]) cronState.fields[field.key] = createCronFieldState(field); }); }
+        function cronValueFromToken(value, field) {
+            const text = String(value).trim().toUpperCase();
+            if (field.names) {
+                const index = field.names.findIndex(name => name.toUpperCase() === text);
+                if (index >= 0) return field.key === 'weekday' ? index : index + 1;
+                const aliases = field.key === 'weekday' ? { SUN: 0, MON: 1, TUE: 2, WED: 3, THU: 4, FRI: 5, SAT: 6 } : { JAN: 1, FEB: 2, MAR: 3, APR: 4, MAY: 5, JUN: 6, JUL: 7, AUG: 8, SEP: 9, OCT: 10, NOV: 11, DEC: 12 };
+                if (aliases[text] !== undefined) return aliases[text];
+            }
+            const number = Number(text);
+            return Number.isInteger(number) && number >= field.min && number <= field.max ? number : null;
+        }
+        function parseCronFieldToken(token, field) {
+            const raw = String(token || '').trim();
+            if (!raw) return null;
+            if (raw === '*' || raw === '?') return { mode: 'every', values: new Set(), rangeStart: field.min, rangeEnd: field.max, stepStart: field.min, step: 1, token: raw };
+            const stepMatch = raw.match(/^(\*|\d+)\/(\d+)$/);
+            if (stepMatch) {
+                const stepStart = stepMatch[1] === '*' ? field.min : cronValueFromToken(stepMatch[1], field);
+                const step = Number(stepMatch[2]);
+                return stepStart !== null && step > 0 && step <= field.max - field.min + 1 ? { mode: 'step', values: new Set(), rangeStart: field.min, rangeEnd: field.max, stepStart, step, token: raw } : null;
+            }
+            const rangeMatch = raw.match(/^([^,/-]+)-([^,/-]+)$/);
+            if (rangeMatch) {
+                const start = cronValueFromToken(rangeMatch[1], field);
+                const end = cronValueFromToken(rangeMatch[2], field);
+                return start !== null && end !== null && start <= end ? { mode: 'range', values: new Set(), rangeStart: start, rangeEnd: end, stepStart: field.min, step: 1, token: raw } : null;
+            }
+            const values = raw.split(',').map(value => cronValueFromToken(value, field));
+            if (values.some(value => value === null)) return null;
+            return { mode: 'specific', values: new Set(values), rangeStart: field.min, rangeEnd: field.max, stepStart: field.min, step: 1, token: raw };
+        }
+        function parseCronExpression(expression) {
+            const parts = String(expression || '').trim().split(/\s+/);
+            if (![5, 6, 7].includes(parts.length)) return false;
+            const keys = getCronKeys(parts.length);
+            const nextFields = {};
+            keys.forEach(key => { nextFields[key] = createCronFieldState(getCronField(key)); });
+            for (let index = 0; index < keys.length; index += 1) {
+                const parsed = parseCronFieldToken(parts[index], getCronField(keys[index]));
+                if (!parsed) return false;
+                nextFields[keys[index]] = parsed;
+            }
+            CRON_FIELDS.forEach(field => { if (!nextFields[field.key]) nextFields[field.key] = cronState.fields[field.key] || createCronFieldState(field); });
+            cronState.format = parts.length;
+            Object.assign(cronState.fields, nextFields);
+            return true;
+        }
+        function cronTokenFromState(state, field) {
+            if (state.mode === 'step') return `${state.stepStart === field.min ? '*' : state.stepStart}/${Math.max(1, state.step || 1)}`;
+            if (state.mode === 'range') return `${state.rangeStart}-${state.rangeEnd}`;
+            if (state.mode === 'specific') return [...state.values].sort((a, b) => a - b).join(',') || '*';
+            return state.token === '?' ? '?' : '*';
+        }
+        function generateCronExpression() { return getCronKeys().map(key => cronTokenFromState(cronState.fields[key], getCronField(key))).join(' '); }
+
+        function isCronWildcard(token) { return token === '*' || token === '?'; }
+        function buildMatcher(token, field) {
+            const parsed = parseCronFieldToken(token, field);
+            if (!parsed) return () => false;
+            if (parsed.mode === 'every') return () => true;
+            if (parsed.mode === 'step') return value => value >= parsed.stepStart && (value - parsed.stepStart) % parsed.step === 0;
+            if (parsed.mode === 'range') return value => value >= parsed.rangeStart && value <= parsed.rangeEnd;
+            return value => parsed.values.has(value);
+        }
+        function cronDateParts(date) {
+            const localTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            if (!cronState.timezone || cronState.timezone === localTimezone) {
+                return { second: date.getSeconds(), minute: date.getMinutes(), hour: date.getHours(), day: date.getDate(), month: date.getMonth() + 1, weekday: date.getDay(), year: date.getFullYear() };
+            }
+            if (!cronDateFormatters.has(cronState.timezone)) cronDateFormatters.set(cronState.timezone, new Intl.DateTimeFormat('en-US', { timeZone: cronState.timezone, year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', weekday: 'short', hourCycle: 'h23' }));
+            const formatter = cronDateFormatters.get(cronState.timezone);
+            const values = Object.fromEntries(formatter.formatToParts(date).filter(part => part.type !== 'literal').map(part => [part.type, part.value]));
+            const weekday = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[values.weekday];
+            return { second: Number(values.second), minute: Number(values.minute), hour: Number(values.hour), day: Number(values.day), month: Number(values.month), weekday, year: Number(values.year) };
+        }
+        function getNextRunTimes(expression, count = 5) {
+            const parts = String(expression || '').trim().split(/\s+/);
+            if (![5, 6, 7].includes(parts.length)) return [];
+            const keys = getCronKeys(parts.length);
+            const matchers = Object.fromEntries(keys.map((key, index) => [key, buildMatcher(parts[index], getCronField(key))]));
+            const dayToken = parts[keys.indexOf('day')];
+            const weekToken = parts[keys.indexOf('weekday')];
+            const hasSeconds = parts.length > 5;
+            const now = Date.now();
+            const candidate = new Date();
+            candidate.setSeconds(0, 0);
+            if (!hasSeconds) candidate.setMinutes(candidate.getMinutes() + 1);
+            const results = [];
+            for (let attempts = 0; attempts < 1600000 && results.length < count; attempts += 1) {
+                const values = cronDateParts(candidate);
+                const dayMatches = matchers.day(values.day);
+                const weekMatches = matchers.weekday(values.weekday);
+                const calendarMatches = isCronWildcard(dayToken) ? weekMatches : (isCronWildcard(weekToken) ? dayMatches : dayMatches || weekMatches);
+                const baseMatches = matchers.minute(values.minute) && matchers.hour(values.hour) && matchers.month(values.month) && calendarMatches && (!matchers.year || matchers.year(values.year));
+                if (baseMatches && hasSeconds) {
+                    for (let second = 0; second < 60 && results.length < count; second += 1) {
+                        if (!matchers.second(second)) continue;
+                        const runTime = new Date(candidate);
+                        runTime.setSeconds(second);
+                        if (runTime.getTime() > now) results.push(runTime);
+                    }
+                } else if (baseMatches && candidate.getTime() > now) {
+                    results.push(new Date(candidate));
+                }
+                candidate.setMinutes(candidate.getMinutes() + 1);
+            }
+            return results;
+        }
+        function cronDateLabel(date) {
+            const values = cronDateParts(date);
+            const pad = value => String(value).padStart(2, '0');
+            return `${values.year}-${pad(values.month)}-${pad(values.day)} ${pad(values.hour)}:${pad(values.minute)}:${pad(values.second)}`;
+        }
+        function cronRelativeLabel(date) {
+            const minutes = Math.max(1, Math.round((date.getTime() - Date.now()) / 60000));
+            if (minutes < 60) return `${minutes} 分钟后`;
+            if (minutes < 1440) return `${Math.round(minutes / 60)} 小时后`;
+            return `${Math.round(minutes / 1440)} 天后`;
+        }
+        function generateCronDescription(expression) {
+            const parts = expression.split(/\s+/);
+            if (parts.length === 5) {
+                if (/^\*\/\d+$/.test(parts[0]) && parts.slice(1).every(token => token === '*')) return `每 ${parts[0].slice(2)} 分钟执行一次`;
+                if (parts[0] === '0' && parts[1] === '*' && parts.slice(2).every(token => token === '*')) return '每小时整点执行一次';
+                if (parts[0] === '0' && parts[1] === '0' && parts.slice(2).every(token => token === '*')) return '每天 00:00 执行一次';
+            }
+            return getCronKeys(parts.length).map((key, index) => `${getCronField(key).label}: ${parts[index]}`).join('  ·  ');
+        }
+
+        function syncCronDialectFromFormat() {
+            if (cronState.format === 7) cronState.dialect = 'quartz';
+            else if (cronState.format === 5 && !['linux', 'go'].includes(cronState.dialect)) cronState.dialect = 'linux';
+            else if (cronState.format === 6 && !['spring', 'node', 'go'].includes(cronState.dialect)) cronState.dialect = 'spring';
+        }
+        function renderCronDialects() {
+            document.getElementById('cron-dialects').innerHTML = Object.entries(CRON_DIALECTS).map(([key, dialect]) => `<button class="cron-dialect-btn${key === cronState.dialect ? ' active' : ''}" type="button" data-cron-dialect="${key}">${dialect.label}</button>`).join('');
+        }
+        function enforceQuartzDayWeek(changedKey) {
+            if (cronState.dialect !== 'quartz') return;
+            const dayState = cronState.fields.day;
+            const weekState = cronState.fields.weekday;
+            if (changedKey === 'day' && dayState.mode !== 'every') Object.assign(weekState, createCronFieldState(getCronField('weekday')), { token: '?' });
+            if (changedKey === 'weekday' && weekState.mode !== 'every') Object.assign(dayState, createCronFieldState(getCronField('day')), { token: '?' });
+            if (dayState.mode === 'every' && weekState.mode === 'every') { dayState.token = '*'; weekState.token = '?'; }
+        }
+        function cronChoiceValues(field) {
+            if (field.key !== 'year') return Array.from({ length: field.max - field.min + 1 }, (_, index) => field.min + index);
+            const currentYear = new Date().getFullYear();
+            return Array.from({ length: 12 }, (_, index) => currentYear - 1 + index);
+        }
+        function renderCronFields() {
+            ensureCronFields();
+            const keys = getCronKeys();
+            if (!keys.includes(cronState.activeField)) cronState.activeField = keys[0];
+            document.getElementById('cron-field-tabs').style.setProperty('--cron-field-count', keys.length);
+            document.getElementById('cron-field-tabs').innerHTML = keys.map(key => `<button class="cron-field-tab${key === cronState.activeField ? ' active' : ''}" type="button" role="tab" aria-selected="${key === cronState.activeField}" data-cron-field="${key}">${getCronField(key).label}</button>`).join('');
+            document.getElementById('cron-panels').innerHTML = keys.map(key => {
+                const field = getCronField(key);
+                const state = cronState.fields[key];
+                const choices = cronChoiceValues(field).map(value => `<label class="cron-choice"><input type="checkbox" data-cron-value="${value}"><span>${field.names?.[value - field.min] || String(value).padStart(field.key === 'second' || field.key === 'minute' ? 2 : 1, '0')}</span></label>`).join('');
+                return `<div class="cron-field-panel${key === cronState.activeField ? ' active' : ''}" data-cron-panel="${key}" role="tabpanel"><div class="cron-rule-list"><div class="cron-rule-row" data-cron-rule="every"><label class="cron-rule-label"><input type="radio" name="cron-mode-${key}" value="every" data-cron-mode="${key}"><span>每${field.label}</span></label><div class="cron-rule-content">${field.label}字段匹配每一个${field.label}（*）</div></div><div class="cron-rule-row" data-cron-rule="range"><label class="cron-rule-label"><input type="radio" name="cron-mode-${key}" value="range" data-cron-mode="${key}"><span>范围</span></label><div class="cron-rule-content"><span>从</span><input class="cron-number-input" type="number" min="${field.min}" max="${field.max}" data-cron-range-start value="${state.rangeStart}"><span>到</span><input class="cron-number-input" type="number" min="${field.min}" max="${field.max}" data-cron-range-end value="${state.rangeEnd}"><span>${field.label}</span></div></div><div class="cron-rule-row" data-cron-rule="step"><label class="cron-rule-label"><input type="radio" name="cron-mode-${key}" value="step" data-cron-mode="${key}"><span>周期</span></label><div class="cron-rule-content"><span>从</span><input class="cron-number-input" type="number" min="${field.min}" max="${field.max}" data-cron-step-start value="${state.stepStart}"><span>开始，每</span><input class="cron-number-input" type="number" min="1" max="${field.max - field.min + 1}" data-cron-step value="${state.step}"><span>${field.label}执行一次</span></div></div><div class="cron-rule-row cron-specific-row" data-cron-rule="specific"><label class="cron-rule-label"><input type="radio" name="cron-mode-${key}" value="specific" data-cron-mode="${key}"><span>指定</span></label><div class="cron-specific-body"><div class="cron-specific-meta"><span>已选择 <b data-cron-selected-count>0</b> 项</span><span class="cron-specific-actions"><button class="cron-specific-action" type="button" data-cron-select-all>全选</button><button class="cron-specific-action" type="button" data-cron-clear>清空</button></span></div><div class="cron-choice-grid">${choices}</div></div></div></div></div>`;
+            }).join('');
+            document.querySelectorAll('.cron-field-tab').forEach(tab => tab.addEventListener('click', () => { cronState.activeField = tab.dataset.cronField; renderCronFields(); }));
+            updateCronUI();
+        }
+        function syncCronPanel(key) {
+            const state = cronState.fields[key];
+            const panel = document.querySelector(`[data-cron-panel="${key}"]`);
+            if (!panel) return;
+            panel.querySelectorAll('[data-cron-mode]').forEach(input => { input.checked = input.value === state.mode; });
+            panel.querySelectorAll('[data-cron-rule]').forEach(row => row.classList.toggle('active', row.dataset.cronRule === state.mode));
+            panel.querySelector('[data-cron-range-start]').value = state.rangeStart;
+            panel.querySelector('[data-cron-range-end]').value = state.rangeEnd;
+            panel.querySelector('[data-cron-step-start]').value = state.stepStart;
+            panel.querySelector('[data-cron-step]').value = state.step;
+            panel.querySelectorAll('[data-cron-value]').forEach(input => { input.checked = state.values.has(Number(input.dataset.cronValue)); });
+            panel.querySelector('[data-cron-selected-count]').textContent = state.values.size;
+            panel.classList.toggle('active', key === cronState.activeField);
+        }
+        function updateCronInvalidState(invalid) {
+            const badge = document.getElementById('cron-validity');
+            badge.classList.toggle('invalid', invalid);
+            badge.classList.toggle('valid', !invalid);
+            badge.textContent = invalid ? '格式错误' : '有效';
+        }
+        function updateCronUI() {
+            const expression = generateCronExpression();
+            const expressionInput = document.getElementById('cron-expression-input');
+            if (expressionInput.value !== expression) expressionInput.value = expression;
+            document.getElementById('cron-description').textContent = generateCronDescription(expression);
+            document.getElementById('cron-field-chips').style.setProperty('--cron-field-count', getCronKeys().length);
+            document.getElementById('cron-field-chips').innerHTML = getCronKeys().map(key => `<label class="cron-field-chip"><span class="cron-field-chip-label">${getCronField(key).label}</span><input class="cron-field-token-input" data-cron-field-token="${key}" value="${cronState.fields[key].token}" aria-label="${getCronField(key).label}字段"></label>`).join('');
+            getCronKeys().forEach(syncCronPanel);
+            renderCronDialects();
+            const runs = getNextRunTimes(expression);
+            document.getElementById('cron-next-runs').innerHTML = runs.length ? runs.map((date, index) => `<div class="cron-next-run"><span class="cron-next-index">${index + 1}</span><div><div class="cron-next-time">${cronDateLabel(date)}</div><div class="cron-next-relative">${cronRelativeLabel(date)}</div></div></div>`).join('') : '<div class="cron-empty">当前表达式在搜索范围内没有可执行时间，请检查字段组合。</div>';
+        }
+
+        function initCronModule() {
+            ensureCronFields();
+            parseCronExpression(document.getElementById('cron-expression-input').value);
+            syncCronDialectFromFormat();
+            renderCronFields();
+            document.getElementById('cron-dialects').addEventListener('click', event => {
+                const button = event.target.closest('[data-cron-dialect]');
+                if (!button) return;
+                cronState.dialect = button.dataset.cronDialect;
+                const dialect = CRON_DIALECTS[cronState.dialect];
+                parseCronExpression(dialect.expression);
+                cronState.activeField = getCronKeys()[0];
+                updateCronInvalidState(false);
+                renderCronFields();
+            });
+            const parseExpressionInput = () => {
+                const input = document.getElementById('cron-expression-input');
+                if (!parseCronExpression(input.value)) { updateCronInvalidState(true); return; }
+                syncCronDialectFromFormat();
+                updateCronInvalidState(false);
+                renderCronFields();
+            };
+            document.getElementById('cron-expression-input').addEventListener('change', parseExpressionInput);
+            document.getElementById('cron-expression-input').addEventListener('keydown', event => {
+                if (event.key === 'Enter') event.target.dispatchEvent(new Event('change'));
+            });
+            document.getElementById('cron-parse').addEventListener('click', parseExpressionInput);
+            document.getElementById('cron-copy').addEventListener('click', async () => {
+                try { await navigator.clipboard.writeText(generateCronExpression()); showNotification(); } catch (error) { updateCronInvalidState(false); }
+            });
+            document.getElementById('cron-panels').addEventListener('change', event => {
+                const panel = event.target.closest('[data-cron-panel]');
+                const key = panel?.dataset.cronPanel;
+                if (!key) return;
+                const field = getCronField(key);
+                const state = cronState.fields[key];
+                if (event.target.matches('[data-cron-mode]')) {
+                    state.mode = event.target.value;
+                    if (state.mode === 'every') state.token = cronState.dialect === 'quartz' && key === 'weekday' ? '?' : '*';
+                    if (state.mode === 'step') { state.stepStart = field.min; state.step = 1; state.token = '*/1'; }
+                    if (state.mode === 'range') state.token = `${state.rangeStart}-${state.rangeEnd}`;
+                    if (state.mode === 'specific') { if (!state.values.size) state.values.add(field.min); state.token = cronTokenFromState(state, field); }
+                } else if (event.target.matches('[data-cron-range-start]')) {
+                    state.mode = 'range'; state.rangeStart = Number(event.target.value); state.token = cronTokenFromState(state, field);
+                } else if (event.target.matches('[data-cron-range-end]')) {
+                    state.mode = 'range'; state.rangeEnd = Number(event.target.value); state.token = cronTokenFromState(state, field);
+                } else if (event.target.matches('[data-cron-step-start]')) {
+                    state.mode = 'step'; state.stepStart = Number(event.target.value); state.token = cronTokenFromState(state, field);
+                } else if (event.target.matches('[data-cron-step]')) {
+                    state.mode = 'step'; state.step = Number(event.target.value); state.token = cronTokenFromState(state, field);
+                } else if (event.target.matches('[data-cron-value]')) {
+                    state.mode = 'specific';
+                    state.values = new Set([...panel.querySelectorAll('[data-cron-value]:checked')].map(input => Number(input.dataset.cronValue)));
+                    state.token = cronTokenFromState(state, field);
+                }
+                enforceQuartzDayWeek(key);
+                updateCronInvalidState(false);
+                updateCronUI();
+            });
+            document.getElementById('cron-panels').addEventListener('click', event => {
+                const panel = event.target.closest('[data-cron-panel]');
+                if (!panel || (!event.target.matches('[data-cron-select-all]') && !event.target.matches('[data-cron-clear]'))) return;
+                const key = panel.dataset.cronPanel;
+                const state = cronState.fields[key];
+                state.mode = 'specific';
+                state.values = event.target.matches('[data-cron-select-all]') ? new Set([...panel.querySelectorAll('[data-cron-value]')].map(input => Number(input.dataset.cronValue))) : new Set();
+                state.token = cronTokenFromState(state, getCronField(key));
+                enforceQuartzDayWeek(key);
+                updateCronUI();
+            });
+            document.getElementById('cron-field-chips').addEventListener('change', event => {
+                const key = event.target.dataset.cronFieldToken;
+                if (!key) return;
+                const parsed = parseCronFieldToken(event.target.value, getCronField(key));
+                if (!parsed) { updateCronInvalidState(true); return; }
+                Object.assign(cronState.fields[key], parsed);
+                enforceQuartzDayWeek(key);
+                updateCronInvalidState(false);
+                renderCronFields();
+            });
+            document.getElementById('cron-timezone').addEventListener('change', event => {
+                cronState.timezone = event.target.value;
+                updateCronUI();
+            });
+            const presets = document.getElementById('cron-presets');
+            presets.innerHTML = CRON_PRESETS.map(([expression, label]) => `<button class="cron-preset" type="button" data-cron-preset="${expression}"><code>${expression}</code><span>${label}</span></button>`).join('');
+            presets.addEventListener('click', event => {
+                const button = event.target.closest('[data-cron-preset]');
+                if (!button) return;
+                parseCronExpression(button.dataset.cronPreset);
+                syncCronDialectFromFormat();
+                updateCronInvalidState(false);
+                renderCronFields();
+            });
+        }
+
         function switchPage(pageToShow) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
             document.querySelectorAll('.sidebar-item').forEach(n => n.classList.remove('active'));
@@ -818,6 +1238,9 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
             } else if (pageToShow === 'timestamp') {
                 pageTimestamp.classList.add('active');
                 navTimestamp.classList.add('active');
+            } else if (pageToShow === 'cron') {
+                pageCron.classList.add('active');
+                navCron.classList.add('active');
             }
         }
 
@@ -2035,13 +2458,19 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
         // 主题管理
         const themeManager = {
             current: 'system',
+            palette: 'mint',
 
             init() {
                 // 获取保存的主题设置
                 this.current = localStorage.getItem('theme') || 'system';
+                this.palette = localStorage.getItem('palette') || 'mint';
+                if (!['light', 'dark', 'system'].includes(this.current)) this.current = 'system';
+                if (!['mint', 'ocean', 'coral', 'graphite'].includes(this.palette)) this.palette = 'mint';
+                this.applyPalette();
                 this.apply();
                 this.bindEvents();
                 this.updateButtons();
+                this.updatePalette();
 
                 // 监听系统主题变化
                 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
@@ -2075,17 +2504,82 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
                 this.updateButtons();
             },
 
+            setPalette(palette, button) {
+                this.palette = palette;
+                localStorage.setItem('palette', palette);
+                this.applyPalette();
+                this.updatePalette();
+
+                button.classList.remove('pulse');
+                void button.offsetWidth;
+                button.classList.add('pulse');
+
+                if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    document.body.classList.remove('theme-changing');
+                    void document.body.offsetWidth;
+                    document.body.classList.add('theme-changing');
+                }
+            },
+
+            applyPalette() {
+                document.documentElement.setAttribute('data-palette', this.palette);
+            },
+
             updateButtons() {
-                document.querySelectorAll('.theme-btn').forEach(btn => {
+                document.querySelectorAll('.theme-btn[id^="theme-"]').forEach(btn => {
                     btn.classList.remove('active');
+                    btn.setAttribute('aria-pressed', 'false');
                 });
-                document.getElementById(`theme-${this.current}`).classList.add('active');
+                const activeButton = document.getElementById(`theme-${this.current}`);
+                activeButton.classList.add('active');
+                activeButton.setAttribute('aria-pressed', 'true');
+            },
+
+            updatePalette() {
+                document.querySelectorAll('.palette-option').forEach(button => {
+                    const isActive = button.dataset.palette === this.palette;
+                    button.classList.toggle('active', isActive);
+                    button.setAttribute('aria-checked', String(isActive));
+                });
+                const activeOption = document.querySelector(`.palette-option[data-palette="${this.palette}"]`);
+                document.getElementById('palette-current').textContent = activeOption.dataset.label;
+            },
+
+            togglePopover(forceOpen) {
+                const trigger = document.getElementById('palette-trigger');
+                const popover = document.getElementById('theme-popover');
+                const shouldOpen = forceOpen ?? !popover.classList.contains('open');
+                trigger.classList.toggle('open', shouldOpen);
+                trigger.setAttribute('aria-expanded', String(shouldOpen));
+                popover.classList.toggle('open', shouldOpen);
+                popover.setAttribute('aria-hidden', String(!shouldOpen));
             },
 
             bindEvents() {
                 document.getElementById('theme-light').addEventListener('click', () => this.set('light'));
                 document.getElementById('theme-dark').addEventListener('click', () => this.set('dark'));
                 document.getElementById('theme-system').addEventListener('click', () => this.set('system'));
+                document.getElementById('palette-trigger').addEventListener('click', () => this.togglePopover());
+                document.querySelectorAll('.palette-option').forEach(button => {
+                    button.addEventListener('click', () => this.setPalette(button.dataset.palette, button));
+                    button.addEventListener('animationend', () => button.classList.remove('pulse'));
+                });
+                document.body.addEventListener('animationend', event => {
+                    if (event.animationName === 'themeWash') {
+                        document.body.classList.remove('theme-changing');
+                    }
+                });
+                document.addEventListener('click', event => {
+                    if (!document.getElementById('theme-switcher').contains(event.target)) {
+                        this.togglePopover(false);
+                    }
+                });
+                document.addEventListener('keydown', event => {
+                    if (event.key === 'Escape') {
+                        this.togglePopover(false);
+                        document.getElementById('palette-trigger').focus();
+                    }
+                });
             }
         };
 
@@ -2104,6 +2598,7 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
             navFood.addEventListener('click', () => switchPage('food'));
             navTestfile.addEventListener('click', () => switchPage('testfile'));
             navTimestamp.addEventListener('click', () => switchPage('timestamp'));
+            navCron.addEventListener('click', () => switchPage('cron'));
             jsonInput.addEventListener('input', scheduleJsonFormat);
             document.getElementById('json-format-btn').addEventListener('click', jsonFormatInput);
             document.getElementById('json-compress-btn').addEventListener('click', jsonCompress);
@@ -2144,6 +2639,7 @@ body{padding:1rem}.container{max-width:1520px;gap:1.25rem}.content{padding:1rem}
 
             // 时间戳模块初始化和事件绑定
             initTimestampModule();
+            initCronModule();
             document.getElementById('ts-switch-unit').addEventListener('click', toggleTsUnit);
             document.getElementById('ts-copy').addEventListener('click', copyCurrentTs);
             document.getElementById('ts-toggle-live').addEventListener('click', () => {
